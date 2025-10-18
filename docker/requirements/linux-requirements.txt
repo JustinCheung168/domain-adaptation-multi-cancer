@@ -1,0 +1,9 @@
+curl
+git
+nano
+iputils-ping
+tar
+tree
+unzip
+vim
+wget

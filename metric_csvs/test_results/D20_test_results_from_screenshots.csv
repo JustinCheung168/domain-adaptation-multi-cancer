@@ -1,0 +1,5 @@
+test_set,eval_loss,eval_accuracy,eval_precision,eval_recall,eval_f1,eval_accuracy_d,eval_precision_d,eval_recall_d,eval_f1_d
+original,0.569933,0.830971,0.831473,0.811433,0.795532,1.0,1.0,1.0,1.0
+Uniform_Noise,3.595704,0.351277,0.223342,0.243413,0.174915,0.0,0.0,0.0,0.0
+Rotate_90deg,2.598634,0.815390,0.822605,0.791375,0.769834,0.0,0.0,0.0,0.0
+Ring_Artifact_v1,2.645179,0.742153,0.726162,0.705171,0.677108,0.0,0.0,0.0,0.0

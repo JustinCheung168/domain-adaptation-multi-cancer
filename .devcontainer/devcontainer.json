@@ -1,0 +1,14 @@
+{
+  "name": "Attach to Pytorch Container",
+  "customizations": {
+    "vscode": {
+        "settings": {
+          "terminal.integrated.defaultProfile.linux": "bash"
+        },
+        "extensions": [
+          "ms-python.python",
+          "ms-toolsai.jupyter"
+        ]
+    }
+  }
+}
