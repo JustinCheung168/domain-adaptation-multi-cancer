@@ -1,4 +1,4 @@
-# domain-generalization-ct
+# domain-adaptation-multi-cancer
 
 ## Usage
 
