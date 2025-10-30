@@ -1,4 +1,4 @@
-# Improving Artifact Robustness for CT Deep Learning Models Without Labeled Artifact Images via Domain Adaptation
+# Multi cancer project to be named
 
 ## Environment Setup
 
@@ -21,7 +21,7 @@ This project uses Docker to control requirements and aid in cross-platform compa
 1. Clone this repository.
 1. Navigate to the project directory:
    ```bash
-   cd ./domain-adaptation-ct
+   cd ./domain-adaptation-multi-cancer
    ```
 1. Run the `build.sh` script to build the Docker image:
    ```bash
@@ -68,8 +68,8 @@ MSYS_NO_PATHCONV=1 winpty docker run \
     --rm \
     --name "${CONTAINER_NAME}" \
     $GPU_FLAG \
-    -v "C:\Users\myname\domain-adaptation-ct":"/repo/" \
-    -v "C:\Users\myname\domain-adaptation-ct":"/data/" \
+    -v "C:\Users\myname\domain-adaptation-multi-cancer":"/repo/" \
+    -v "C:\Users\myname\domain-adaptation-multi-cancer":"/data/" \
     -p 8888:8888 \
     dact-image \
     "$@"
@@ -77,28 +77,10 @@ MSYS_NO_PATHCONV=1 winpty docker run \
 
 ## Contents
 
-- `src/`: Source code for this project.
-   - `domain_adaptation_ct/`: Module for this project.
-      - `config/`: Classes for config files.
-      - `dataset/`: Classes for reading and interacting with datasets.
-      - `learn/`: Classes & functions for model training & evaluation.
-      - `logging/`: Classes for logging.
-      - `preprocess/`: Functions for preprocessing data.
-      - `visualize/`: Classes for visualizing images.
-- `results/`: Raw training/validation/test result outputs.
-- `src/`: Source code files. Primarily contains sinogram manipulation code right now.
-- `*_pipeline*.ipynb`: Jupyter Notebooks used for model training for each experiment on OrganAMNIST data. In our convention expanding on notation used by Geirhos et al., "A" models are trained on single distortions, "C" models are trained on all-but-one distortion, and "D" models are based on Ganin & Lempitsky (2015)'s domain adaptation architecture.
-- `GaninDALoss.ipynb`: Quick demonstration that the loss function component used for the label predictor successfully excludes influence of target domain instances.
-- `Image_Manipulation*.ipynb`: Jupyter Notebooks for producing distorted data.
-- `*resnet*.py`: Classes and script for our custom ResNet-50 configuration based on Ganin & Lempitsky (2015), and for a comparable unmodified ResNet-50.
-- `ct_projection_proto.ipynb`: Exploration of sinogram manipulation.
-- `evaluate_experiment.ipynb`: Model evaluation code.
-- `medmnist_eda.ipynb`: Exploratory data analysis of MedMNIST datasets.
-- `view_test_results.ipynb`: Model training/validation curve and test matrix visualization code. 
+TBD
 
 ## Usage
 
-1. Download data from [huggingface.co/datasets/NNDLCLASS](huggingface.co/datasets/NNDLCLASS).
 2. Specify details of your experiment in `experiment_configs/`. Example config values are specified as arguments to the commands below.
 3. Run training:
 ```bash
@@ -109,9 +91,6 @@ MSYS_NO_PATHCONV=1 winpty docker run \
 ./scripts/run_evaluation.py experiment_configs/dann_test_quickcheck_config.yaml
 ```
 
-## Citation
-
-Cheung, J., Savine, S., Nguyen, C., Lu, L., & Yasin, A. S. (2025). Improving Artifact Robustness for CT Deep Learning Models Without Labeled Artifact Images via Domain Adaptation. arXiv preprint arXiv:2510.06584.
 
 ## TODO
 
