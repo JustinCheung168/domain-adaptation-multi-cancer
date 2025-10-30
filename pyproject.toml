@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools >= 72.1.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "domain-adaptation-ct"
+version = "0.0.1"
+dependencies = [
+    "jupyter>=1.1.1",
+    "medmnist>=3.0.2",
+    "transformers>=4.57.1",
+    "accelerate>=1.11.0",
+    "seaborn>=0.13.2",
+    "matplotlib>=0.10.7",
+]
+requires-python = ">= 3.11.10"
+authors = [
+    {name = "Justin Cheung", email = "jcheun11@jh.edu"},
+    {name = "Samuel Savine", email = "ssavine1@jh.edu"},
+    {name = "Calvin Nguyen", email = "nguye89@jh.edu"},
+    {name = "Lin Lu", email = "llu45@jhu.edu"},
+    {name = "Alhassan S. Yasin", email = "ayasin1@jhu.edu"},
+]
+description = "Improving Artifact Robustness for CT Deep Learning Models Without Labeled Artifact Images via Domain Adaptation"
+readme = "README.md"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["domain_adaptation_ct*"]

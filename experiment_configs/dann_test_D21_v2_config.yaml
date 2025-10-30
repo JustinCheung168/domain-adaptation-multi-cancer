@@ -1,0 +1,29 @@
+---
+logging_dir: /repo/results/logs/
+architecture:
+    cls_name: ResNet50DANN
+    cls_init_args:
+        num_classes: 11
+        # Unused in evaluation.
+        lamb_initial: 0.0
+        ld_scale: 1.0
+evaluation:
+    evaluator:
+        cls_name: DANNTrainer
+    dataset:
+        cls_name: TwoLabelDataset
+        convert_grayscale_to_rgb: True
+        fold_file_paths:
+            - /data/D21_preprocessed/D21_preprocessed_val_v2.npz
+    output_dir: /data/D21_eval_results/
+    batch_size: 32
+
+    evaluation_arguments:
+        output_dir: /data/D21_train_results/
+        num_train_epochs: 3
+        batch_size: 32
+        learning_rate: 0.1
+        weight_decay: 0.0001
+        optim: sgd
+        resume_from_checkpoint: False
+    lambda_scheduler: parabolic_increasing_lambda_scheduler

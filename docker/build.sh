@@ -9,4 +9,4 @@ cd "${SCRIPT_DIR}"
 
 # Build the Docker image based on `Dockerfile`.
 # Allow the build process to use this folder as its context.
-docker build --force-rm --no-cache --platform linux/amd64 -t dagict-image -f Dockerfile .
+docker build --force-rm --no-cache --platform linux/amd64 -t dact-image -f Dockerfile .

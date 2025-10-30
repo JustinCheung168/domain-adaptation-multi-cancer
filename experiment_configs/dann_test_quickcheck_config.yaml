@@ -1,0 +1,22 @@
+---
+output_dir: /data/dann_test_quickcheck_results/
+architecture:
+    cls_name: ResNet50DANN
+    cls_init_args:
+        num_classes: 11
+        # Unused in evaluation.
+        lamb_initial: 0.0
+        ld_scale: 1.0
+evaluation:
+    evaluator:
+        cls_name: DANNTrainer
+    dataset:
+        cls_name: TwoLabelDataset
+        convert_grayscale_to_rgb: True
+        fold_file_paths:
+            - /data/toy/fold4.npz
+    evaluation_arguments:
+        # `checkpoint` is only used by `run_evaluation.py` - it is ignored in `run_training.py` in favor of the checkpoints produced by the training run.
+        # `checkpoint` specifies where to find the input model.
+        checkpoint: /data/dann_test_quickcheck_results/xyz
+        batch_size: 32

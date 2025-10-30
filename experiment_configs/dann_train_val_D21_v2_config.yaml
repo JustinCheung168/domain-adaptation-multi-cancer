@@ -1,0 +1,32 @@
+---
+output_dir: /data/dann_train_val_D21_v2_results/
+architecture:
+    cls_name: ResNet50DANN
+    cls_init_args:
+        num_classes: 11
+        lamb_initial: 0.0
+        ld_scale: 1.0
+training:
+    trainer:
+        cls_name: DANNTrainer
+    dataset:
+        cls_name: TwoLabelDataset
+        convert_grayscale_to_rgb: True
+        fold_file_paths:
+            - /data/D21_preprocessed/D21_preprocessed_train_v2.npz
+            - /data/D21_preprocessed/D21_preprocessed_val_v2.npz
+        # For each fold, specify which files to include in training vs. validation as indices of the `fold_file_paths` list.
+        folds:
+            -
+                train:
+                    - 0
+                val:
+                    - 1
+    training_arguments:
+        num_train_epochs: 3
+        batch_size: 32
+        learning_rate: 0.1
+        weight_decay: 0.0001
+        optim: sgd
+        resume_from_checkpoint: False
+    lambda_scheduler: parabolic_increasing_lambda_scheduler
