@@ -62,4 +62,5 @@ class MaskedDomainAdversarialLoss(torch.nn.Module):
 
         total_loss = loss1 + (ld_scale * loss2)
 
-        return total_loss
+        # Return all three losses for reporting purposes. total_loss should be the one to backpropagate from. 
+        return total_loss, loss1, loss2

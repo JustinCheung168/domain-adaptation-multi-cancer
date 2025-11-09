@@ -1,0 +1,39 @@
+---
+# Paths to the checkpoint-xyz/ directory containing the checkpoint to load the model and any other products of training from.
+checkpoint_dirs:
+    - "DANN ($\\mathcal{S}=\\text{Original}, \\mathcal{T}=\\text{Rotated 90}\\degree$)":
+        - /data/dann_train_quickcheck_results/parabolic_increasing_lambda_scheduler_fold_1_2025-11-04_17-19-56/results/checkpoint-1040/model.safetensors
+        - /data/dann_train_quickcheck_results/parabolic_increasing_lambda_scheduler_fold_1_2025-11-04_17-19-56/results/checkpoint-1040/model.safetensors
+        - /data/dann_train_quickcheck_results/parabolic_increasing_lambda_scheduler_fold_1_2025-11-04_17-19-56/results/checkpoint-1040/model.safetensors
+        - /data/dann_train_quickcheck_results/parabolic_increasing_lambda_scheduler_fold_1_2025-11-04_17-19-56/results/checkpoint-1040/model.safetensors
+        - /data/dann_train_quickcheck_results/parabolic_increasing_lambda_scheduler_fold_1_2025-11-04_17-19-56/results/checkpoint-1040/model.safetensors
+    - "DANN ($\\mathcal{S}=\\text{Original}, \\mathcal{T}=\\text{Ring Artifact}\\degree$)":
+        - /data/dann_train_quickcheck_results/parabolic_increasing_lambda_scheduler_fold_1_2025-11-04_17-19-56/results/checkpoint-1040/model.safetensors
+        - /data/dann_train_quickcheck_results/parabolic_increasing_lambda_scheduler_fold_1_2025-11-04_17-19-56/results/checkpoint-1040/model.safetensors
+        - /data/dann_train_quickcheck_results/parabolic_increasing_lambda_scheduler_fold_1_2025-11-04_17-19-56/results/checkpoint-1040/model.safetensors
+        - /data/dann_train_quickcheck_results/parabolic_increasing_lambda_scheduler_fold_1_2025-11-04_17-19-56/results/checkpoint-1040/model.safetensors
+        - /data/dann_train_quickcheck_results/parabolic_increasing_lambda_scheduler_fold_1_2025-11-04_17-19-56/results/checkpoint-1040/model.safetensors
+output_dir: /data/dann_test_quickcheck_results/
+architecture:
+    # This directory is expected to contain `model.safetensors` at minimum.
+    # This directory would have been produced by using `run_training.py`.
+    cls_name: ResNet50DANN
+    cls_init_args:
+        num_classes: 11
+        # Irrelevant to evaluation, but must be provided to instantiate the model object.
+        lamb_initial: 0.0
+        ld_scale: 1.0
+evaluation:
+    evaluator:
+        cls_name: DANNTrainer
+    dataset:
+        cls_name: TwoLabelDataset
+        convert_grayscale_to_rgb: True
+        fold_file_paths:
+            - /data/toy/fold0.npz
+            - /data/toy/fold1.npz
+            - /data/toy/fold2.npz
+            - /data/toy/fold3.npz
+            - /data/toy/fold4.npz
+    evaluation_arguments:
+        batch_size: 32

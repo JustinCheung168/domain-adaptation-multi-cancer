@@ -13,7 +13,7 @@ dependencies = [
     "seaborn>=0.13.2",
     "matplotlib>=0.10.7",
 ]
-requires-python = ">= 3.11.10"
+requires-python = ">= 3.11.4"
 authors = [
     {name = "Justin Cheung", email = "jcheun11@jh.edu"},
     {name = "Samuel Savine", email = "ssavine1@jh.edu"},

@@ -25,7 +25,7 @@ def unit_test_loss():
     logging.info("True domains:\n\t%s", labels2)
 
     loss_fn = MaskedDomainAdversarialLoss()
-    loss_val = loss_fn(logits1, logits2, labels1, labels2, ld_scale)
+    loss_val, loss1, loss2 = loss_fn(logits1, logits2, labels1, labels2, ld_scale)
     loss_val.backward()
 
     logging.info("Gradient of loss w.r.t. label logits:\n\t%s", logits1.grad)
@@ -41,6 +41,9 @@ def unit_test_loss():
 
     assert torch.equal(zero_label_gradient_instance_indices, target_domain_instances), "Gradient of loss w.r.t. target domain instances should be 0 for all target domain instances."
     assert zero_domain_gradient_instance_indices.numel() == 0, "Every instance should affect the gradient of loss for the domain classifier."
+
+    logging.info(float(loss1.detach().numpy()))
+    logging.info(float(loss2.detach().numpy()))
 
     logging.info("unit_test_loss passed.")
 
