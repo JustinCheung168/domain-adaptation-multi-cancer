@@ -3,7 +3,7 @@ import os
 import logging
 from typing import Optional, Callable
 
-from domain_adaptation_ct.config.experiment_config import TrainingConfig, EvaluationConfig
+from domain_adaptation_ct.config.experiment_config import TrainingConfig
 from domain_adaptation_ct.dataset.image_dataset import DATASET_REGISTRY
 from domain_adaptation_ct.dataset.multifold_dataset import MultifoldDataset
 from domain_adaptation_ct.learn.architectures import ARCHITECTURE_REGISTRY
@@ -11,7 +11,7 @@ from domain_adaptation_ct.learn.lambda_schedules import LAMBDA_SCHEDULER_REGISTR
 from domain_adaptation_ct.learn.metrics import make_metrics_fn
 from domain_adaptation_ct.learn.trainers import TRAINER_REGISTRY
 from domain_adaptation_ct.logging.log_mixin import init_logging
-from domain_adaptation_ct.logging.epoch_csv_logging import CSVLoggingCallback
+from domain_adaptation_ct.logging.epoch_csv_logging import TrainingCSVLoggingCallback
 
 import torch
 from transformers import Trainer, TrainingArguments
@@ -55,7 +55,7 @@ def train_model(
 
     # Record each metric on each epoch in a tabular format
     training_curves_csv_save_path = os.path.join(run_output_dir, f"training_curves.csv")
-    callbacks.append(CSVLoggingCallback(training_curves_csv_save_path))
+    callbacks.append(TrainingCSVLoggingCallback(training_curves_csv_save_path))
 
     output_dir_results = os.path.join(run_output_dir, f"results")
     model_save_path = os.path.join(run_output_dir, f"final_model")

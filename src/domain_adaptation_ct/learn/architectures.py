@@ -1,6 +1,7 @@
 from typing import Optional
 
 from dataclasses import dataclass
+from safetensors.torch import load_file
 import torch
 from transformers import PreTrainedModel, ResNetConfig
 from transformers.modeling_outputs import ModelOutput
@@ -15,6 +16,8 @@ class BranchedOutput(ModelOutput):
     loss: Optional[torch.FloatTensor] = None
     branch1_logits: Optional[torch.FloatTensor] = None
     branch2_logits: Optional[torch.FloatTensor] = None
+    loss1: Optional[torch.FloatTensor] = None
+    loss2: Optional[torch.FloatTensor] = None
 
 class ResNet50Baseline(PreTrainedModel):
     """
@@ -61,6 +64,8 @@ class ResNet50Baseline(PreTrainedModel):
             loss = loss,
             branch1_logits = logits,
             branch2_logits = None,
+            loss1 = None,
+            loss2 = None,
         )
 
     @classmethod
@@ -109,14 +114,34 @@ class ResNet50DANN(ResNet50Baseline):
         logits2 = self.branch2(features)
 
         loss = None
+        loss1 = None
+        loss2 = None
         if (labels1 is not None) and (labels2 is not None):
-            loss = self.loss_fn(logits1, logits2, labels1, labels2.view(-1, 1), self.ld_scale)
+            loss, loss1, loss2 = self.loss_fn(logits1, logits2, labels1, labels2.view(-1, 1), self.ld_scale)
 
         return BranchedOutput(
             loss = loss,
             branch1_logits = logits1,
             branch2_logits = logits2,
+            loss1 = loss1,
+            loss2 = loss2,
         )
+
+    @classmethod
+    def load(cls, file_path: str, num_classes: int, lamb_initial: float, ld_scale: float):
+        """Load from model.safetensors file"""
+        # Load safetensors weights
+        state_dict = load_file(file_path)
+
+        # Rebuild model and load weights.
+        # TODO - figure out a better way to ensure the parameters used in the original construction make it here.
+        model = ResNet50DANN(num_classes=num_classes, lamb_initial=lamb_initial, ld_scale=ld_scale)
+        model.load_state_dict(state_dict)
+
+        # Put into eval mode by default. The Trainer should manage the state if you are going to continue training from here.
+        model.eval()
+
+        return model
 
 
 ARCHITECTURE_REGISTRY: dict[str, type[torch.nn.Module]] = {

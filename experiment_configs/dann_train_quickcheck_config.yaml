@@ -31,7 +31,7 @@ training:
                 val:
                     - 1
     training_arguments:
-        num_train_epochs: 3
+        num_train_epochs: 50
         batch_size: 32
         learning_rate: 0.1
         weight_decay: 0.0001
