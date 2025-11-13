@@ -584,3 +584,58 @@ def save_experiment_results(results_dict: Dict[str, Dict], save_dir: str):
         np.save(os.path.join(domain_dir, 'labels.npy'), result['all_labels'])
     
     print(f"Results saved to: {save_dir}")
+
+
+def create_leave_one_out_test_dataset(images: np.ndarray,
+                                     labels: np.ndarray,
+                                     domain_text_list: List[str],
+                                     sub_domain_text_list: List[str],
+                                     target_domain: str,
+                                     transform: Optional[transforms.Compose] = None,
+                                     branched_mode: bool = False) -> Tuple[CustomImageDataset, Dict]:
+    """
+    Create a test dataset containing ONLY samples from the target domain
+    for leave-one-out ensemble evaluation.
+    
+    Args:
+        images: Image data array
+        labels: Label array  
+        domain_text_list: List of domain labels
+        sub_domain_text_list: List of sub-domain labels
+        target_domain: Domain to create test dataset for (held-out domain)
+        transform: Optional transforms to apply
+        branched_mode: If True, return dataset compatible with dual-branch architecture
+        
+    Returns:
+        Tuple of (test_dataset, metadata_dict)
+    """
+    domain_array = np.array(domain_text_list)
+    
+    # Get indices for target domain ONLY
+    target_indices = np.where(domain_array == target_domain)[0]
+    
+    # Create test dataset from target domain samples only
+    test_dataset = CustomImageDataset(
+        images[target_indices], 
+        labels[target_indices],
+        transform=transform,
+        branched_mode=branched_mode
+    )
+    
+    # Create metadata
+    from collections import Counter
+    target_labels = labels[target_indices]
+    label_counts = Counter(target_labels)
+    
+    metadata = {
+        'target_domain': target_domain,
+        'test_samples': len(target_indices),
+        'test_label_distribution': dict(label_counts),
+        'test_domains': {target_domain: len(target_indices)}
+    }
+    
+    print(f"Leave-one-out test dataset for '{target_domain}':")
+    print(f"  Test samples: {len(target_indices)} (from {target_domain} domain only)")
+    print(f"  Label distribution: {dict(label_counts)}")
+    
+    return test_dataset, metadata

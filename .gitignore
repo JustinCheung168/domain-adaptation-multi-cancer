@@ -3,3 +3,8 @@ __pycache__
 .DS_Store
 data/
 *.egg-info/
+
+# Model files and results
+models/
+ensemble_results/
+ensemble_results_clean/
