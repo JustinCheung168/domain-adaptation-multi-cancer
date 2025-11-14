@@ -68,10 +68,28 @@ class ResNet50Baseline(PreTrainedModel):
             loss2 = None,
         )
 
+    def get_branch1_logits_func(self):
+        """"""
+        def model_forward_func(input_tensor: torch.Tensor):
+            outputs = self(input_tensor)
+            return outputs.branch1_logits
+        return model_forward_func
+
     @classmethod
-    def load(cls, file_path: str):
-        """In theory should be able to load from checkpoint or safetensors formats"""
-        raise NotImplementedError(":)")
+    def load(cls, file_path: str, num_classes: int):
+        """Load from model.safetensors file"""
+        # Load safetensors weights
+        state_dict = load_file(file_path)
+
+        # Rebuild model and load weights.
+        # TODO - figure out a better way to ensure the parameters used in the original construction make it here.
+        model = ResNet50Baseline(num_classes=num_classes)
+        model.load_state_dict(state_dict)
+
+        # Put into eval mode by default. The Trainer should manage the state if you are going to continue training from here.
+        model.eval()
+
+        return model
 
 class ResNet50DANN(ResNet50Baseline):
     """
@@ -143,8 +161,50 @@ class ResNet50DANN(ResNet50Baseline):
 
         return model
 
+class ResNet50BaselineInitialMulticancerExploration(ResNetForImageClassification):
+    """
+    Baseline ResNet-50 model,
+    without the label predictor comparable to the DANN.
+    """
+    config_class = ResNetConfig
+
+    def __init__(self, num_classes: int):
+        """
+        num_classes: Number of possible values for output label y.
+        """
+        super().__init__(
+            ResNet50BaselineInitialMulticancerExploration.config_class(
+                num_channels=3,
+                image_size=224,
+                num_classes=num_classes,
+            )
+        )
+
+    def get_branch1_logits_func(self):
+        """"""
+        def model_forward_func(input_tensor: torch.Tensor):
+            outputs = self(input_tensor)
+            return outputs.logits
+        return model_forward_func
+
+    @classmethod
+    def load(cls, file_path: str, num_classes: int):
+        """Load from model.safetensors file"""
+        # Load safetensors weights
+        state_dict = load_file(file_path)
+
+        # Rebuild model and load weights.
+        # TODO - figure out a better way to ensure the parameters used in the original construction make it here.
+        model = ResNet50BaselineInitialMulticancerExploration(num_classes=num_classes)
+        model.load_state_dict(state_dict)
+
+        # Put into eval mode by default. The Trainer should manage the state if you are going to continue training from here.
+        model.eval()
+        return model
+
 
 ARCHITECTURE_REGISTRY: dict[str, type[torch.nn.Module]] = {
     "ResNet50Baseline": ResNet50Baseline,
     "ResNet50DANN": ResNet50DANN,
+    "ResNet50BaselineInitialMulticancerExploration": ResNet50BaselineInitialMulticancerExploration,
 }
