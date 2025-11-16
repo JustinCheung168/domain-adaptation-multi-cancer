@@ -22,12 +22,6 @@ class InstanceWeightedCrossEntropyLoss(torch.nn.Module): # Old loss version
         Returns:
             Shape []. Loss value.
         """
-        active_mask = instance_weights > 0
-        if active_mask.sum() == 0:
-            return torch.tensor(0.0, device=logits.device)
-        logits = logits[active_mask]
-        labels = labels[active_mask]
-        weights = instance_weights[active_mask]
         loss = self.base_loss(logits, labels)
         masked_loss = loss * instance_weights
         reduced_loss = masked_loss.mean()
