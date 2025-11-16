@@ -19,7 +19,9 @@ def make_metrics_fn(model: torch.nn.Module):
             # Domain classification is binary prediction from logits
             preds2 = (logits2 > 0).astype(int).flatten()
 
-            tn, fp, fn, tp = confusion_matrix(y_true=labels2, y_pred=preds2).ravel().tolist()
+            # Handle confusion matrix with explicit labels to handle single-class cases
+            cm = confusion_matrix(y_true=labels2, y_pred=preds2, labels=[0, 1])
+            tn, fp, fn, tp = cm.ravel().tolist()
             
             metrics = {
                 "accuracy_branch1": accuracy_score(labels1, preds1),

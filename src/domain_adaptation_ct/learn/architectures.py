@@ -135,11 +135,19 @@ class ResNet50DANN(ResNet50Baseline):
         loss1 = None
         loss2 = None
         if (labels1 is not None) and (labels2 is not None):
-            loss, loss1, loss2 = self.loss_fn(logits1, logits2, labels1, labels2.view(-1, 1), self.ld_scale)
+            # Freeze gradients BEFORE loss computation
+            target_domain_mask = labels2.view(-1, 1).bool()
+            logits1_masked = torch.where(
+                target_domain_mask,
+                logits1.detach(),  # No gradient for target domain
+                logits1            # Keep gradient for source domain
+            )
+
+            loss, loss1, loss2 = self.loss_fn(logits1_masked, logits2, labels1, labels2.view(-1, 1), self.ld_scale)
 
         return BranchedOutput(
             loss = loss,
-            branch1_logits = logits1,
+            branch1_logits = logits1_masked,
             branch2_logits = logits2,
             loss1 = loss1,
             loss2 = loss2,

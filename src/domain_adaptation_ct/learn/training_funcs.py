@@ -9,7 +9,7 @@ from domain_adaptation_ct.dataset.multifold_dataset import MultifoldDataset
 from domain_adaptation_ct.learn.architectures import ARCHITECTURE_REGISTRY
 from domain_adaptation_ct.learn.lambda_schedules import LAMBDA_SCHEDULER_REGISTRY, LambdaUpdateCallback
 from domain_adaptation_ct.learn.metrics import make_metrics_fn
-from domain_adaptation_ct.learn.trainers import TRAINER_REGISTRY
+from domain_adaptation_ct.learn.trainers import TRAINER_REGISTRY, GradientAssertionCallback
 from domain_adaptation_ct.logging.log_mixin import init_logging
 from domain_adaptation_ct.logging.epoch_csv_logging import TrainingCSVLoggingCallback
 
@@ -43,6 +43,7 @@ def train_model(
     else:
         assert hasattr(model, "grad_reverse"), "Must specify a lambda scheduler with the `grad_reverse` layer."
         callbacks.append(LambdaUpdateCallback(model, lambda_scheduler))
+        callbacks.append(GradientAssertionCallback())
         scheduler_name = lambda_scheduler.__name__
 
     # Unique identifier for this run
