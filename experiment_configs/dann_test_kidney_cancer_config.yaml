@@ -1,0 +1,29 @@
+---
+logging_dir: results/logs/
+architecture:
+    cls_name: ResNet50DANN
+    cls_init_args:
+        num_classes: 2  # Binary classification: benign (0) vs malignant (1)
+        # Unused in evaluation.
+        lamb_initial: 0.0
+        ld_scale: 1.0
+evaluation:
+    evaluator:
+        cls_name: DANNTrainer
+    dataset:
+        cls_name: TwoLabelDataset
+        convert_grayscale_to_rgb: False
+        fold_file_paths:
+            - data/preprocessed/kidney_cancer_test.npz
+    output_dir: results/dann_test_kidney_cancer_results/
+    batch_size: 32
+
+    evaluation_arguments:
+        output_dir: results/dann_train_kidney_cancer_results/
+        num_train_epochs: 3
+        batch_size: 32
+        learning_rate: 0.1
+        weight_decay: 0.0001
+        optim: sgd
+        resume_from_checkpoint: False
+    lambda_scheduler: parabolic_increasing_lambda_scheduler

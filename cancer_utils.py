@@ -19,6 +19,7 @@ import numpy as np
 import torch
 from torch.utils.data import Dataset
 from torchvision import transforms
+from collections import Counter
 from typing import List, Optional, Tuple, Dict
 from collections import Counter
 import matplotlib.pyplot as plt
@@ -43,24 +44,31 @@ class CustomImageDataset(Dataset):
         
         # Apply transforms if provided
         if self.transform:
-            # Convert numpy array to PIL Image if needed for transforms
+            # Transforms expect numpy array or PIL Image
+            # ToTensor will handle conversion from numpy uint8 to float32 tensor
+            if isinstance(image, np.ndarray):
+                # Ensure image is in HWC format for transforms
+                if len(image.shape) == 2:
+                    # Grayscale, convert to RGB by stacking
+                    image = np.stack([image, image, image], axis=-1)
+            image = self.transform(image)
+        else:
+            # No transform, convert manually
             if isinstance(image, np.ndarray):
                 if len(image.shape) == 3 and image.shape[-1] == 3:
-                    # RGB image
+                    # RGB image: HWC -> CHW
                     image = torch.from_numpy(image).permute(2, 0, 1).float() / 255.0
                 else:
                     # Grayscale, convert to RGB
                     image = torch.from_numpy(image).unsqueeze(0).repeat(3, 1, 1).float() / 255.0
-            image = self.transform(image)
         
         # Return different format based on mode
         if self.branched_mode:
-            # For dual-branch architecture
+            # For dual-branch architecture (matches TwoLabelDataset structure)
             return {
                 "pixel_values": image,
-                "labels": self.sub_domain_labels[idx],
-                "labels1": self.sub_domain_labels[idx],
-                "labels2": self.cancer_binary_labels[idx]
+                "labels1": int(self.sub_domain_labels[idx]),
+                "labels2": int(self.cancer_binary_labels[idx])
             }
         else:
             # For standard single-branch architecture
@@ -639,3 +647,369 @@ def create_leave_one_out_test_dataset(images: np.ndarray,
     print(f"  Label distribution: {dict(label_counts)}")
     
     return test_dataset, metadata
+
+
+def load_adenocarcinoma_dataset(npz_path: str) -> Tuple[np.ndarray, np.ndarray, np.ndarray, List[str], List[str]]:
+    """
+    Load the adenocarcinoma dataset from .npz file.
+    
+    The adenocarcinoma dataset has the following structure:
+    - images: (N, H, W, 3) RGB images
+    - sub_domain: class IDs for tissue types (labels1 in original)
+    - cancer_binary: binary labels 0=benign, 1=malignant (labels2 in original)
+    - domain_text: domain names (e.g., "Breast Cancer", "Colon Cancer")
+    - sub_domain_text: tissue type names (e.g., "breast_benign", "colon_aca")
+    
+    Args:
+        npz_path: Path to the adenocarcinoma_dataset.npz file
+        
+    Returns:
+        Tuple of (images, sub_domain_labels, cancer_binary_labels, domain_text_list, sub_domain_text_list)
+    """
+    print(f"Loading adenocarcinoma dataset from: {npz_path}")
+    data = np.load(npz_path, allow_pickle=True)
+    
+    # Extract arrays with correct keys for adenocarcinoma dataset
+    images = data['images']
+    sub_domain_labels = data['sub_domain'].astype(np.int64)  # Class IDs
+    cancer_binary_labels = data['cancer_binary'].astype(np.int64)  # Binary 0/1
+    
+    # Text metadata
+    domain_text_list = data['domain_text'].astype(str).tolist()
+    sub_domain_text_list = data['sub_domain_text'].astype(str).tolist()
+    
+    print(f"Loaded shapes: images={images.shape}, sub_domain={sub_domain_labels.shape}, cancer_binary={cancer_binary_labels.shape}")
+    print(f"Sub-domain label range: {min(sub_domain_labels)} to {max(sub_domain_labels)}")
+    print(f"Cancer binary label distribution: {dict(Counter(cancer_binary_labels))}")
+    print(f"Available domains: {sorted(set(domain_text_list))}")
+    print(f"Available sub-domains: {sorted(set(sub_domain_text_list))}")
+    
+    return images, sub_domain_labels, cancer_binary_labels, domain_text_list, sub_domain_text_list
+
+
+def preprocess_for_branched_resnet(images: np.ndarray,
+                                   cancer_binary_labels: np.ndarray,
+                                   domain_text_list: List[str],
+                                   target_domain: str,
+                                   normalize: bool = True) -> Tuple[np.ndarray, np.ndarray, np.ndarray]:
+    """
+    Preprocess adenocarcinoma dataset for branched ResNet model.
+    Memory-efficient: Skips normalization to avoid creating float32 copy of entire dataset.
+    
+    Converts the dataset to have:
+    - labels1: cancer_binary (0=benign, 1=malignant) - primary classification task
+    - labels2: binary target domain indicator (1 if domain==target_domain, 0 otherwise)
+    
+    Args:
+        images: Image data array (N, H, W, 3)
+        cancer_binary_labels: Binary cancer labels (0=benign, 1=malignant)
+        domain_text_list: List of domain names for each sample
+        target_domain: Target domain for labels2 encoding
+        normalize: If True, normalization will happen on-the-fly during training
+        
+    Returns:
+        Tuple of (preprocessed_images, labels1, labels2)
+    """
+    # Memory-efficient: Keep images as uint8, normalize on-the-fly with transforms
+    # This avoids creating a 40,000 x 224 x 224 x 3 x 4 bytes = ~24GB float32 array
+    print(f"Keeping images as {images.dtype} to reduce RAM usage...")
+    print(f"  Images will be normalized on-the-fly during training")
+    images_processed = images
+    
+    # labels1 = cancer_binary (primary task) - avoid copy if already int64
+    labels1 = cancer_binary_labels if cancer_binary_labels.dtype == np.int64 else cancer_binary_labels.astype(np.int64)
+    
+    # labels2 = binary indicator for target_domain
+    domain_array = np.array(domain_text_list)
+    labels2 = (domain_array == target_domain).astype(np.int64)
+    
+    print(f"Preprocessed for branched ResNet:")
+    print(f"  Images shape: {images_processed.shape}, dtype: {images_processed.dtype}")
+    print(f"  labels1 (cancer_binary) distribution: {dict(Counter(labels1))}")
+    print(f"  labels2 (target_domain={target_domain}) distribution: {dict(Counter(labels2))}")
+    
+    return images_processed, labels1, labels2
+
+
+def get_branched_resnet_transforms() -> transforms.Compose:
+    """
+    Get the standard transform pipeline for branched ResNet model.
+    
+    This transform converts uint8 images [0-255] to normalized float32 tensors [-1, 1].
+    Normalization happens on-the-fly during training to reduce memory usage.
+    
+    Returns:
+        transforms.Compose with ToTensor (scales to [0,1]) and Normalize (to [-1,1])
+    """
+    # ToTensor automatically converts uint8 [0-255] to float32 [0.0-1.0]
+    # Then Normalize converts [0.0-1.0] to [-1.0, 1.0] using: (x - 0.5) / 0.5
+    return transforms.Compose([
+        transforms.ToTensor(),
+        transforms.Normalize(mean=[0.5, 0.5, 0.5], std=[0.5, 0.5, 0.5]),
+    ])
+
+
+def create_branched_dataset(images: np.ndarray,
+                           labels1: np.ndarray,
+                           labels2: np.ndarray,
+                           transform: Optional[transforms.Compose] = None) -> CustomImageDataset:
+    """
+    Create a CustomImageDataset for branched ResNet model.
+    
+    Args:
+        images: Preprocessed image data
+        labels1: Primary labels (cancer_binary)
+        labels2: Secondary labels (target_domain indicator)
+        transform: Optional transforms to apply
+        
+    Returns:
+        CustomImageDataset configured for branched mode
+    """
+    dataset = CustomImageDataset(
+        images=images,
+        sub_domain_labels=labels1,
+        cancer_binary_labels=labels2,
+        transform=transform,
+        branched_mode=True
+    )
+    
+    print(f"Created branched dataset:")
+    print(f"  Total samples: {len(dataset)}")
+    print(f"  Sample structure: {list(dataset[0].keys())}")
+    
+    return dataset
+
+
+def split_dataset_stratified(dataset: CustomImageDataset,
+                            domain_text_list: List[str],
+                            sub_domain_text_list: List[str],
+                            train_size: float = 0.7,
+                            val_size: float = 0.15,
+                            test_size: float = 0.15,
+                            stratify_on: str = "labels1",
+                            seed: int = 42) -> Tuple[CustomImageDataset, CustomImageDataset, CustomImageDataset, 
+                                                     List[str], List[str], List[str], 
+                                                     List[str], List[str], List[str]]:
+    """
+    Split dataset into train/val/test with stratification while preserving text metadata.
+    Memory-efficient: Uses array slicing instead of copying.
+    
+    Args:
+        dataset: CustomImageDataset to split
+        domain_text_list: List of domain labels for each sample
+        sub_domain_text_list: List of sub-domain labels for each sample
+        train_size: Fraction for training set
+        val_size: Fraction for validation set
+        test_size: Fraction for test set
+        stratify_on: Attribute to stratify on ("labels1" or "labels2")
+        seed: Random seed for reproducibility
+        
+    Returns:
+        Tuple of (train_ds, val_ds, test_ds, 
+                 train_domains, val_domains, test_domains,
+                 train_subdomains, val_subdomains, test_subdomains)
+    """
+    if not np.isclose(train_size + val_size + test_size, 1.0):
+        raise ValueError("train_size + val_size + test_size must sum to 1.0")
+    
+    print(f"  Performing memory-efficient stratified split...")
+    
+    rng = np.random.default_rng(seed)
+    N = len(dataset)
+    
+    # Get stratification labels - use existing arrays, don't copy
+    if stratify_on == "labels1":
+        strat_labels = dataset.sub_domain_labels
+    elif stratify_on == "labels2":
+        strat_labels = dataset.cancer_binary_labels
+    else:
+        raise ValueError("stratify_on must be 'labels1' or 'labels2'")
+    
+    # Group indices by label
+    label_to_indices = {}
+    for idx, label in enumerate(strat_labels):
+        label_to_indices.setdefault(int(label), []).append(idx)
+    
+    # Split each label group
+    train_idx, val_idx, test_idx = [], [], []
+    
+    for label, indices in label_to_indices.items():
+        indices = np.array(indices)
+        rng.shuffle(indices)
+        
+        n = len(indices)
+        n_train = int(np.floor(train_size * n))
+        n_val = int(np.floor(val_size * n))
+        
+        train_idx.extend(indices[:n_train].tolist())
+        val_idx.extend(indices[n_train:n_train + n_val].tolist())
+        test_idx.extend(indices[n_train + n_val:].tolist())
+    
+    # Shuffle final splits
+    rng.shuffle(train_idx)
+    rng.shuffle(val_idx)
+    rng.shuffle(test_idx)
+    
+    # Convert to arrays for metadata alignment
+    domain_array = np.array(domain_text_list)
+    subdomain_array = np.array(sub_domain_text_list)
+    
+    # Create subset datasets
+    def build_subset(indices):
+        return CustomImageDataset(
+            images=dataset.images[indices],
+            sub_domain_labels=dataset.sub_domain_labels[indices],
+            cancer_binary_labels=dataset.cancer_binary_labels[indices],
+            transform=dataset.transform,
+            branched_mode=dataset.branched_mode
+        )
+    
+    train_ds = build_subset(train_idx)
+    val_ds = build_subset(val_idx)
+    test_ds = build_subset(test_idx)
+    
+    # Extract aligned text metadata
+    train_domains = domain_array[train_idx].tolist()
+    val_domains = domain_array[val_idx].tolist()
+    test_domains = domain_array[test_idx].tolist()
+    
+    train_subdomains = subdomain_array[train_idx].tolist()
+    val_subdomains = subdomain_array[val_idx].tolist()
+    test_subdomains = subdomain_array[test_idx].tolist()
+    
+    print(f"Stratified split (on {stratify_on}):")
+    print(f"  Train: {len(train_ds)} samples")
+    print(f"  Val:   {len(val_ds)} samples")
+    print(f"  Test:  {len(test_ds)} samples")
+    print(f"  Train domain distribution: {Counter(train_domains)}")
+    print(f"  Val domain distribution: {Counter(val_domains)}")
+    print(f"  Test domain distribution: {Counter(test_domains)}")
+    
+    return (train_ds, val_ds, test_ds,
+            train_domains, val_domains, test_domains,
+            train_subdomains, val_subdomains, test_subdomains)
+
+
+def cancer_preprocess(npz_path: str,
+                     target_domain: str,
+                     train_size: float = 0.7,
+                     val_size: float = 0.15,
+                     test_size: float = 0.15,
+                     stratify_on: str = "labels1",
+                     normalize: bool = True,
+                     seed: int = 42) -> Tuple[CustomImageDataset, CustomImageDataset, CustomImageDataset, Dict]:
+    """
+    Complete preprocessing pipeline for adenocarcinoma dataset to be used with branched ResNet.
+    
+    This function performs all necessary preprocessing steps:
+    1. Loads the adenocarcinoma dataset
+    2. Preprocesses images (normalization)
+    3. Converts labels: labels1=cancer_binary, labels2=target_domain_indicator
+    4. Creates CustomImageDataset with transforms
+    5. Splits into train/val/test with stratification
+    6. Returns datasets ready for training
+    
+    Args:
+        npz_path: Path to adenocarcinoma_dataset.npz file
+        target_domain: Target domain for labels2 encoding (e.g., "Breast Cancer")
+        train_size: Fraction for training set (default: 0.7)
+        val_size: Fraction for validation set (default: 0.15)
+        test_size: Fraction for test set (default: 0.15)
+        stratify_on: Stratify splits on "labels1" (cancer_binary) or "labels2" (target_domain)
+        normalize: If True, normalize images to [-1, 1] range
+        seed: Random seed for reproducibility
+        
+    Returns:
+        Tuple of (train_dataset, val_dataset, test_dataset, metadata_dict)
+        
+    Example:
+        >>> train_ds, val_ds, test_ds, metadata = cancer_preprocess(
+        ...     'data/multi_cancer/adenocarcinoma_dataset.npz',
+        ...     target_domain='Breast Cancer',
+        ...     train_size=0.7,
+        ...     val_size=0.15,
+        ...     test_size=0.15
+        ... )
+        >>> print(f"Train: {len(train_ds)}, Val: {len(val_ds)}, Test: {len(test_ds)}")
+    """
+    print("=" * 80)
+    print("CANCER DATASET PREPROCESSING PIPELINE")
+    print("=" * 80)
+    
+    # Step 1: Load adenocarcinoma dataset
+    print("\n[Step 1/5] Loading adenocarcinoma dataset...")
+    images, sub_domain_labels, cancer_binary_labels, domain_text_list, sub_domain_text_list = \
+        load_adenocarcinoma_dataset(npz_path)
+    
+    # Step 2: Preprocess for branched ResNet
+    print(f"\n[Step 2/5] Preprocessing for branched ResNet (target_domain='{target_domain}')...")
+    images_processed, labels1, labels2 = preprocess_for_branched_resnet(
+        images=images,
+        cancer_binary_labels=cancer_binary_labels,
+        domain_text_list=domain_text_list,
+        target_domain=target_domain,
+        normalize=normalize
+    )
+    
+    # Step 3: Get transforms
+    print("\n[Step 3/5] Creating image transforms...")
+    transform = get_branched_resnet_transforms()
+    print(f"  Transforms: {transform}")
+    
+    # Step 4: Create full dataset
+    print("\n[Step 4/5] Creating CustomImageDataset...")
+    full_dataset = create_branched_dataset(
+        images=images_processed,
+        labels1=labels1,
+        labels2=labels2,
+        transform=transform
+    )
+    
+    # Step 5: Split dataset
+    print(f"\n[Step 5/5] Splitting dataset (train={train_size}, val={val_size}, test={test_size})...")
+    train_ds, val_ds, test_ds, train_domains, val_domains, test_domains, \
+        train_subdomains, val_subdomains, test_subdomains = split_dataset_stratified(
+        dataset=full_dataset,
+        domain_text_list=domain_text_list,
+        sub_domain_text_list=sub_domain_text_list,
+        train_size=train_size,
+        val_size=val_size,
+        test_size=test_size,
+        stratify_on=stratify_on,
+        seed=seed
+    )
+    
+    # Create metadata
+    metadata = {
+        'target_domain': target_domain,
+        'train_size': len(train_ds),
+        'val_size': len(val_ds),
+        'test_size': len(test_ds),
+        'train_domains': train_domains,
+        'val_domains': val_domains,
+        'test_domains': test_domains,
+        'train_subdomains': train_subdomains,
+        'val_subdomains': val_subdomains,
+        'test_subdomains': test_subdomains,
+        'num_classes_labels1': int(np.max(labels1)) + 1,
+        'num_classes_labels2': int(np.max(labels2)) + 1,
+        'labels1_distribution_train': dict(Counter(train_ds.sub_domain_labels)),
+        'labels2_distribution_train': dict(Counter(train_ds.cancer_binary_labels)),
+        'stratified_on': stratify_on,
+        'seed': seed
+    }
+    
+    print("\n" + "=" * 80)
+    print("PREPROCESSING COMPLETE")
+    print("=" * 80)
+    print(f"\nDatasets ready for branched ResNet training:")
+    print(f"  Train: {len(train_ds)} samples")
+    print(f"  Val:   {len(val_ds)} samples")
+    print(f"  Test:  {len(test_ds)} samples")
+    print(f"\nLabels configuration:")
+    print(f"  labels1: cancer_binary (0=benign, 1=malignant)")
+    print(f"  labels2: target_domain indicator (1={target_domain}, 0=other)")
+    print(f"  num_d1_classes: {metadata['num_classes_labels1']}")
+    print(f"  num_d2_classes: {metadata['num_classes_labels2']}")
+    
+    return train_ds, val_ds, test_ds, metadata
