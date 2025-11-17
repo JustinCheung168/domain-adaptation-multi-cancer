@@ -16,6 +16,14 @@ def make_metrics_fn(model: torch.nn.Module):
             # Label prediction is multiclass prediction from logits
             preds1 = np.argmax(logits1, axis=-1)
 
+            cm_branch1 = confusion_matrix(y_true=labels1, y_pred=preds1)
+            # Flatten and label each cell for logging
+            cm_metrics_branch1 = {
+                f"cm_branch1_actual{i}_pred{j}": int(cm_branch1[i, j])
+                for i in range(cm_branch1.shape[0])
+                for j in range(cm_branch1.shape[1])
+            }
+
             # Domain classification is binary prediction from logits
             preds2 = (logits2 > 0).astype(int).flatten()
 
@@ -40,15 +48,26 @@ def make_metrics_fn(model: torch.nn.Module):
                 "loss_branch1": float(loss1.mean()),
                 "loss_branch2": float(loss2.mean()),
             }
+            metrics.update(cm_metrics_branch1) # The branch1 confusion matrix metrics can vary in size with the number of classes.
         else:
             # Single branch case
             preds = np.argmax(outputs, axis=-1)
+
+            cm_branch1 = confusion_matrix(y_true=labels, y_pred=preds)
+            # Flatten and label each cell for logging
+            cm_metrics_branch1 = {
+                f"cm_branch1_actual{i}_pred{j}": int(cm_branch1[i, j])
+                for i in range(cm_branch1.shape[0])
+                for j in range(cm_branch1.shape[1])
+            }
+
             metrics = {
                 "accuracy_branch1": accuracy_score(labels, preds),
                 "precision_branch1": precision_score(labels, preds, average="macro", zero_division=0),
                 "recall_branch1": recall_score(labels, preds, average="macro", zero_division=0),
                 "f1_branch1": f1_score(labels, preds, average="macro", zero_division=0)
             }
+            metrics.update(cm_metrics_branch1)
             
         return metrics
     return compute_metrics
