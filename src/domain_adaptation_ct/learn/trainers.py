@@ -1,4 +1,5 @@
 from transformers import Trainer, TrainerCallback
+import torch
 
 from domain_adaptation_ct.logging.log_mixin import LogMixin
 
