@@ -144,6 +144,8 @@ class ResNet50DANN(ResNet50Baseline):
             )
 
             loss, loss1, loss2 = self.loss_fn(logits1_masked, logits2, labels1, labels2.view(-1, 1), self.ld_scale)
+        else:
+            logits1_masked = logits1 # No need to explicitly freeze gradients for inference
 
         return BranchedOutput(
             loss = loss,

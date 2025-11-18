@@ -20,33 +20,37 @@ class IntegratedGradientsAttributor():
         self.device = device
 
 
-    def calculate_attribution(self, img: torch.Tensor, label: int, n_steps: int):
+    def calculate_attribution(self, img: torch.Tensor, label: int, n_steps: int, baseline: torch.Tensor):
         """
         img is a tensor in CHW format.
+        baseline is the baseline image. The average value of the training dataset seems to work well.
         n_steps is number of samples along linear interpolation from baseline image to the instance's image to perform approximated integration over.
             A reasonable choice could be 100 or 200 depending on your GPU's memory.
         """
         # Using this as shorthand for expecting CHW format
         assert img.shape[0] == 3 
         assert len(img.shape) == 3
+        assert img.shape == baseline.shape
+
+        print(f"Got baseline image whose means on each channel are: {baseline.mean(dim=[1, 2])}")
 
         t = time.time()
 
         image_on_device = img.unsqueeze(0).to(self.device)
-
-        # For sanity, run inference on this image as well.
-        logits = self.model_forward_func(image_on_device).detach().cpu()[0]
-        pred = torch.argmax(logits).item()
-        print(f"Model predicted logits: {logits} (prediction would be {pred})")
+        baseline_on_device = baseline.unsqueeze(0).to(self.device)
 
         # Handle sending to device and back internally.
         attribution = self.integrated_gradients.attribute(
             image_on_device,
+            baselines=baseline_on_device,
             target=label,
-            n_steps=n_steps
+            n_steps=n_steps,
+            internal_batch_size=8, # Limit batch size for memory concerns.
         ).detach().cpu()[0] # Drop batch dimension
         
         del image_on_device
+        del baseline_on_device
+        torch.cuda.empty_cache()
 
         exec_time = time.time() - t
         print(f"Attributions calculated - {n_steps} steps, {exec_time}s total ({exec_time / n_steps}s per step)")
