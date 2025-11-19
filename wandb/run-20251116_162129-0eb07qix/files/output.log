@@ -1,0 +1,44 @@
+  0%|                                                                                                                                                             | 0/2190 [00:00<?, ?it/s][WARNING|modeling_utils.py:1759] 2025-11-16 16:21:32,811 >> Could not estimate the number of tokens of the input, floating-point operations will not be computed
+WARNING:transformers.modeling_utils:Could not estimate the number of tokens of the input, floating-point operations will not be computed
+ 10%|██████████████▋                                                                                                                                    | 219/2190 [00:27<04:09,  7.89it/s][INFO|trainer.py:4643] 2025-11-16 16:21:59,939 >>
+{'loss': 0.0066, 'grad_norm': 0.005846241023391485, 'learning_rate': 0.09004566210045663, 'epoch': 1.0}
+***** Running Evaluation *****
+INFO:transformers.trainer:
+***** Running Evaluation *****
+[INFO|trainer.py:4645] 2025-11-16 16:21:59,939 >>   Num examples = 1529
+INFO:transformers.trainer:  Num examples = 1529
+[INFO|trainer.py:4648] 2025-11-16 16:21:59,941 >>   Batch size = 32
+INFO:transformers.trainer:  Batch size = 32
+                                                                                                                                                                                           C:\Users\samue\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:386: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▉   | 47/48 [00:02<00:00, 19.66it/s]
+Traceback (most recent call last):
+  File "C:\Users\samue\Capstone_Project\domain-adaptation-multi-cancer\domain-adaptation-multi-cancer-main\scripts\run_training.py", line 15, in <module>
+    main()
+  File "C:\Users\samue\Capstone_Project\domain-adaptation-multi-cancer\domain-adaptation-multi-cancer-main\scripts\run_training.py", line 12, in main
+    run_training_from_config_file(args.config_file)
+  File "C:\Users\samue\Capstone_Project\domain-adaptation-multi-cancer\domain-adaptation-multi-cancer-main\src\domain_adaptation_ct\learn\training_funcs.py", line 155, in run_training_from_config_file
+    run_output_dir = train_model(
+                     ^^^^^^^^^^^^
+  File "C:\Users\samue\Capstone_Project\domain-adaptation-multi-cancer\domain-adaptation-multi-cancer-main\src\domain_adaptation_ct\learn\training_funcs.py", line 93, in train_model
+    trainer.train(resume_from_checkpoint=resume_from_checkpoint)
+  File "C:\Users\samue\AppData\Roaming\Python\Python311\site-packages\transformers\trainer.py", line 2325, in train
+    return inner_training_loop(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samue\AppData\Roaming\Python\Python311\site-packages\transformers\trainer.py", line 2790, in _inner_training_loop
+    self._maybe_log_save_evaluate(
+  File "C:\Users\samue\AppData\Roaming\Python\Python311\site-packages\transformers\trainer.py", line 3221, in _maybe_log_save_evaluate
+    metrics = self._evaluate(trial, ignore_keys_for_eval)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samue\AppData\Roaming\Python\Python311\site-packages\transformers\trainer.py", line 3170, in _evaluate
+    metrics = self.evaluate(ignore_keys=ignore_keys_for_eval)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samue\AppData\Roaming\Python\Python311\site-packages\transformers\trainer.py", line 4489, in evaluate
+    output = eval_loop(
+             ^^^^^^^^^^
+  File "C:\Users\samue\AppData\Roaming\Python\Python311\site-packages\transformers\trainer.py", line 4780, in evaluation_loop
+    metrics = self.compute_metrics(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samue\Capstone_Project\domain-adaptation-multi-cancer\domain-adaptation-multi-cancer-main\src\domain_adaptation_ct\learn\metrics.py", line 22, in compute_metrics
+    tn, fp, fn, tp = confusion_matrix(y_true=labels2, y_pred=preds2).ravel().tolist()
+    ^^^^^^^^^^^^^^
+ValueError: not enough values to unpack (expected 4, got 1)

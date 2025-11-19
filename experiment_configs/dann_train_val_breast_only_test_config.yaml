@@ -1,0 +1,34 @@
+---
+# Test masking by training ONLY on target domain (Breast Cancer)
+# If masking works correctly, the model should NOT learn (loss stays high, accuracy ~50%)
+# If masking is broken, the model WILL learn from target domain
+output_dir: results/dann_train_val_breast_only_test_results/
+architecture:
+    cls_name: ResNet50DANN
+    cls_init_args:
+        num_classes: 2
+        lamb_initial: 0.0
+        ld_scale: 1.0
+training:
+    trainer:
+        cls_name: DANNTrainer
+    dataset:
+        cls_name: TwoLabelDataset
+        convert_grayscale_to_rgb: False
+        fold_file_paths:
+            - data/preprocessed/breast_only_train.npz  # All Breast samples, all labeled Benign
+            - data/preprocessed/breast_only_val.npz  # Original labels
+        folds:
+            -
+                train:
+                    - 0  # Only Breast samples (target domain, labels2=1)
+                val:
+                    - 1
+    training_arguments:
+        num_train_epochs: 10
+        batch_size: 32
+        learning_rate: 0.1
+        weight_decay: 0.0001
+        optim: sgd
+        resume_from_checkpoint: False
+    lambda_scheduler: parabolic_increasing_lambda_scheduler

@@ -1,5 +1,7 @@
 ---
-logging_dir: /repo/results/logs/
+# Specify the checkpoint directory from training (use final_model for best checkpoint)
+checkpoint_dir: results\dann_train_val_breast_cancer_results\parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_18-06-56\final_model\model.safetensors
+output_dir: results/dann_test_breast_cancer_results/
 architecture:
     cls_name: ResNet50DANN
     cls_init_args:
@@ -14,16 +16,6 @@ evaluation:
         cls_name: TwoLabelDataset
         convert_grayscale_to_rgb: False
         fold_file_paths:
-            - C:/Users/samue/Capstone_Project/domain-adaptation-multi-cancer/domain-adaptation-multi-cancer-main/data/preprocessed/breast_cancer_test.npz
-    output_dir: /data/dann_test_breast_cancer_results/
-    batch_size: 32
-
+            - data/preprocessed/breast_cancer_test.npz
     evaluation_arguments:
-        output_dir: /data/dann_train_breast_cancer_results/
-        num_train_epochs: 50
         batch_size: 32
-        learning_rate: 0.1
-        weight_decay: 0.0001
-        optim: sgd
-        resume_from_checkpoint: False
-    lambda_scheduler: parabolic_increasing_lambda_scheduler

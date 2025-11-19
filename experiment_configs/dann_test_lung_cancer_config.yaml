@@ -1,5 +1,8 @@
 ---
-logging_dir: results/logs/
+# Specify the checkpoint directory from training
+# Update this path to point to your latest trained model checkpoint
+checkpoint_dir: results\dann_train_val_lung_cancer_results\parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_05-21-44\final_model\model.safetensors
+output_dir: results/dann_test_lung_cancer_results/
 architecture:
     cls_name: ResNet50DANN
     cls_init_args:
@@ -15,15 +18,5 @@ evaluation:
         convert_grayscale_to_rgb: False
         fold_file_paths:
             - data/preprocessed/lung_cancer_test.npz
-    output_dir: results/dann_test_lung_cancer_results/
-    batch_size: 32
-
     evaluation_arguments:
-        output_dir: results/dann_train_lung_cancer_results/
-        num_train_epochs: 3
         batch_size: 32
-        learning_rate: 0.1
-        weight_decay: 0.0001
-        optim: sgd
-        resume_from_checkpoint: False
-    lambda_scheduler: parabolic_increasing_lambda_scheduler

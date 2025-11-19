@@ -1,0 +1,821 @@
+  0%|                                                                                                                                                            | 0/43750 [00:00<?, ?it/s][WARNING|modeling_utils.py:1759] 2025-11-16 06:30:00,987 >> Could not estimate the number of tokens of the input, floating-point operations will not be computed
+WARNING:transformers.modeling_utils:Could not estimate the number of tokens of the input, floating-point operations will not be computed
+  2%|██▉                                                                                                                                             | 875/43750 [01:51<1:24:43,  8.43it/s][INFO|trainer.py:4643] 2025-11-16 06:31:52,034 >>
+{'loss': 0.9342, 'grad_norm': 17.66645622253418, 'learning_rate': 0.09800228571428572, 'epoch': 1.0}
+***** Running Evaluation *****
+INFO:transformers.trainer:
+***** Running Evaluation *****
+[INFO|trainer.py:4645] 2025-11-16 06:31:52,036 >>   Num examples = 6000
+INFO:transformers.trainer:  Num examples = 6000
+[INFO|trainer.py:4648] 2025-11-16 06:31:52,037 >>   Batch size = 32
+INFO:transformers.trainer:  Batch size = 32
+  2%|██▉                                                                                                                                             | 875/43750 [02:02<1:24:43,  8.43it/s][INFO|trainer.py:4309] 2025-11-16 06:32:02,268 >> Saving model checkpoint to results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-875
+INFO:transformers.trainer:Saving model checkpoint to results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-875  
+{'eval_loss': 0.9465730786323547, 'eval_accuracy_branch1': 0.6665, 'eval_precision_branch1': 0.7684906952789177, 'eval_recall_branch1': 0.6665, 'eval_f1_branch1': 0.6315052739464868, 'eval_accuracy_branch2': 0.7558333333333334, 'eval_precision_branch2': 0.8275544388609715, 'eval_recall_branch2': 0.508733967070123, 'eval_f1_branch2': 0.44788648244583645, 'eval_lambda': 0.0, 'eval_tn_branch2': 4508, 'eval_fp_branch2': 3, 'eval_fn_branch2': 1462, 'eval_tp_branch2': 27, 'eval_loss_branch1': 0.4804607033729553, 'eval_loss_branch2': 0.46683523058891296, 'eval_runtime': 10.2153, 'eval_samples_per_second': 587.353, 'eval_steps_per_second': 18.404, 'epoch': 1.0}
+[INFO|configuration_utils.py:491] 2025-11-16 06:32:02,278 >> Configuration saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-875\config.json
+INFO:transformers.configuration_utils:Configuration saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-875\config.json
+[INFO|modeling_utils.py:4181] 2025-11-16 06:32:02,419 >> Model weights saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-875\model.safetensors
+INFO:transformers.modeling_utils:Model weights saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-875\model.safetensors
+  4%|█████▋                                                                                                                                         | 1750/43750 [03:53<1:24:20,  8.30it/s][INFO|trainer.py:4643] 2025-11-16 06:33:53,547 >>
+{'loss': 0.6866, 'grad_norm': 9.423648834228516, 'learning_rate': 0.09600228571428572, 'epoch': 2.0}
+***** Running Evaluation *****
+INFO:transformers.trainer:
+***** Running Evaluation *****
+[INFO|trainer.py:4645] 2025-11-16 06:33:53,549 >>   Num examples = 6000
+INFO:transformers.trainer:  Num examples = 6000
+[INFO|trainer.py:4648] 2025-11-16 06:33:53,550 >>   Batch size = 32
+INFO:transformers.trainer:  Batch size = 32
+  4%|█████▋                                                                                                                                         | 1750/43750 [04:03<1:24:20,  8.30it/s][INFO|trainer.py:4309] 2025-11-16 06:34:03,824 >> Saving model checkpoint to results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-1750
+INFO:transformers.trainer:Saving model checkpoint to results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-1750 
+{'eval_loss': 0.6604627370834351, 'eval_accuracy_branch1': 0.8318333333333333, 'eval_precision_branch1': 0.837808833794321, 'eval_recall_branch1': 0.8318333333333333, 'eval_f1_branch1': 0.8310863549665843, 'eval_accuracy_branch2': 0.8363333333333334, 'eval_precision_branch2': 0.9087736048506905, 'eval_recall_branch2': 0.6706984002540466, 'eval_f1_branch2': 0.7054, 'eval_lambda': 0.0004, 'eval_tn_branch2': 4509, 'eval_fp_branch2': 2, 'eval_fn_branch2': 980, 'eval_tp_branch2': 509, 'eval_loss_branch1': 0.3231796622276306, 'eval_loss_branch2': 0.3372180163860321, 'eval_runtime': 10.2578, 'eval_samples_per_second': 584.92, 'eval_steps_per_second': 18.327, 'epoch': 2.0}
+[INFO|configuration_utils.py:491] 2025-11-16 06:34:03,834 >> Configuration saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-1750\config.json
+INFO:transformers.configuration_utils:Configuration saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-1750\config.json
+[INFO|modeling_utils.py:4181] 2025-11-16 06:34:03,973 >> Model weights saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-1750\model.safetensors
+INFO:transformers.modeling_utils:Model weights saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-1750\model.safetensors
+  6%|████████▌                                                                                                                                      | 2625/43750 [05:54<1:21:49,  8.38it/s][INFO|trainer.py:4643] 2025-11-16 06:35:54,866 >>
+{'loss': 0.5508, 'grad_norm': 7.667868614196777, 'learning_rate': 0.09400228571428572, 'epoch': 3.0}
+***** Running Evaluation *****
+INFO:transformers.trainer:
+***** Running Evaluation *****
+[INFO|trainer.py:4645] 2025-11-16 06:35:54,868 >>   Num examples = 6000
+INFO:transformers.trainer:  Num examples = 6000
+[INFO|trainer.py:4648] 2025-11-16 06:35:54,869 >>   Batch size = 32
+INFO:transformers.trainer:  Batch size = 32
+  6%|████████▌                                                                                                                                      | 2625/43750 [06:04<1:21:49,  8.38it/s][INFO|trainer.py:4309] 2025-11-16 06:36:05,131 >> Saving model checkpoint to results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-2625
+INFO:transformers.trainer:Saving model checkpoint to results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-2625 
+{'eval_loss': 0.7334570288658142, 'eval_accuracy_branch1': 0.7668333333333334, 'eval_precision_branch1': 0.8138362790033924, 'eval_recall_branch1': 0.7668333333333334, 'eval_f1_branch1': 0.7577634519418013, 'eval_accuracy_branch2': 0.831, 'eval_precision_branch2': 0.9043239585831259, 'eval_recall_branch2': 0.6604028448331435, 'eval_f1_branch2': 0.6923421721411286, 'eval_lambda': 0.0016, 'eval_tn_branch2': 4507, 'eval_fp_branch2': 4, 'eval_fn_branch2': 1010, 'eval_tp_branch2': 479, 'eval_loss_branch1': 0.4691823720932007, 'eval_loss_branch2': 0.2638988494873047, 'eval_runtime': 10.2365, 'eval_samples_per_second': 586.136, 'eval_steps_per_second': 18.366, 'epoch': 3.0}
+[INFO|configuration_utils.py:491] 2025-11-16 06:36:05,142 >> Configuration saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-2625\config.json
+INFO:transformers.configuration_utils:Configuration saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-2625\config.json
+[INFO|modeling_utils.py:4181] 2025-11-16 06:36:05,283 >> Model weights saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-2625\model.safetensors
+INFO:transformers.modeling_utils:Model weights saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-2625\model.safetensors
+  8%|███████████▍                                                                                                                                   | 3500/43750 [07:56<1:21:04,  8.27it/s][INFO|trainer.py:4643] 2025-11-16 06:37:56,253 >>
+{'loss': 0.5415, 'grad_norm': 6.252388000488281, 'learning_rate': 0.09200228571428572, 'epoch': 4.0}
+***** Running Evaluation *****
+INFO:transformers.trainer:
+***** Running Evaluation *****
+[INFO|trainer.py:4645] 2025-11-16 06:37:56,254 >>   Num examples = 6000
+INFO:transformers.trainer:  Num examples = 6000
+[INFO|trainer.py:4648] 2025-11-16 06:37:56,256 >>   Batch size = 32
+INFO:transformers.trainer:  Batch size = 32
+  8%|███████████▍                                                                                                                                   | 3500/43750 [08:06<1:21:04,  8.27it/s][INFO|trainer.py:4309] 2025-11-16 06:38:06,518 >> Saving model checkpoint to results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-3500
+INFO:transformers.trainer:Saving model checkpoint to results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-3500 
+{'eval_loss': 0.49564582109451294, 'eval_accuracy_branch1': 0.91, 'eval_precision_branch1': 0.913867360558104, 'eval_recall_branch1': 0.91, 'eval_f1_branch1': 0.9097892576825306, 'eval_accuracy_branch2': 0.8228333333333333, 'eval_precision_branch2': 0.9002605516375757, 'eval_recall_branch2': 0.6439488488626935, 'eval_f1_branch2': 0.6708650721735925, 'eval_lambda': 0.0036, 'eval_tn_branch2': 4507, 'eval_fp_branch2': 4, 'eval_fn_branch2': 1059, 'eval_tp_branch2': 430, 'eval_loss_branch1': 0.16699662804603577, 'eval_loss_branch2': 0.32819220423698425, 'eval_runtime': 10.2392, 'eval_samples_per_second': 585.983, 'eval_steps_per_second': 18.361, 'epoch': 4.0}
+[INFO|configuration_utils.py:491] 2025-11-16 06:38:06,525 >> Configuration saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-3500\config.json
+INFO:transformers.configuration_utils:Configuration saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-3500\config.json
+[INFO|modeling_utils.py:4181] 2025-11-16 06:38:06,663 >> Model weights saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-3500\model.safetensors
+INFO:transformers.modeling_utils:Model weights saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-3500\model.safetensors
+ 10%|██████████████▎                                                                                                                                | 4375/43750 [09:57<1:18:52,  8.32it/s][INFO|trainer.py:4643] 2025-11-16 06:39:58,019 >>
+{'loss': 0.6544, 'grad_norm': 5.381295680999756, 'learning_rate': 0.09000228571428572, 'epoch': 5.0}
+***** Running Evaluation *****
+INFO:transformers.trainer:
+***** Running Evaluation *****
+[INFO|trainer.py:4645] 2025-11-16 06:39:58,020 >>   Num examples = 6000
+INFO:transformers.trainer:  Num examples = 6000
+[INFO|trainer.py:4648] 2025-11-16 06:39:58,021 >>   Batch size = 32
+INFO:transformers.trainer:  Batch size = 32
+ 10%|██████████████▎                                                                                                                                | 4375/43750 [10:08<1:18:52,  8.32it/s][INFO|trainer.py:4309] 2025-11-16 06:40:08,253 >> Saving model checkpoint to results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-4375
+INFO:transformers.trainer:Saving model checkpoint to results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-4375 
+{'eval_loss': 0.6672382950782776, 'eval_accuracy_branch1': 0.9133333333333333, 'eval_precision_branch1': 0.9186475523298187, 'eval_recall_branch1': 0.9133333333333333, 'eval_f1_branch1': 0.9130574259045845, 'eval_accuracy_branch2': 0.7651666666666667, 'eval_precision_branch2': 0.8314406779661017, 'eval_recall_branch2': 0.5291132235670764, 'eval_f1_branch2': 0.4889705840128068, 'eval_lambda': 0.0064, 'eval_tn_branch2': 4501, 'eval_fp_branch2': 10, 'eval_fn_branch2': 1399, 'eval_tp_branch2': 90, 'eval_loss_branch1': 0.18298043310642242, 'eval_loss_branch2': 0.4839540123939514, 'eval_runtime': 10.2165, 'eval_samples_per_second': 587.288, 'eval_steps_per_second': 18.402, 'epoch': 5.0}
+[INFO|configuration_utils.py:491] 2025-11-16 06:40:08,264 >> Configuration saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-4375\config.json
+INFO:transformers.configuration_utils:Configuration saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-4375\config.json
+[INFO|modeling_utils.py:4181] 2025-11-16 06:40:08,419 >> Model weights saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-4375\model.safetensors
+INFO:transformers.modeling_utils:Model weights saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-4375\model.safetensors
+ 12%|█████████████████▏                                                                                                                             | 5250/43750 [11:59<1:17:26,  8.29it/s][INFO|trainer.py:4643] 2025-11-16 06:41:59,382 >>
+{'loss': 0.6627, 'grad_norm': 5.743505477905273, 'learning_rate': 0.08800228571428571, 'epoch': 6.0}
+***** Running Evaluation *****
+INFO:transformers.trainer:
+***** Running Evaluation *****
+[INFO|trainer.py:4645] 2025-11-16 06:41:59,384 >>   Num examples = 6000
+INFO:transformers.trainer:  Num examples = 6000
+[INFO|trainer.py:4648] 2025-11-16 06:41:59,386 >>   Batch size = 32
+INFO:transformers.trainer:  Batch size = 32
+ 12%|█████████████████▏                                                                                                                             | 5250/43750 [12:09<1:17:26,  8.29it/s][INFO|trainer.py:4309] 2025-11-16 06:42:09,599 >> Saving model checkpoint to results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-5250
+INFO:transformers.trainer:Saving model checkpoint to results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-5250 
+{'eval_loss': 0.5967778563499451, 'eval_accuracy_branch1': 0.9461666666666667, 'eval_precision_branch1': 0.9477251980811873, 'eval_recall_branch1': 0.9461666666666666, 'eval_f1_branch1': 0.9461197774029515, 'eval_accuracy_branch2': 0.7551666666666667, 'eval_precision_branch2': 0.7745311668079904, 'eval_recall_branch2': 0.5082906063962147, 'eval_f1_branch2': 0.447622221730607, 'eval_lambda': 0.010000000000000002, 'eval_tn_branch2': 4504, 'eval_fp_branch2': 7, 'eval_fn_branch2': 1462, 'eval_tp_branch2': 27, 'eval_loss_branch1': 0.10065313428640366, 'eval_loss_branch2': 0.4960828721523285, 'eval_runtime': 10.1948, 'eval_samples_per_second': 588.537, 'eval_steps_per_second': 18.441, 'epoch': 6.0}
+[INFO|configuration_utils.py:491] 2025-11-16 06:42:09,610 >> Configuration saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-5250\config.json
+INFO:transformers.configuration_utils:Configuration saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-5250\config.json
+[INFO|modeling_utils.py:4181] 2025-11-16 06:42:09,777 >> Model weights saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-5250\model.safetensors
+INFO:transformers.modeling_utils:Model weights saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-5250\model.safetensors
+ 14%|████████████████████                                                                                                                           | 6125/43750 [14:00<1:15:32,  8.30it/s][INFO|trainer.py:4643] 2025-11-16 06:44:00,919 >>
+{'loss': 0.6462, 'grad_norm': 10.20805835723877, 'learning_rate': 0.08600228571428571, 'epoch': 7.0}
+***** Running Evaluation *****
+INFO:transformers.trainer:
+***** Running Evaluation *****
+[INFO|trainer.py:4645] 2025-11-16 06:44:00,921 >>   Num examples = 6000
+INFO:transformers.trainer:  Num examples = 6000
+[INFO|trainer.py:4648] 2025-11-16 06:44:00,922 >>   Batch size = 32
+INFO:transformers.trainer:  Batch size = 32
+ 14%|████████████████████                                                                                                                           | 6125/43750 [14:10<1:15:32,  8.30it/s][INFO|trainer.py:4309] 2025-11-16 06:44:11,111 >> Saving model checkpoint to results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-6125
+INFO:transformers.trainer:Saving model checkpoint to results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-6125 
+{'eval_loss': 0.692558765411377, 'eval_accuracy_branch1': 0.9305, 'eval_precision_branch1': 0.9352991733865871, 'eval_recall_branch1': 0.9305, 'eval_f1_branch1': 0.9303079111801904, 'eval_accuracy_branch2': 0.7518333333333334, 'eval_precision_branch2': 0.3759166666666667, 'eval_recall_branch2': 0.5, 'eval_f1_branch2': 0.42916944153743697, 'eval_lambda': 0.0144, 'eval_tn_branch2': 4511, 'eval_fp_branch2': 0, 'eval_fn_branch2': 1489, 'eval_tp_branch2': 0, 'eval_loss_branch1': 0.1522245854139328, 'eval_loss_branch2': 0.5399613976478577, 'eval_runtime': 10.1755, 'eval_samples_per_second': 589.649, 'eval_steps_per_second': 18.476, 'epoch': 7.0}
+[INFO|configuration_utils.py:491] 2025-11-16 06:44:11,119 >> Configuration saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-6125\config.json
+INFO:transformers.configuration_utils:Configuration saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-6125\config.json
+[INFO|modeling_utils.py:4181] 2025-11-16 06:44:11,290 >> Model weights saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-6125\model.safetensors
+INFO:transformers.modeling_utils:Model weights saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-6125\model.safetensors
+ 16%|██████████████████████▉                                                                                                                        | 7000/43750 [16:02<1:13:17,  8.36it/s][INFO|trainer.py:4643] 2025-11-16 06:46:02,335 >>
+{'loss': 0.6552, 'grad_norm': 2.4804646968841553, 'learning_rate': 0.08400228571428572, 'epoch': 8.0}
+***** Running Evaluation *****
+INFO:transformers.trainer:
+***** Running Evaluation *****
+[INFO|trainer.py:4645] 2025-11-16 06:46:02,336 >>   Num examples = 6000
+INFO:transformers.trainer:  Num examples = 6000
+[INFO|trainer.py:4648] 2025-11-16 06:46:02,338 >>   Batch size = 32
+INFO:transformers.trainer:  Batch size = 32
+ 16%|██████████████████████▉                                                                                                                        | 7000/43750 [16:12<1:13:17,  8.36it/s][INFO|trainer.py:4309] 2025-11-16 06:46:12,575 >> Saving model checkpoint to results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-7000
+INFO:transformers.trainer:Saving model checkpoint to results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-7000 
+{'eval_loss': 0.7434769868850708, 'eval_accuracy_branch1': 0.9388333333333333, 'eval_precision_branch1': 0.943236195456669, 'eval_recall_branch1': 0.9388333333333334, 'eval_f1_branch1': 0.9386810562530578, 'eval_accuracy_branch2': 0.7075, 'eval_precision_branch2': 0.37016044645971397, 'eval_recall_branch2': 0.47051651518510307, 'eval_f1_branch2': 0.4143484626647145, 'eval_lambda': 0.019600000000000003, 'eval_tn_branch2': 4245, 'eval_fp_branch2': 266, 'eval_fn_branch2': 1489, 'eval_tp_branch2': 0, 'eval_loss_branch1': 0.14790648221969604, 'eval_loss_branch2': 0.5952298641204834, 'eval_runtime': 10.2239, 'eval_samples_per_second': 586.863, 'eval_steps_per_second': 18.388, 'epoch': 8.0}
+[INFO|configuration_utils.py:491] 2025-11-16 06:46:12,582 >> Configuration saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-7000\config.json
+INFO:transformers.configuration_utils:Configuration saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-7000\config.json
+[INFO|modeling_utils.py:4181] 2025-11-16 06:46:12,727 >> Model weights saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-7000\model.safetensors
+INFO:transformers.modeling_utils:Model weights saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-7000\model.safetensors
+ 18%|█████████████████████████▋                                                                                                                     | 7875/43750 [18:03<1:12:08,  8.29it/s][INFO|trainer.py:4643] 2025-11-16 06:48:03,641 >>
+{'loss': 0.6585, 'grad_norm': 3.9834914207458496, 'learning_rate': 0.08200228571428572, 'epoch': 9.0}
+***** Running Evaluation *****
+INFO:transformers.trainer:
+***** Running Evaluation *****
+[INFO|trainer.py:4645] 2025-11-16 06:48:03,642 >>   Num examples = 6000
+INFO:transformers.trainer:  Num examples = 6000
+[INFO|trainer.py:4648] 2025-11-16 06:48:03,644 >>   Batch size = 32
+INFO:transformers.trainer:  Batch size = 32
+ 18%|█████████████████████████▋                                                                                                                     | 7875/43750 [18:13<1:12:08,  8.29it/s][INFO|trainer.py:4309] 2025-11-16 06:48:13,912 >> Saving model checkpoint to results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-7875
+INFO:transformers.trainer:Saving model checkpoint to results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-7875 
+{'eval_loss': 0.6851313710212708, 'eval_accuracy_branch1': 0.955, 'eval_precision_branch1': 0.9564313687724705, 'eval_recall_branch1': 0.9550000000000001, 'eval_f1_branch1': 0.954964692318778, 'eval_accuracy_branch2': 0.7518333333333334, 'eval_precision_branch2': 0.3759166666666667, 'eval_recall_branch2': 0.5, 'eval_f1_branch2': 0.42916944153743697, 'eval_lambda': 0.0256, 'eval_tn_branch2': 4511, 'eval_fp_branch2': 0, 'eval_fn_branch2': 1489, 'eval_tp_branch2': 0, 'eval_loss_branch1': 0.11891971528530121, 'eval_loss_branch2': 0.5656691193580627, 'eval_runtime': 10.2488, 'eval_samples_per_second': 585.434, 'eval_steps_per_second': 18.344, 'epoch': 9.0}
+[INFO|configuration_utils.py:491] 2025-11-16 06:48:13,918 >> Configuration saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-7875\config.json
+INFO:transformers.configuration_utils:Configuration saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-7875\config.json
+[INFO|modeling_utils.py:4181] 2025-11-16 06:48:14,087 >> Model weights saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-7875\model.safetensors
+INFO:transformers.modeling_utils:Model weights saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-7875\model.safetensors
+ 20%|████████████████████████████▌                                                                                                                  | 8750/43750 [20:05<1:11:03,  8.21it/s][INFO|trainer.py:4643] 2025-11-16 06:50:05,482 >>
+{'loss': 0.6548, 'grad_norm': 1.9290987253189087, 'learning_rate': 0.08000228571428572, 'epoch': 10.0}
+***** Running Evaluation *****
+INFO:transformers.trainer:
+***** Running Evaluation *****
+[INFO|trainer.py:4645] 2025-11-16 06:50:05,484 >>   Num examples = 6000
+INFO:transformers.trainer:  Num examples = 6000
+[INFO|trainer.py:4648] 2025-11-16 06:50:05,487 >>   Batch size = 32
+INFO:transformers.trainer:  Batch size = 32
+ 20%|████████████████████████████▌                                                                                                                  | 8750/43750 [20:15<1:11:03,  8.21it/s][INFO|trainer.py:4309] 2025-11-16 06:50:15,711 >> Saving model checkpoint to results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-8750
+INFO:transformers.trainer:Saving model checkpoint to results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-8750 
+{'eval_loss': 0.7292865514755249, 'eval_accuracy_branch1': 0.9548333333333333, 'eval_precision_branch1': 0.9548479390060414, 'eval_recall_branch1': 0.9548333333333333, 'eval_f1_branch1': 0.9548329707424595, 'eval_accuracy_branch2': 0.7518333333333334, 'eval_precision_branch2': 0.3759166666666667, 'eval_recall_branch2': 0.5, 'eval_f1_branch2': 0.42916944153743697, 'eval_lambda': 0.0324, 'eval_tn_branch2': 4511, 'eval_fp_branch2': 0, 'eval_fn_branch2': 1489, 'eval_tp_branch2': 0, 'eval_loss_branch1': 0.08937656134366989, 'eval_loss_branch2': 0.6394155621528625, 'eval_runtime': 10.2097, 'eval_samples_per_second': 587.677, 'eval_steps_per_second': 18.414, 'epoch': 10.0}
+[INFO|configuration_utils.py:491] 2025-11-16 06:50:15,717 >> Configuration saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-8750\config.json
+INFO:transformers.configuration_utils:Configuration saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-8750\config.json
+[INFO|modeling_utils.py:4181] 2025-11-16 06:50:15,880 >> Model weights saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-8750\model.safetensors
+INFO:transformers.modeling_utils:Model weights saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-8750\model.safetensors
+ 22%|███████████████████████████████▍                                                                                                               | 9625/43750 [22:06<1:08:32,  8.30it/s][INFO|trainer.py:4643] 2025-11-16 06:52:06,891 >>
+{'loss': 0.658, 'grad_norm': 3.946260929107666, 'learning_rate': 0.07800228571428572, 'epoch': 11.0}
+***** Running Evaluation *****
+INFO:transformers.trainer:
+***** Running Evaluation *****
+[INFO|trainer.py:4645] 2025-11-16 06:52:06,892 >>   Num examples = 6000
+INFO:transformers.trainer:  Num examples = 6000
+[INFO|trainer.py:4648] 2025-11-16 06:52:06,894 >>   Batch size = 32
+INFO:transformers.trainer:  Batch size = 32
+ 22%|███████████████████████████████▍                                                                                                               | 9625/43750 [22:16<1:08:32,  8.30it/s][INFO|trainer.py:4309] 2025-11-16 06:52:17,154 >> Saving model checkpoint to results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-9625
+INFO:transformers.trainer:Saving model checkpoint to results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-9625 
+{'eval_loss': 0.6849503517150879, 'eval_accuracy_branch1': 0.9813333333333333, 'eval_precision_branch1': 0.9813367561724884, 'eval_recall_branch1': 0.9813333333333334, 'eval_f1_branch1': 0.9813333001480892, 'eval_accuracy_branch2': 0.6603333333333333, 'eval_precision_branch2': 0.5169602062257429, 'eval_recall_branch2': 0.5147338518380337, 'eval_f1_branch2': 0.5142974034691908, 'eval_lambda': 0.04000000000000001, 'eval_tn_branch2': 3626, 'eval_fp_branch2': 885, 'eval_fn_branch2': 1153, 'eval_tp_branch2': 336, 'eval_loss_branch1': 0.03972097113728523, 'eval_loss_branch2': 0.6451539993286133, 'eval_runtime': 10.2359, 'eval_samples_per_second': 586.175, 'eval_steps_per_second': 18.367, 'epoch': 11.0}
+[INFO|configuration_utils.py:491] 2025-11-16 06:52:17,160 >> Configuration saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-9625\config.json
+INFO:transformers.configuration_utils:Configuration saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-9625\config.json
+[INFO|modeling_utils.py:4181] 2025-11-16 06:52:17,285 >> Model weights saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-9625\model.safetensors
+INFO:transformers.modeling_utils:Model weights saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-9625\model.safetensors
+ 24%|██████████████████████████████████                                                                                                            | 10500/43750 [24:08<1:06:15,  8.36it/s][INFO|trainer.py:4643] 2025-11-16 06:54:08,538 >>
+{'loss': 0.6593, 'grad_norm': 17.575864791870117, 'learning_rate': 0.07600228571428572, 'epoch': 12.0}
+***** Running Evaluation *****
+INFO:transformers.trainer:
+***** Running Evaluation *****
+[INFO|trainer.py:4645] 2025-11-16 06:54:08,539 >>   Num examples = 6000
+INFO:transformers.trainer:  Num examples = 6000
+[INFO|trainer.py:4648] 2025-11-16 06:54:08,540 >>   Batch size = 32
+INFO:transformers.trainer:  Batch size = 32
+ 24%|██████████████████████████████████                                                                                                            | 10500/43750 [24:18<1:06:15,  8.36it/s][INFO|trainer.py:4309] 2025-11-16 06:54:18,812 >> Saving model checkpoint to results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-10500
+INFO:transformers.trainer:Saving model checkpoint to results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-10500
+{'eval_loss': 0.67299485206604, 'eval_accuracy_branch1': 0.9398333333333333, 'eval_precision_branch1': 0.9438959180975306, 'eval_recall_branch1': 0.9398333333333333, 'eval_f1_branch1': 0.9396953546295967, 'eval_accuracy_branch2': 0.7515, 'eval_precision_branch2': 0.3758752917639213, 'eval_recall_branch2': 0.49977831966304587, 'eval_f1_branch2': 0.4290608050242649, 'eval_lambda': 0.0484, 'eval_tn_branch2': 4509, 'eval_fp_branch2': 2, 'eval_fn_branch2': 1489, 'eval_tp_branch2': 0, 'eval_loss_branch1': 0.13169676065444946, 'eval_loss_branch2': 0.5414023399353027, 'eval_runtime': 10.2529, 'eval_samples_per_second': 585.197, 'eval_steps_per_second': 18.336, 'epoch': 12.0}
+[INFO|configuration_utils.py:491] 2025-11-16 06:54:18,819 >> Configuration saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-10500\config.json
+INFO:transformers.configuration_utils:Configuration saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-10500\config.json
+[INFO|modeling_utils.py:4181] 2025-11-16 06:54:18,986 >> Model weights saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-10500\model.safetensors
+INFO:transformers.modeling_utils:Model weights saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-10500\model.safetensors
+ 26%|████████████████████████████████████▉                                                                                                         | 11375/43750 [26:09<1:05:15,  8.27it/s][INFO|trainer.py:4643] 2025-11-16 06:56:10,077 >>
+{'loss': 0.659, 'grad_norm': 3.9373459815979004, 'learning_rate': 0.07400228571428571, 'epoch': 13.0}
+***** Running Evaluation *****
+INFO:transformers.trainer:
+***** Running Evaluation *****
+[INFO|trainer.py:4645] 2025-11-16 06:56:10,078 >>   Num examples = 6000
+INFO:transformers.trainer:  Num examples = 6000
+[INFO|trainer.py:4648] 2025-11-16 06:56:10,080 >>   Batch size = 32
+INFO:transformers.trainer:  Batch size = 32
+ 26%|████████████████████████████████████▉                                                                                                         | 11375/43750 [26:20<1:05:15,  8.27it/s][INFO|trainer.py:4309] 2025-11-16 06:56:20,325 >> Saving model checkpoint to results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-11375
+INFO:transformers.trainer:Saving model checkpoint to results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-11375
+{'eval_loss': 0.695915937423706, 'eval_accuracy_branch1': 0.9845, 'eval_precision_branch1': 0.9846749676633264, 'eval_recall_branch1': 0.9844999999999999, 'eval_f1_branch1': 0.9844986009987402, 'eval_accuracy_branch2': 0.634, 'eval_precision_branch2': 0.39532286018385593, 'eval_recall_branch2': 0.434008562607723, 'eval_f1_branch2': 0.41058488624413564, 'eval_lambda': 0.0576, 'eval_tn_branch2': 3749, 'eval_fp_branch2': 762, 'eval_fn_branch2': 1434, 'eval_tp_branch2': 55, 'eval_loss_branch1': 0.03585914894938469, 'eval_loss_branch2': 0.6596859693527222, 'eval_runtime': 10.2305, 'eval_samples_per_second': 586.482, 'eval_steps_per_second': 18.376, 'epoch': 13.0}
+[INFO|configuration_utils.py:491] 2025-11-16 06:56:20,331 >> Configuration saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-11375\config.json
+INFO:transformers.configuration_utils:Configuration saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-11375\config.json
+[INFO|modeling_utils.py:4181] 2025-11-16 06:56:20,529 >> Model weights saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-11375\model.safetensors
+INFO:transformers.modeling_utils:Model weights saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-11375\model.safetensors
+ 28%|███████████████████████████████████████▊                                                                                                      | 12250/43750 [28:11<1:03:15,  8.30it/s][INFO|trainer.py:4643] 2025-11-16 06:58:11,624 >>
+{'loss': 0.6692, 'grad_norm': 3.5892574787139893, 'learning_rate': 0.07200228571428573, 'epoch': 14.0}
+***** Running Evaluation *****
+INFO:transformers.trainer:
+***** Running Evaluation *****
+[INFO|trainer.py:4645] 2025-11-16 06:58:11,626 >>   Num examples = 6000
+INFO:transformers.trainer:  Num examples = 6000
+[INFO|trainer.py:4648] 2025-11-16 06:58:11,628 >>   Batch size = 32
+INFO:transformers.trainer:  Batch size = 32
+ 28%|███████████████████████████████████████▊                                                                                                      | 12250/43750 [28:21<1:03:15,  8.30it/s][INFO|trainer.py:4309] 2025-11-16 06:58:21,802 >> Saving model checkpoint to results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-12250
+INFO:transformers.trainer:Saving model checkpoint to results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-12250
+{'eval_loss': 0.7110089659690857, 'eval_accuracy_branch1': 0.9545, 'eval_precision_branch1': 0.9580200879403048, 'eval_recall_branch1': 0.9544999999999999, 'eval_f1_branch1': 0.9544124097769963, 'eval_accuracy_branch2': 0.7518333333333334, 'eval_precision_branch2': 0.3759166666666667, 'eval_recall_branch2': 0.5, 'eval_f1_branch2': 0.42916944153743697, 'eval_lambda': 0.06760000000000001, 'eval_tn_branch2': 4511, 'eval_fp_branch2': 0, 'eval_fn_branch2': 1489, 'eval_tp_branch2': 0, 'eval_loss_branch1': 0.10664721578359604, 'eval_loss_branch2': 0.604255199432373, 'eval_runtime': 10.1579, 'eval_samples_per_second': 590.672, 'eval_steps_per_second': 18.508, 'epoch': 14.0}
+[INFO|configuration_utils.py:491] 2025-11-16 06:58:21,810 >> Configuration saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-12250\config.json
+INFO:transformers.configuration_utils:Configuration saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-12250\config.json
+[INFO|modeling_utils.py:4181] 2025-11-16 06:58:21,954 >> Model weights saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-12250\model.safetensors
+INFO:transformers.modeling_utils:Model weights saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-12250\model.safetensors
+ 30%|██████████████████████████████████████████▌                                                                                                   | 13125/43750 [30:12<1:01:36,  8.29it/s][INFO|trainer.py:4643] 2025-11-16 07:00:12,977 >>
+{'loss': 0.6727, 'grad_norm': 2.6888179779052734, 'learning_rate': 0.07000228571428573, 'epoch': 15.0}
+***** Running Evaluation *****
+INFO:transformers.trainer:
+***** Running Evaluation *****
+[INFO|trainer.py:4645] 2025-11-16 07:00:12,979 >>   Num examples = 6000
+INFO:transformers.trainer:  Num examples = 6000
+[INFO|trainer.py:4648] 2025-11-16 07:00:12,980 >>   Batch size = 32
+INFO:transformers.trainer:  Batch size = 32
+ 30%|██████████████████████████████████████████▌                                                                                                   | 13125/43750 [30:23<1:01:36,  8.29it/s][INFO|trainer.py:4309] 2025-11-16 07:00:23,267 >> Saving model checkpoint to results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-13125
+INFO:transformers.trainer:Saving model checkpoint to results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-13125
+{'eval_loss': 0.6442262530326843, 'eval_accuracy_branch1': 0.9896666666666667, 'eval_precision_branch1': 0.9896721074678607, 'eval_recall_branch1': 0.9896666666666667, 'eval_f1_branch1': 0.9896666379628832, 'eval_accuracy_branch2': 0.7301666666666666, 'eval_precision_branch2': 0.3731686541737649, 'eval_recall_branch2': 0.48559077809798273, 'eval_f1_branch2': 0.42202099990367015, 'eval_lambda': 0.07840000000000001, 'eval_tn_branch2': 4381, 'eval_fp_branch2': 130, 'eval_fn_branch2': 1489, 'eval_tp_branch2': 0, 'eval_loss_branch1': 0.02256268821656704, 'eval_loss_branch2': 0.6213387846946716, 'eval_runtime': 10.2727, 'eval_samples_per_second': 584.074, 'eval_steps_per_second': 18.301, 'epoch': 15.0}
+[INFO|configuration_utils.py:491] 2025-11-16 07:00:23,274 >> Configuration saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-13125\config.json
+INFO:transformers.configuration_utils:Configuration saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-13125\config.json
+[INFO|modeling_utils.py:4181] 2025-11-16 07:00:23,428 >> Model weights saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-13125\model.safetensors
+INFO:transformers.modeling_utils:Model weights saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-13125\model.safetensors
+ 32%|██████████████████████████████████████████████                                                                                                  | 14000/43750 [32:14<59:54,  8.28it/s][INFO|trainer.py:4643] 2025-11-16 07:02:14,439 >>
+{'loss': 0.6819, 'grad_norm': 6.103766441345215, 'learning_rate': 0.06800228571428572, 'epoch': 16.0}
+***** Running Evaluation *****
+INFO:transformers.trainer:
+***** Running Evaluation *****
+[INFO|trainer.py:4645] 2025-11-16 07:02:14,441 >>   Num examples = 6000
+INFO:transformers.trainer:  Num examples = 6000
+[INFO|trainer.py:4648] 2025-11-16 07:02:14,443 >>   Batch size = 32
+INFO:transformers.trainer:  Batch size = 32
+ 32%|██████████████████████████████████████████████                                                                                                  | 14000/43750 [32:24<59:54,  8.28it/s][INFO|trainer.py:4309] 2025-11-16 07:02:24,670 >> Saving model checkpoint to results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-14000
+INFO:transformers.trainer:Saving model checkpoint to results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-14000
+{'eval_loss': 0.8583764433860779, 'eval_accuracy_branch1': 0.9728333333333333, 'eval_precision_branch1': 0.973629504530449, 'eval_recall_branch1': 0.9728333333333333, 'eval_f1_branch1': 0.9728219117417428, 'eval_accuracy_branch2': 0.5598333333333333, 'eval_precision_branch2': 0.4792405227831348, 'eval_recall_branch2': 0.474891910364918, 'eval_f1_branch2': 0.4720145556850548, 'eval_lambda': 0.09, 'eval_tn_branch2': 2903, 'eval_fp_branch2': 1608, 'eval_fn_branch2': 1033, 'eval_tp_branch2': 456, 'eval_loss_branch1': 0.06995242834091187, 'eval_loss_branch2': 0.7879911661148071, 'eval_runtime': 10.2127, 'eval_samples_per_second': 587.504, 'eval_steps_per_second': 18.408, 'epoch': 16.0}
+[INFO|configuration_utils.py:491] 2025-11-16 07:02:24,676 >> Configuration saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-14000\config.json
+INFO:transformers.configuration_utils:Configuration saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-14000\config.json
+[INFO|modeling_utils.py:4181] 2025-11-16 07:02:24,820 >> Model weights saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-14000\model.safetensors
+INFO:transformers.modeling_utils:Model weights saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-14000\model.safetensors
+ 34%|████████████████████████████████████████████████▉                                                                                               | 14875/43750 [34:15<58:59,  8.16it/s][INFO|trainer.py:4643] 2025-11-16 07:04:15,951 >>
+{'loss': 0.6895, 'grad_norm': 5.232950687408447, 'learning_rate': 0.06600228571428572, 'epoch': 17.0}
+***** Running Evaluation *****
+INFO:transformers.trainer:
+***** Running Evaluation *****
+[INFO|trainer.py:4645] 2025-11-16 07:04:15,954 >>   Num examples = 6000
+INFO:transformers.trainer:  Num examples = 6000
+[INFO|trainer.py:4648] 2025-11-16 07:04:15,955 >>   Batch size = 32
+INFO:transformers.trainer:  Batch size = 32
+ 34%|████████████████████████████████████████████████▉                                                                                               | 14875/43750 [34:26<58:59,  8.16it/s][INFO|trainer.py:4309] 2025-11-16 07:04:26,267 >> Saving model checkpoint to results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-14875
+INFO:transformers.trainer:Saving model checkpoint to results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-14875
+{'eval_loss': 0.6442835927009583, 'eval_accuracy_branch1': 0.9725, 'eval_precision_branch1': 0.9736372029242211, 'eval_recall_branch1': 0.9724999999999999, 'eval_f1_branch1': 0.9724834832107973, 'eval_accuracy_branch2': 0.7518333333333334, 'eval_precision_branch2': 0.3759166666666667, 'eval_recall_branch2': 0.5, 'eval_f1_branch2': 0.42916944153743697, 'eval_lambda': 0.1024, 'eval_tn_branch2': 4511, 'eval_fp_branch2': 0, 'eval_fn_branch2': 1489, 'eval_tp_branch2': 0, 'eval_loss_branch1': 0.07097470015287399, 'eval_loss_branch2': 0.5729736685752869, 'eval_runtime': 10.29, 'eval_samples_per_second': 583.092, 'eval_steps_per_second': 18.27, 'epoch': 17.0}
+[INFO|configuration_utils.py:491] 2025-11-16 07:04:26,276 >> Configuration saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-14875\config.json
+INFO:transformers.configuration_utils:Configuration saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-14875\config.json
+[INFO|modeling_utils.py:4181] 2025-11-16 07:04:26,435 >> Model weights saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-14875\model.safetensors
+INFO:transformers.modeling_utils:Model weights saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-14875\model.safetensors
+ 36%|███████████████████████████████████████████████████▊                                                                                            | 15750/43750 [36:17<55:35,  8.39it/s][INFO|trainer.py:4643] 2025-11-16 07:06:17,397 >>
+{'loss': 0.7014, 'grad_norm': 6.1068854331970215, 'learning_rate': 0.06400228571428572, 'epoch': 18.0}
+***** Running Evaluation *****
+INFO:transformers.trainer:
+***** Running Evaluation *****
+[INFO|trainer.py:4645] 2025-11-16 07:06:17,398 >>   Num examples = 6000
+INFO:transformers.trainer:  Num examples = 6000
+[INFO|trainer.py:4648] 2025-11-16 07:06:17,399 >>   Batch size = 32
+INFO:transformers.trainer:  Batch size = 32
+ 36%|███████████████████████████████████████████████████▊                                                                                            | 15750/43750 [36:27<55:35,  8.39it/s][INFO|trainer.py:4309] 2025-11-16 07:06:27,641 >> Saving model checkpoint to results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-15750
+INFO:transformers.trainer:Saving model checkpoint to results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-15750
+{'eval_loss': 0.6738663911819458, 'eval_accuracy_branch1': 0.9866666666666667, 'eval_precision_branch1': 0.986801889413726, 'eval_recall_branch1': 0.9866666666666667, 'eval_f1_branch1': 0.9866657406764359, 'eval_accuracy_branch2': 0.7351666666666666, 'eval_precision_branch2': 0.3738135593220339, 'eval_recall_branch2': 0.4889159831522944, 'eval_f1_branch2': 0.42368648544808374, 'eval_lambda': 0.11560000000000002, 'eval_tn_branch2': 4411, 'eval_fp_branch2': 100, 'eval_fn_branch2': 1489, 'eval_tp_branch2': 0, 'eval_loss_branch1': 0.03417987376451492, 'eval_loss_branch2': 0.6393386721611023, 'eval_runtime': 10.2286, 'eval_samples_per_second': 586.59, 'eval_steps_per_second': 18.38, 'epoch': 18.0}
+[INFO|configuration_utils.py:491] 2025-11-16 07:06:27,649 >> Configuration saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-15750\config.json
+INFO:transformers.configuration_utils:Configuration saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-15750\config.json
+[INFO|modeling_utils.py:4181] 2025-11-16 07:06:27,831 >> Model weights saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-15750\model.safetensors
+INFO:transformers.modeling_utils:Model weights saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-15750\model.safetensors
+ 38%|██████████████████████████████████████████████████████▋                                                                                         | 16625/43750 [38:18<54:38,  8.27it/s][INFO|trainer.py:4643] 2025-11-16 07:08:18,805 >>
+{'loss': 0.7147, 'grad_norm': 4.663332462310791, 'learning_rate': 0.06200228571428571, 'epoch': 19.0}
+***** Running Evaluation *****
+INFO:transformers.trainer:
+***** Running Evaluation *****
+[INFO|trainer.py:4645] 2025-11-16 07:08:18,807 >>   Num examples = 6000
+INFO:transformers.trainer:  Num examples = 6000
+[INFO|trainer.py:4648] 2025-11-16 07:08:18,808 >>   Batch size = 32
+INFO:transformers.trainer:  Batch size = 32
+ 38%|██████████████████████████████████████████████████████▋                                                                                         | 16625/43750 [38:28<54:38,  8.27it/s][INFO|trainer.py:4309] 2025-11-16 07:08:29,044 >> Saving model checkpoint to results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-16625
+INFO:transformers.trainer:Saving model checkpoint to results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-16625
+{'eval_loss': 0.8046433925628662, 'eval_accuracy_branch1': 0.987, 'eval_precision_branch1': 0.9871353153653792, 'eval_recall_branch1': 0.987, 'eval_f1_branch1': 0.9869990971595249, 'eval_accuracy_branch2': 0.629, 'eval_precision_branch2': 0.5055343106935495, 'eval_recall_branch2': 0.5055935948823851, 'eval_f1_branch2': 0.5055530142977958, 'eval_lambda': 0.1296, 'eval_tn_branch2': 3386, 'eval_fp_branch2': 1125, 'eval_fn_branch2': 1101, 'eval_tp_branch2': 388, 'eval_loss_branch1': 0.024711530655622482, 'eval_loss_branch2': 0.7802457809448242, 'eval_runtime': 10.2138, 'eval_samples_per_second': 587.442, 'eval_steps_per_second': 18.407, 'epoch': 19.0}
+[INFO|configuration_utils.py:491] 2025-11-16 07:08:29,052 >> Configuration saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-16625\config.json
+INFO:transformers.configuration_utils:Configuration saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-16625\config.json
+[INFO|modeling_utils.py:4181] 2025-11-16 07:08:29,201 >> Model weights saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-16625\model.safetensors
+INFO:transformers.modeling_utils:Model weights saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-16625\model.safetensors
+ 40%|█████████████████████████████████████████████████████████▌                                                                                      | 17500/43750 [40:20<52:37,  8.31it/s][INFO|trainer.py:4643] 2025-11-16 07:10:20,597 >>
+{'loss': 0.7319, 'grad_norm': 9.393985748291016, 'learning_rate': 0.06000228571428572, 'epoch': 20.0}
+***** Running Evaluation *****
+INFO:transformers.trainer:
+***** Running Evaluation *****
+[INFO|trainer.py:4645] 2025-11-16 07:10:20,599 >>   Num examples = 6000
+INFO:transformers.trainer:  Num examples = 6000
+[INFO|trainer.py:4648] 2025-11-16 07:10:20,600 >>   Batch size = 32
+INFO:transformers.trainer:  Batch size = 32
+ 40%|█████████████████████████████████████████████████████████▌                                                                                      | 17500/43750 [40:30<52:37,  8.31it/s][INFO|trainer.py:4309] 2025-11-16 07:10:30,838 >> Saving model checkpoint to results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-17500
+INFO:transformers.trainer:Saving model checkpoint to results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-17500
+{'eval_loss': 0.8395200371742249, 'eval_accuracy_branch1': 0.9638333333333333, 'eval_precision_branch1': 0.9657211079710992, 'eval_recall_branch1': 0.9638333333333333, 'eval_f1_branch1': 0.963796646262564, 'eval_accuracy_branch2': 0.7518333333333334, 'eval_precision_branch2': 0.3759166666666667, 'eval_recall_branch2': 0.5, 'eval_f1_branch2': 0.42916944153743697, 'eval_lambda': 0.1444, 'eval_tn_branch2': 4511, 'eval_fp_branch2': 0, 'eval_fn_branch2': 1489, 'eval_tp_branch2': 0, 'eval_loss_branch1': 0.10292349755764008, 'eval_loss_branch2': 0.7365078330039978, 'eval_runtime': 10.222, 'eval_samples_per_second': 586.969, 'eval_steps_per_second': 18.392, 'epoch': 20.0}
+[INFO|configuration_utils.py:491] 2025-11-16 07:10:30,845 >> Configuration saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-17500\config.json
+INFO:transformers.configuration_utils:Configuration saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-17500\config.json
+[INFO|modeling_utils.py:4181] 2025-11-16 07:10:30,988 >> Model weights saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-17500\model.safetensors
+INFO:transformers.modeling_utils:Model weights saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-17500\model.safetensors
+ 42%|████████████████████████████████████████████████████████████▍                                                                                   | 18375/43750 [42:21<51:03,  8.28it/s][INFO|trainer.py:4643] 2025-11-16 07:12:21,940 >>
+{'loss': 0.7464, 'grad_norm': 19.791030883789062, 'learning_rate': 0.05800228571428572, 'epoch': 21.0}
+***** Running Evaluation *****
+INFO:transformers.trainer:
+***** Running Evaluation *****
+[INFO|trainer.py:4645] 2025-11-16 07:12:21,942 >>   Num examples = 6000
+INFO:transformers.trainer:  Num examples = 6000
+[INFO|trainer.py:4648] 2025-11-16 07:12:21,943 >>   Batch size = 32
+INFO:transformers.trainer:  Batch size = 32
+ 42%|████████████████████████████████████████████████████████████▍                                                                                   | 18375/43750 [42:31<51:03,  8.28it/s][INFO|trainer.py:4309] 2025-11-16 07:12:32,161 >> Saving model checkpoint to results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-18375
+INFO:transformers.trainer:Saving model checkpoint to results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-18375
+{'eval_loss': 0.6766992211341858, 'eval_accuracy_branch1': 0.99, 'eval_precision_branch1': 0.9900176406350629, 'eval_recall_branch1': 0.99, 'eval_f1_branch1': 0.98999990999919, 'eval_accuracy_branch2': 0.7518333333333334, 'eval_precision_branch2': 0.3759166666666667, 'eval_recall_branch2': 0.5, 'eval_f1_branch2': 0.42916944153743697, 'eval_lambda': 0.16000000000000003, 'eval_tn_branch2': 4511, 'eval_fp_branch2': 0, 'eval_fn_branch2': 1489, 'eval_tp_branch2': 0, 'eval_loss_branch1': 0.02284815162420273, 'eval_loss_branch2': 0.6534873247146606, 'eval_runtime': 10.2049, 'eval_samples_per_second': 587.954, 'eval_steps_per_second': 18.423, 'epoch': 21.0}
+[INFO|configuration_utils.py:491] 2025-11-16 07:12:32,168 >> Configuration saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-18375\config.json
+INFO:transformers.configuration_utils:Configuration saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-18375\config.json
+[INFO|modeling_utils.py:4181] 2025-11-16 07:12:32,335 >> Model weights saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-18375\model.safetensors
+INFO:transformers.modeling_utils:Model weights saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-18375\model.safetensors
+ 44%|███████████████████████████████████████████████████████████████▎                                                                                | 19250/43750 [44:23<49:04,  8.32it/s][INFO|trainer.py:4643] 2025-11-16 07:14:23,404 >>
+{'loss': 0.7563, 'grad_norm': 8.058087348937988, 'learning_rate': 0.05600228571428572, 'epoch': 22.0}
+***** Running Evaluation *****
+INFO:transformers.trainer:
+***** Running Evaluation *****
+[INFO|trainer.py:4645] 2025-11-16 07:14:23,406 >>   Num examples = 6000
+INFO:transformers.trainer:  Num examples = 6000
+[INFO|trainer.py:4648] 2025-11-16 07:14:23,408 >>   Batch size = 32
+INFO:transformers.trainer:  Batch size = 32
+ 44%|███████████████████████████████████████████████████████████████▎                                                                                | 19250/43750 [44:33<49:04,  8.32it/s][INFO|trainer.py:4309] 2025-11-16 07:14:33,682 >> Saving model checkpoint to results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-19250
+INFO:transformers.trainer:Saving model checkpoint to results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-19250
+{'eval_loss': 0.7211548686027527, 'eval_accuracy_branch1': 0.9923333333333333, 'eval_precision_branch1': 0.9923412107927061, 'eval_recall_branch1': 0.9923333333333333, 'eval_f1_branch1': 0.992333302666544, 'eval_accuracy_branch2': 0.7351666666666666, 'eval_precision_branch2': 0.3787575050366026, 'eval_recall_branch2': 0.48914093881994897, 'eval_f1_branch2': 0.424300357973588, 'eval_lambda': 0.17639999999999997, 'eval_tn_branch2': 4410, 'eval_fp_branch2': 101, 'eval_fn_branch2': 1488, 'eval_tp_branch2': 1, 'eval_loss_branch1': 0.019481023773550987, 'eval_loss_branch2': 0.701328694820404, 'eval_runtime': 10.2616, 'eval_samples_per_second': 584.702, 'eval_steps_per_second': 18.321, 'epoch': 22.0}
+[INFO|configuration_utils.py:491] 2025-11-16 07:14:33,692 >> Configuration saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-19250\config.json
+INFO:transformers.configuration_utils:Configuration saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-19250\config.json
+[INFO|modeling_utils.py:4181] 2025-11-16 07:14:33,849 >> Model weights saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-19250\model.safetensors
+INFO:transformers.modeling_utils:Model weights saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-19250\model.safetensors
+ 46%|██████████████████████████████████████████████████████████████████▏                                                                             | 20125/43750 [46:24<47:36,  8.27it/s][INFO|trainer.py:4643] 2025-11-16 07:16:24,941 >>
+{'loss': 0.7747, 'grad_norm': 10.3165922164917, 'learning_rate': 0.05400228571428572, 'epoch': 23.0}
+***** Running Evaluation *****
+INFO:transformers.trainer:
+***** Running Evaluation *****
+[INFO|trainer.py:4645] 2025-11-16 07:16:24,943 >>   Num examples = 6000
+INFO:transformers.trainer:  Num examples = 6000
+[INFO|trainer.py:4648] 2025-11-16 07:16:24,944 >>   Batch size = 32
+INFO:transformers.trainer:  Batch size = 32
+ 46%|██████████████████████████████████████████████████████████████████▏                                                                             | 20125/43750 [46:34<47:36,  8.27it/s][INFO|trainer.py:4309] 2025-11-16 07:16:35,149 >> Saving model checkpoint to results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-20125
+INFO:transformers.trainer:Saving model checkpoint to results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-20125
+{'eval_loss': 0.6779724955558777, 'eval_accuracy_branch1': 0.9921666666666666, 'eval_precision_branch1': 0.9922008472810612, 'eval_recall_branch1': 0.9921666666666666, 'eval_f1_branch1': 0.9921665306689352, 'eval_accuracy_branch2': 0.6188333333333333, 'eval_precision_branch2': 0.5610188162438966, 'eval_recall_branch2': 0.5768919612814225, 'eval_f1_branch2': 0.5569110493926642, 'eval_lambda': 0.1936, 'eval_tn_branch2': 2978, 'eval_fp_branch2': 1533, 'eval_fn_branch2': 754, 'eval_tp_branch2': 735, 'eval_loss_branch1': 0.02201838232576847, 'eval_loss_branch2': 0.6554632782936096, 'eval_runtime': 10.1886, 'eval_samples_per_second': 588.896, 'eval_steps_per_second': 18.452, 'epoch': 23.0}
+[INFO|configuration_utils.py:491] 2025-11-16 07:16:35,157 >> Configuration saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-20125\config.json
+INFO:transformers.configuration_utils:Configuration saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-20125\config.json
+[INFO|modeling_utils.py:4181] 2025-11-16 07:16:35,308 >> Model weights saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-20125\model.safetensors
+INFO:transformers.modeling_utils:Model weights saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-20125\model.safetensors
+ 48%|█████████████████████████████████████████████████████████████████████                                                                           | 21000/43750 [48:26<45:55,  8.26it/s][INFO|trainer.py:4643] 2025-11-16 07:18:26,308 >>
+{'loss': 0.7792, 'grad_norm': 23.47362518310547, 'learning_rate': 0.052002285714285716, 'epoch': 24.0}
+***** Running Evaluation *****
+INFO:transformers.trainer:
+***** Running Evaluation *****
+[INFO|trainer.py:4645] 2025-11-16 07:18:26,309 >>   Num examples = 6000
+INFO:transformers.trainer:  Num examples = 6000
+[INFO|trainer.py:4648] 2025-11-16 07:18:26,310 >>   Batch size = 32
+INFO:transformers.trainer:  Batch size = 32
+ 48%|█████████████████████████████████████████████████████████████████████                                                                           | 21000/43750 [48:36<45:55,  8.26it/s][INFO|trainer.py:4309] 2025-11-16 07:18:36,538 >> Saving model checkpoint to results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-21000
+INFO:transformers.trainer:Saving model checkpoint to results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-21000
+{'eval_loss': 0.7107499241828918, 'eval_accuracy_branch1': 0.9828333333333333, 'eval_precision_branch1': 0.983119393694333, 'eval_recall_branch1': 0.9828333333333333, 'eval_f1_branch1': 0.9828307918135992, 'eval_accuracy_branch2': 0.7518333333333334, 'eval_precision_branch2': 0.3759166666666667, 'eval_recall_branch2': 0.5, 'eval_f1_branch2': 0.42916944153743697, 'eval_lambda': 0.2116, 'eval_tn_branch2': 4511, 'eval_fp_branch2': 0, 'eval_fn_branch2': 1489, 'eval_tp_branch2': 0, 'eval_loss_branch1': 0.05059606581926346, 'eval_loss_branch2': 0.6596601605415344, 'eval_runtime': 10.2144, 'eval_samples_per_second': 587.406, 'eval_steps_per_second': 18.405, 'epoch': 24.0}
+[INFO|configuration_utils.py:491] 2025-11-16 07:18:36,544 >> Configuration saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-21000\config.json
+INFO:transformers.configuration_utils:Configuration saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-21000\config.json
+[INFO|modeling_utils.py:4181] 2025-11-16 07:18:36,691 >> Model weights saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-21000\model.safetensors
+INFO:transformers.modeling_utils:Model weights saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-21000\model.safetensors
+ 50%|████████████████████████████████████████████████████████████████████████                                                                        | 21875/43750 [50:27<43:20,  8.41it/s][INFO|trainer.py:4643] 2025-11-16 07:20:27,927 >>
+{'loss': 0.7937, 'grad_norm': 18.95924186706543, 'learning_rate': 0.050002285714285714, 'epoch': 25.0}
+***** Running Evaluation *****
+INFO:transformers.trainer:
+***** Running Evaluation *****
+[INFO|trainer.py:4645] 2025-11-16 07:20:27,928 >>   Num examples = 6000
+INFO:transformers.trainer:  Num examples = 6000
+[INFO|trainer.py:4648] 2025-11-16 07:20:27,930 >>   Batch size = 32
+INFO:transformers.trainer:  Batch size = 32
+ 50%|████████████████████████████████████████████████████████████████████████                                                                        | 21875/43750 [50:37<43:20,  8.41it/s][INFO|trainer.py:4309] 2025-11-16 07:20:38,126 >> Saving model checkpoint to results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-21875
+INFO:transformers.trainer:Saving model checkpoint to results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-21875
+{'eval_loss': 0.6470159292221069, 'eval_accuracy_branch1': 0.9925, 'eval_precision_branch1': 0.9925000547222282, 'eval_recall_branch1': 0.9924999999999999, 'eval_f1_branch1': 0.9924999997916666, 'eval_accuracy_branch2': 0.672, 'eval_precision_branch2': 0.5558166781792995, 'eval_recall_branch2': 0.5544363684383774, 'eval_f1_branch2': 0.5550568870019336, 'eval_lambda': 0.2304, 'eval_tn_branch2': 3554, 'eval_fp_branch2': 957, 'eval_fn_branch2': 1011, 'eval_tp_branch2': 478, 'eval_loss_branch1': 0.02021760120987892, 'eval_loss_branch2': 0.6268021464347839, 'eval_runtime': 10.1839, 'eval_samples_per_second': 589.166, 'eval_steps_per_second': 18.461, 'epoch': 25.0}
+[INFO|configuration_utils.py:491] 2025-11-16 07:20:38,134 >> Configuration saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-21875\config.json
+INFO:transformers.configuration_utils:Configuration saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-21875\config.json
+[INFO|modeling_utils.py:4181] 2025-11-16 07:20:38,279 >> Model weights saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-21875\model.safetensors
+INFO:transformers.modeling_utils:Model weights saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-21875\model.safetensors
+ 52%|██████████████████████████████████████████████████████████████████████████▉                                                                     | 22750/43750 [52:29<42:15,  8.28it/s][INFO|trainer.py:4643] 2025-11-16 07:22:29,384 >>
+{'loss': 0.8051, 'grad_norm': 12.921807289123535, 'learning_rate': 0.04800228571428572, 'epoch': 26.0}
+***** Running Evaluation *****
+INFO:transformers.trainer:
+***** Running Evaluation *****
+[INFO|trainer.py:4645] 2025-11-16 07:22:29,385 >>   Num examples = 6000
+INFO:transformers.trainer:  Num examples = 6000
+[INFO|trainer.py:4648] 2025-11-16 07:22:29,387 >>   Batch size = 32
+INFO:transformers.trainer:  Batch size = 32
+ 52%|██████████████████████████████████████████████████████████████████████████▉                                                                     | 22750/43750 [52:39<42:15,  8.28it/s][INFO|trainer.py:4309] 2025-11-16 07:22:39,645 >> Saving model checkpoint to results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-22750
+INFO:transformers.trainer:Saving model checkpoint to results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-22750
+{'eval_loss': 0.8260226249694824, 'eval_accuracy_branch1': 0.9928333333333333, 'eval_precision_branch1': 0.9928675602472394, 'eval_recall_branch1': 0.9928333333333333, 'eval_f1_branch1': 0.9928332089098769, 'eval_accuracy_branch2': 0.569, 'eval_precision_branch2': 0.5670732201926091, 'eval_recall_branch2': 0.5898666627759708, 'eval_f1_branch2': 0.5388571956406967, 'eval_lambda': 0.25, 'eval_tn_branch2': 2474, 'eval_fp_branch2': 2037, 'eval_fn_branch2': 549, 'eval_tp_branch2': 940, 'eval_loss_branch1': 0.0189239252358675, 'eval_loss_branch2': 0.8065609931945801, 'eval_runtime': 10.2423, 'eval_samples_per_second': 585.806, 'eval_steps_per_second': 18.355, 'epoch': 26.0}
+[INFO|configuration_utils.py:491] 2025-11-16 07:22:39,651 >> Configuration saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-22750\config.json
+INFO:transformers.configuration_utils:Configuration saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-22750\config.json
+[INFO|modeling_utils.py:4181] 2025-11-16 07:22:39,869 >> Model weights saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-22750\model.safetensors
+INFO:transformers.modeling_utils:Model weights saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-22750\model.safetensors
+ 54%|█████████████████████████████████████████████████████████████████████████████▊                                                                  | 23625/43750 [54:30<40:23,  8.31it/s][INFO|trainer.py:4643] 2025-11-16 07:24:30,947 >>
+{'loss': 0.8047, 'grad_norm': 11.261175155639648, 'learning_rate': 0.04600228571428572, 'epoch': 27.0}
+***** Running Evaluation *****
+INFO:transformers.trainer:
+***** Running Evaluation *****
+[INFO|trainer.py:4645] 2025-11-16 07:24:30,949 >>   Num examples = 6000
+INFO:transformers.trainer:  Num examples = 6000
+[INFO|trainer.py:4648] 2025-11-16 07:24:30,950 >>   Batch size = 32
+INFO:transformers.trainer:  Batch size = 32
+ 54%|█████████████████████████████████████████████████████████████████████████████▊                                                                  | 23625/43750 [54:41<40:23,  8.31it/s][INFO|trainer.py:4309] 2025-11-16 07:24:41,218 >> Saving model checkpoint to results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-23625
+INFO:transformers.trainer:Saving model checkpoint to results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-23625
+{'eval_loss': 0.577822208404541, 'eval_accuracy_branch1': 0.9931666666666666, 'eval_precision_branch1': 0.9931693516998037, 'eval_recall_branch1': 0.9931666666666666, 'eval_f1_branch1': 0.9931666573657281, 'eval_accuracy_branch2': 0.7518333333333334, 'eval_precision_branch2': 0.3759166666666667, 'eval_recall_branch2': 0.5, 'eval_f1_branch2': 0.42916944153743697, 'eval_lambda': 0.27040000000000003, 'eval_tn_branch2': 4511, 'eval_fp_branch2': 0, 'eval_fn_branch2': 1489, 'eval_tp_branch2': 0, 'eval_loss_branch1': 0.020908767357468605, 'eval_loss_branch2': 0.5566543936729431, 'eval_runtime': 10.2535, 'eval_samples_per_second': 585.169, 'eval_steps_per_second': 18.335, 'epoch': 27.0}
+[INFO|configuration_utils.py:491] 2025-11-16 07:24:41,224 >> Configuration saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-23625\config.json
+INFO:transformers.configuration_utils:Configuration saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-23625\config.json
+[INFO|modeling_utils.py:4181] 2025-11-16 07:24:41,382 >> Model weights saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-23625\model.safetensors
+INFO:transformers.modeling_utils:Model weights saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-23625\model.safetensors
+ 56%|████████████████████████████████████████████████████████████████████████████████▋                                                               | 24500/43750 [56:32<38:05,  8.42it/s][INFO|trainer.py:4643] 2025-11-16 07:26:32,486 >>
+{'loss': 0.8183, 'grad_norm': 22.317386627197266, 'learning_rate': 0.044002285714285716, 'epoch': 28.0}
+***** Running Evaluation *****
+INFO:transformers.trainer:
+***** Running Evaluation *****
+[INFO|trainer.py:4645] 2025-11-16 07:26:32,488 >>   Num examples = 6000
+INFO:transformers.trainer:  Num examples = 6000
+[INFO|trainer.py:4648] 2025-11-16 07:26:32,488 >>   Batch size = 32
+INFO:transformers.trainer:  Batch size = 32
+ 56%|████████████████████████████████████████████████████████████████████████████████▋                                                               | 24500/43750 [56:42<38:05,  8.42it/s][INFO|trainer.py:4309] 2025-11-16 07:26:42,664 >> Saving model checkpoint to results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-24500
+INFO:transformers.trainer:Saving model checkpoint to results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-24500
+{'eval_loss': 0.652088463306427, 'eval_accuracy_branch1': 0.9941666666666666, 'eval_precision_branch1': 0.9941711142066945, 'eval_recall_branch1': 0.9941666666666666, 'eval_f1_branch1': 0.9941666535416371, 'eval_accuracy_branch2': 0.6463333333333333, 'eval_precision_branch2': 0.5769563550119895, 'eval_recall_branch2': 0.5936058994065547, 'eval_f1_branch2': 0.57748604595566, 'eval_lambda': 0.2916, 'eval_tn_branch2': 3150, 'eval_fp_branch2': 1361, 'eval_fn_branch2': 761, 'eval_tp_branch2': 728, 'eval_loss_branch1': 0.013862348161637783, 'eval_loss_branch2': 0.6379185318946838, 'eval_runtime': 10.1622, 'eval_samples_per_second': 590.422, 'eval_steps_per_second': 18.5, 'epoch': 28.0}
+[INFO|configuration_utils.py:491] 2025-11-16 07:26:42,672 >> Configuration saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-24500\config.json
+INFO:transformers.configuration_utils:Configuration saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-24500\config.json
+[INFO|modeling_utils.py:4181] 2025-11-16 07:26:42,838 >> Model weights saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-24500\model.safetensors
+INFO:transformers.modeling_utils:Model weights saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-24500\model.safetensors
+ 58%|███████████████████████████████████████████████████████████████████████████████████▌                                                            | 25375/43750 [58:34<36:56,  8.29it/s][INFO|trainer.py:4643] 2025-11-16 07:28:34,267 >>
+{'loss': 0.8191, 'grad_norm': 10.346495628356934, 'learning_rate': 0.042002285714285714, 'epoch': 29.0}
+***** Running Evaluation *****
+INFO:transformers.trainer:
+***** Running Evaluation *****
+[INFO|trainer.py:4645] 2025-11-16 07:28:34,271 >>   Num examples = 6000
+INFO:transformers.trainer:  Num examples = 6000
+[INFO|trainer.py:4648] 2025-11-16 07:28:34,272 >>   Batch size = 32
+INFO:transformers.trainer:  Batch size = 32
+ 58%|███████████████████████████████████████████████████████████████████████████████████▌                                                            | 25375/43750 [58:44<36:56,  8.29it/s][INFO|trainer.py:4309] 2025-11-16 07:28:44,557 >> Saving model checkpoint to results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-25375
+INFO:transformers.trainer:Saving model checkpoint to results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-25375
+{'eval_loss': 0.6564310789108276, 'eval_accuracy_branch1': 0.9948333333333333, 'eval_precision_branch1': 0.9948377868734152, 'eval_recall_branch1': 0.9948333333333332, 'eval_f1_branch1': 0.9948333217083072, 'eval_accuracy_branch2': 0.5943333333333334, 'eval_precision_branch2': 0.40538711440707903, 'eval_recall_branch2': 0.4204510755664945, 'eval_f1_branch2': 0.411865054683985, 'eval_lambda': 0.31360000000000005, 'eval_tn_branch2': 3454, 'eval_fp_branch2': 1057, 'eval_fn_branch2': 1377, 'eval_tp_branch2': 112, 'eval_loss_branch1': 0.012210126034915447, 'eval_loss_branch2': 0.643955647945404, 'eval_runtime': 10.2698, 'eval_samples_per_second': 584.239, 'eval_steps_per_second': 18.306, 'epoch': 29.0}
+[INFO|configuration_utils.py:491] 2025-11-16 07:28:44,565 >> Configuration saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-25375\config.json
+INFO:transformers.configuration_utils:Configuration saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-25375\config.json
+[INFO|modeling_utils.py:4181] 2025-11-16 07:28:44,715 >> Model weights saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-25375\model.safetensors
+INFO:transformers.modeling_utils:Model weights saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-25375\model.safetensors
+ 60%|█████████████████████████████████████████████████████████████████████████████████████▏                                                        | 26250/43750 [1:00:35<35:12,  8.28it/s][INFO|trainer.py:4643] 2025-11-16 07:30:35,989 >>
+{'loss': 0.8202, 'grad_norm': 12.968400001525879, 'learning_rate': 0.04000228571428571, 'epoch': 30.0}
+***** Running Evaluation *****
+INFO:transformers.trainer:
+***** Running Evaluation *****
+[INFO|trainer.py:4645] 2025-11-16 07:30:35,991 >>   Num examples = 6000
+INFO:transformers.trainer:  Num examples = 6000
+[INFO|trainer.py:4648] 2025-11-16 07:30:35,992 >>   Batch size = 32
+INFO:transformers.trainer:  Batch size = 32
+ 60%|█████████████████████████████████████████████████████████████████████████████████████▏                                                        | 26250/43750 [1:00:46<35:12,  8.28it/s][INFO|trainer.py:4309] 2025-11-16 07:30:46,236 >> Saving model checkpoint to results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-26250
+INFO:transformers.trainer:Saving model checkpoint to results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-26250
+{'eval_loss': 0.8395349979400635, 'eval_accuracy_branch1': 0.9885, 'eval_precision_branch1': 0.9886764121847987, 'eval_recall_branch1': 0.9884999999999999, 'eval_f1_branch1': 0.9884989620313234, 'eval_accuracy_branch2': 0.6146666666666667, 'eval_precision_branch2': 0.5419067399210254, 'eval_recall_branch2': 0.5509505233010747, 'eval_f1_branch2': 0.5395068102003224, 'eval_lambda': 0.3364, 'eval_tn_branch2': 3056, 'eval_fp_branch2': 1455, 'eval_fn_branch2': 857, 'eval_tp_branch2': 632, 'eval_loss_branch1': 0.03379800543189049, 'eval_loss_branch2': 0.8059207201004028, 'eval_runtime': 10.2314, 'eval_samples_per_second': 586.427, 'eval_steps_per_second': 18.375, 'epoch': 30.0}
+[INFO|configuration_utils.py:491] 2025-11-16 07:30:46,244 >> Configuration saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-26250\config.json
+INFO:transformers.configuration_utils:Configuration saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-26250\config.json
+[INFO|modeling_utils.py:4181] 2025-11-16 07:30:46,451 >> Model weights saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-26250\model.safetensors
+INFO:transformers.modeling_utils:Model weights saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-26250\model.safetensors
+ 62%|████████████████████████████████████████████████████████████████████████████████████████                                                      | 27125/43750 [1:02:37<32:44,  8.46it/s][INFO|trainer.py:4643] 2025-11-16 07:32:37,546 >>
+{'loss': 0.821, 'grad_norm': 18.744285583496094, 'learning_rate': 0.03800228571428572, 'epoch': 31.0}
+***** Running Evaluation *****
+INFO:transformers.trainer:
+***** Running Evaluation *****
+[INFO|trainer.py:4645] 2025-11-16 07:32:37,547 >>   Num examples = 6000
+INFO:transformers.trainer:  Num examples = 6000
+[INFO|trainer.py:4648] 2025-11-16 07:32:37,549 >>   Batch size = 32
+INFO:transformers.trainer:  Batch size = 32
+ 62%|████████████████████████████████████████████████████████████████████████████████████████                                                      | 27125/43750 [1:02:47<32:44,  8.46it/s][INFO|trainer.py:4309] 2025-11-16 07:32:47,812 >> Saving model checkpoint to results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-27125
+INFO:transformers.trainer:Saving model checkpoint to results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-27125
+{'eval_loss': 1.0135537385940552, 'eval_accuracy_branch1': 0.9935, 'eval_precision_branch1': 0.9935092670073471, 'eval_recall_branch1': 0.9935, 'eval_f1_branch1': 0.9934999694859679, 'eval_accuracy_branch2': 0.7518333333333334, 'eval_precision_branch2': 0.3759166666666667, 'eval_recall_branch2': 0.5, 'eval_f1_branch2': 0.42916944153743697, 'eval_lambda': 0.36, 'eval_tn_branch2': 4511, 'eval_fp_branch2': 0, 'eval_fn_branch2': 1489, 'eval_tp_branch2': 0, 'eval_loss_branch1': 0.017019599676132202, 'eval_loss_branch2': 0.9957794547080994, 'eval_runtime': 10.246, 'eval_samples_per_second': 585.592, 'eval_steps_per_second': 18.349, 'epoch': 31.0}
+[INFO|configuration_utils.py:491] 2025-11-16 07:32:47,819 >> Configuration saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-27125\config.json
+INFO:transformers.configuration_utils:Configuration saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-27125\config.json
+[INFO|modeling_utils.py:4181] 2025-11-16 07:32:47,983 >> Model weights saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-27125\model.safetensors
+INFO:transformers.modeling_utils:Model weights saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-27125\model.safetensors
+ 64%|██████████████████████████████████████████████████████████████████████████████████████████▉                                                   | 28000/43750 [1:04:39<31:47,  8.26it/s][INFO|trainer.py:4643] 2025-11-16 07:34:39,205 >>
+{'loss': 0.8091, 'grad_norm': 27.055326461791992, 'learning_rate': 0.036002285714285716, 'epoch': 32.0}
+***** Running Evaluation *****
+INFO:transformers.trainer:
+***** Running Evaluation *****
+[INFO|trainer.py:4645] 2025-11-16 07:34:39,206 >>   Num examples = 6000
+INFO:transformers.trainer:  Num examples = 6000
+[INFO|trainer.py:4648] 2025-11-16 07:34:39,207 >>   Batch size = 32
+INFO:transformers.trainer:  Batch size = 32
+ 64%|██████████████████████████████████████████████████████████████████████████████████████████▉                                                   | 28000/43750 [1:04:49<31:47,  8.26it/s][INFO|trainer.py:4309] 2025-11-16 07:34:49,514 >> Saving model checkpoint to results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-28000
+INFO:transformers.trainer:Saving model checkpoint to results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-28000
+{'eval_loss': 0.7936419248580933, 'eval_accuracy_branch1': 0.9943333333333333, 'eval_precision_branch1': 0.9943335530371347, 'eval_recall_branch1': 0.9943333333333333, 'eval_f1_branch1': 0.9943333327037036, 'eval_accuracy_branch2': 0.7518333333333334, 'eval_precision_branch2': 0.3759166666666667, 'eval_recall_branch2': 0.5, 'eval_f1_branch2': 0.42916944153743697, 'eval_lambda': 0.3844, 'eval_tn_branch2': 4511, 'eval_fp_branch2': 0, 'eval_fn_branch2': 1489, 'eval_tp_branch2': 0, 'eval_loss_branch1': 0.01627463847398758, 'eval_loss_branch2': 0.7768352031707764, 'eval_runtime': 10.291, 'eval_samples_per_second': 583.033, 'eval_steps_per_second': 18.268, 'epoch': 32.0}
+[INFO|configuration_utils.py:491] 2025-11-16 07:34:49,522 >> Configuration saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-28000\config.json
+INFO:transformers.configuration_utils:Configuration saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-28000\config.json
+[INFO|modeling_utils.py:4181] 2025-11-16 07:34:49,659 >> Model weights saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-28000\model.safetensors
+INFO:transformers.modeling_utils:Model weights saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-28000\model.safetensors
+ 66%|█████████████████████████████████████████████████████████████████████████████████████████████▋                                                | 28875/43750 [1:06:40<29:53,  8.29it/s][INFO|trainer.py:4643] 2025-11-16 07:36:40,800 >>
+{'loss': 0.8053, 'grad_norm': 21.260234832763672, 'learning_rate': 0.034002285714285714, 'epoch': 33.0}
+***** Running Evaluation *****
+INFO:transformers.trainer:
+***** Running Evaluation *****
+[INFO|trainer.py:4645] 2025-11-16 07:36:40,802 >>   Num examples = 6000
+INFO:transformers.trainer:  Num examples = 6000
+[INFO|trainer.py:4648] 2025-11-16 07:36:40,803 >>   Batch size = 32
+INFO:transformers.trainer:  Batch size = 32
+ 66%|█████████████████████████████████████████████████████████████████████████████████████████████▋                                                | 28875/43750 [1:06:50<29:53,  8.29it/s][INFO|trainer.py:4309] 2025-11-16 07:36:51,089 >> Saving model checkpoint to results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-28875
+INFO:transformers.trainer:Saving model checkpoint to results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-28875
+{'eval_loss': 0.8555261492729187, 'eval_accuracy_branch1': 0.9946666666666667, 'eval_precision_branch1': 0.9946721630240336, 'eval_recall_branch1': 0.9946666666666666, 'eval_f1_branch1': 0.9946666518518107, 'eval_accuracy_branch2': 0.5643333333333334, 'eval_precision_branch2': 0.5443891853639024, 'eval_recall_branch2': 0.5590935909371004, 'eval_f1_branch2': 0.5237241491898573, 'eval_lambda': 0.4096, 'eval_tn_branch2': 2569, 'eval_fp_branch2': 1942, 'eval_fn_branch2': 672, 'eval_tp_branch2': 817, 'eval_loss_branch1': 0.01587650738656521, 'eval_loss_branch2': 0.8391653895378113, 'eval_runtime': 10.2741, 'eval_samples_per_second': 583.99, 'eval_steps_per_second': 18.298, 'epoch': 33.0}
+[INFO|configuration_utils.py:491] 2025-11-16 07:36:51,097 >> Configuration saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-28875\config.json
+INFO:transformers.configuration_utils:Configuration saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-28875\config.json
+[INFO|modeling_utils.py:4181] 2025-11-16 07:36:51,286 >> Model weights saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-28875\model.safetensors
+INFO:transformers.modeling_utils:Model weights saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-28875\model.safetensors
+ 68%|████████████████████████████████████████████████████████████████████████████████████████████████▌                                             | 29750/43750 [1:08:42<27:42,  8.42it/s][INFO|trainer.py:4643] 2025-11-16 07:38:42,480 >>
+{'loss': 0.7956, 'grad_norm': 17.94576072692871, 'learning_rate': 0.03200228571428572, 'epoch': 34.0}
+***** Running Evaluation *****
+INFO:transformers.trainer:
+***** Running Evaluation *****
+[INFO|trainer.py:4645] 2025-11-16 07:38:42,482 >>   Num examples = 6000
+INFO:transformers.trainer:  Num examples = 6000
+[INFO|trainer.py:4648] 2025-11-16 07:38:42,483 >>   Batch size = 32
+INFO:transformers.trainer:  Batch size = 32
+ 68%|████████████████████████████████████████████████████████████████████████████████████████████████▌                                             | 29750/43750 [1:08:52<27:42,  8.42it/s][INFO|trainer.py:4309] 2025-11-16 07:38:52,671 >> Saving model checkpoint to results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-29750
+INFO:transformers.trainer:Saving model checkpoint to results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-29750
+{'eval_loss': 0.744001030921936, 'eval_accuracy_branch1': 0.9951666666666666, 'eval_precision_branch1': 0.9951790461428203, 'eval_recall_branch1': 0.9951666666666668, 'eval_f1_branch1': 0.9951666364581445, 'eval_accuracy_branch2': 0.5306666666666666, 'eval_precision_branch2': 0.5331041489543634, 'eval_recall_branch2': 0.5443523696049906, 'eval_f1_branch2': 0.5001727031107505, 'eval_lambda': 0.43560000000000004, 'eval_tn_branch2': 2333, 'eval_fp_branch2': 2178, 'eval_fn_branch2': 638, 'eval_tp_branch2': 851, 'eval_loss_branch1': 0.015056571923196316, 'eval_loss_branch2': 0.7288035750389099, 'eval_runtime': 10.1748, 'eval_samples_per_second': 589.691, 'eval_steps_per_second': 18.477, 'epoch': 34.0}
+[INFO|configuration_utils.py:491] 2025-11-16 07:38:52,679 >> Configuration saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-29750\config.json
+INFO:transformers.configuration_utils:Configuration saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-29750\config.json
+[INFO|modeling_utils.py:4181] 2025-11-16 07:38:52,855 >> Model weights saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-29750\model.safetensors
+INFO:transformers.modeling_utils:Model weights saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-29750\model.safetensors
+ 70%|███████████████████████████████████████████████████████████████████████████████████████████████████▍                                          | 30625/43750 [1:10:43<26:36,  8.22it/s][INFO|trainer.py:4643] 2025-11-16 07:40:43,953 >>
+{'loss': 0.7837, 'grad_norm': 31.669523239135742, 'learning_rate': 0.030002285714285717, 'epoch': 35.0}
+***** Running Evaluation *****
+INFO:transformers.trainer:
+***** Running Evaluation *****
+[INFO|trainer.py:4645] 2025-11-16 07:40:43,954 >>   Num examples = 6000
+INFO:transformers.trainer:  Num examples = 6000
+[INFO|trainer.py:4648] 2025-11-16 07:40:43,955 >>   Batch size = 32
+INFO:transformers.trainer:  Batch size = 32
+ 70%|███████████████████████████████████████████████████████████████████████████████████████████████████▍                                          | 30625/43750 [1:10:54<26:36,  8.22it/s][INFO|trainer.py:4309] 2025-11-16 07:40:54,219 >> Saving model checkpoint to results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-30625
+INFO:transformers.trainer:Saving model checkpoint to results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-30625
+{'eval_loss': 0.7888803482055664, 'eval_accuracy_branch1': 0.995, 'eval_precision_branch1': 0.9950002200000978, 'eval_recall_branch1': 0.995, 'eval_f1_branch1': 0.9949999994444444, 'eval_accuracy_branch2': 0.7518333333333334, 'eval_precision_branch2': 0.3759166666666667, 'eval_recall_branch2': 0.5, 'eval_f1_branch2': 0.42916944153743697, 'eval_lambda': 0.4624000000000001, 'eval_tn_branch2': 4511, 'eval_fp_branch2': 0, 'eval_fn_branch2': 1489, 'eval_tp_branch2': 0, 'eval_loss_branch1': 0.015044009312987328, 'eval_loss_branch2': 0.7732837796211243, 'eval_runtime': 10.2479, 'eval_samples_per_second': 585.489, 'eval_steps_per_second': 18.345, 'epoch': 35.0}
+[INFO|configuration_utils.py:491] 2025-11-16 07:40:54,227 >> Configuration saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-30625\config.json
+INFO:transformers.configuration_utils:Configuration saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-30625\config.json
+[INFO|modeling_utils.py:4181] 2025-11-16 07:40:54,392 >> Model weights saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-30625\model.safetensors
+INFO:transformers.modeling_utils:Model weights saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-30625\model.safetensors
+ 72%|██████████████████████████████████████████████████████████████████████████████████████████████████████▏                                       | 31500/43750 [1:12:45<24:49,  8.23it/s][INFO|trainer.py:4643] 2025-11-16 07:42:45,534 >>
+{'loss': 0.7646, 'grad_norm': 31.53204917907715, 'learning_rate': 0.028002285714285716, 'epoch': 36.0}
+***** Running Evaluation *****
+INFO:transformers.trainer:
+***** Running Evaluation *****
+[INFO|trainer.py:4645] 2025-11-16 07:42:45,535 >>   Num examples = 6000
+INFO:transformers.trainer:  Num examples = 6000
+[INFO|trainer.py:4648] 2025-11-16 07:42:45,536 >>   Batch size = 32
+INFO:transformers.trainer:  Batch size = 32
+ 72%|██████████████████████████████████████████████████████████████████████████████████████████████████████▏                                       | 31500/43750 [1:12:55<24:49,  8.23it/s][INFO|trainer.py:4309] 2025-11-16 07:42:55,796 >> Saving model checkpoint to results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-31500
+INFO:transformers.trainer:Saving model checkpoint to results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-31500
+{'eval_loss': 0.7415895462036133, 'eval_accuracy_branch1': 0.9961666666666666, 'eval_precision_branch1': 0.9961711322068565, 'eval_recall_branch1': 0.9961666666666666, 'eval_f1_branch1': 0.9961666580416473, 'eval_accuracy_branch2': 0.7518333333333334, 'eval_precision_branch2': 0.3759166666666667, 'eval_recall_branch2': 0.5, 'eval_f1_branch2': 0.42916944153743697, 'eval_lambda': 0.48999999999999994, 'eval_tn_branch2': 4511, 'eval_fp_branch2': 0, 'eval_fn_branch2': 1489, 'eval_tp_branch2': 0, 'eval_loss_branch1': 0.009683329612016678, 'eval_loss_branch2': 0.731454074382782, 'eval_runtime': 10.243, 'eval_samples_per_second': 585.763, 'eval_steps_per_second': 18.354, 'epoch': 36.0}
+[INFO|configuration_utils.py:491] 2025-11-16 07:42:55,803 >> Configuration saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-31500\config.json
+INFO:transformers.configuration_utils:Configuration saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-31500\config.json
+[INFO|modeling_utils.py:4181] 2025-11-16 07:42:56,005 >> Model weights saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-31500\model.safetensors
+INFO:transformers.modeling_utils:Model weights saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-31500\model.safetensors
+ 74%|█████████████████████████████████████████████████████████████████████████████████████████████████████████                                     | 32375/43750 [1:14:47<22:40,  8.36it/s][INFO|trainer.py:4643] 2025-11-16 07:44:47,306 >>
+{'loss': 0.7516, 'grad_norm': 14.636033058166504, 'learning_rate': 0.026002285714285717, 'epoch': 37.0}
+***** Running Evaluation *****
+INFO:transformers.trainer:
+***** Running Evaluation *****
+[INFO|trainer.py:4645] 2025-11-16 07:44:47,308 >>   Num examples = 6000
+INFO:transformers.trainer:  Num examples = 6000
+[INFO|trainer.py:4648] 2025-11-16 07:44:47,309 >>   Batch size = 32
+INFO:transformers.trainer:  Batch size = 32
+ 74%|█████████████████████████████████████████████████████████████████████████████████████████████████████████                                     | 32375/43750 [1:14:57<22:40,  8.36it/s][INFO|trainer.py:4309] 2025-11-16 07:44:57,524 >> Saving model checkpoint to results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-32375
+INFO:transformers.trainer:Saving model checkpoint to results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-32375
+{'eval_loss': 0.67753005027771, 'eval_accuracy_branch1': 0.9948333333333333, 'eval_precision_branch1': 0.9948457044759452, 'eval_recall_branch1': 0.9948333333333332, 'eval_f1_branch1': 0.9948333010414648, 'eval_accuracy_branch2': 0.5726666666666667, 'eval_precision_branch2': 0.37085818899504713, 'eval_recall_branch2': 0.3914197352669298, 'eval_f1_branch2': 0.3804527527566711, 'eval_lambda': 0.5184, 'eval_tn_branch2': 3389, 'eval_fp_branch2': 1122, 'eval_fn_branch2': 1442, 'eval_tp_branch2': 47, 'eval_loss_branch1': 0.015054228715598583, 'eval_loss_branch2': 0.6621710658073425, 'eval_runtime': 10.2015, 'eval_samples_per_second': 588.15, 'eval_steps_per_second': 18.429, 'epoch': 37.0}
+[INFO|configuration_utils.py:491] 2025-11-16 07:44:57,531 >> Configuration saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-32375\config.json
+INFO:transformers.configuration_utils:Configuration saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-32375\config.json
+[INFO|modeling_utils.py:4181] 2025-11-16 07:44:57,674 >> Model weights saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-32375\model.safetensors
+INFO:transformers.modeling_utils:Model weights saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-32375\model.safetensors
+ 76%|███████████████████████████████████████████████████████████████████████████████████████████████████████████▉                                  | 33250/43750 [1:16:48<21:03,  8.31it/s][INFO|trainer.py:4643] 2025-11-16 07:46:48,593 >>
+{'loss': 0.7374, 'grad_norm': 17.592599868774414, 'learning_rate': 0.024002285714285716, 'epoch': 38.0}
+***** Running Evaluation *****
+INFO:transformers.trainer:
+***** Running Evaluation *****
+[INFO|trainer.py:4645] 2025-11-16 07:46:48,595 >>   Num examples = 6000
+INFO:transformers.trainer:  Num examples = 6000
+[INFO|trainer.py:4648] 2025-11-16 07:46:48,597 >>   Batch size = 32
+INFO:transformers.trainer:  Batch size = 32
+ 76%|███████████████████████████████████████████████████████████████████████████████████████████████████████████▉                                  | 33250/43750 [1:16:58<21:03,  8.31it/s][INFO|trainer.py:4309] 2025-11-16 07:46:58,841 >> Saving model checkpoint to results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-33250
+INFO:transformers.trainer:Saving model checkpoint to results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-33250
+{'eval_loss': 0.6357774138450623, 'eval_accuracy_branch1': 0.9956666666666667, 'eval_precision_branch1': 0.9956675478534184, 'eval_recall_branch1': 0.9956666666666667, 'eval_f1_branch1': 0.99566666474074, 'eval_accuracy_branch2': 0.7518333333333334, 'eval_precision_branch2': 0.3759166666666667, 'eval_recall_branch2': 0.5, 'eval_f1_branch2': 0.42916944153743697, 'eval_lambda': 0.5476, 'eval_tn_branch2': 4511, 'eval_fp_branch2': 0, 'eval_fn_branch2': 1489, 'eval_tp_branch2': 0, 'eval_loss_branch1': 0.011678563430905342, 'eval_loss_branch2': 0.6237573623657227, 'eval_runtime': 10.2327, 'eval_samples_per_second': 586.358, 'eval_steps_per_second': 18.373, 'epoch': 38.0}
+[INFO|configuration_utils.py:491] 2025-11-16 07:46:58,849 >> Configuration saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-33250\config.json
+INFO:transformers.configuration_utils:Configuration saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-33250\config.json
+[INFO|modeling_utils.py:4181] 2025-11-16 07:46:59,034 >> Model weights saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-33250\model.safetensors
+INFO:transformers.modeling_utils:Model weights saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-33250\model.safetensors
+ 78%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████▊                               | 34125/43750 [1:18:50<19:19,  8.30it/s][INFO|trainer.py:4643] 2025-11-16 07:48:50,260 >>
+{'loss': 0.7152, 'grad_norm': 11.487369537353516, 'learning_rate': 0.022002285714285714, 'epoch': 39.0}
+***** Running Evaluation *****
+INFO:transformers.trainer:
+***** Running Evaluation *****
+[INFO|trainer.py:4645] 2025-11-16 07:48:50,263 >>   Num examples = 6000
+INFO:transformers.trainer:  Num examples = 6000
+[INFO|trainer.py:4648] 2025-11-16 07:48:50,264 >>   Batch size = 32
+INFO:transformers.trainer:  Batch size = 32
+ 78%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████▊                               | 34125/43750 [1:19:00<19:19,  8.30it/s][INFO|trainer.py:4309] 2025-11-16 07:49:00,558 >> Saving model checkpoint to results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-34125
+INFO:transformers.trainer:Saving model checkpoint to results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-34125
+{'eval_loss': 0.7109354138374329, 'eval_accuracy_branch1': 0.9943333333333333, 'eval_precision_branch1': 0.9943388259869554, 'eval_recall_branch1': 0.9943333333333333, 'eval_f1_branch1': 0.9943333175925488, 'eval_accuracy_branch2': 0.5861666666666666, 'eval_precision_branch2': 0.4019995961868501, 'eval_recall_branch2': 0.41501990731111876, 'eval_f1_branch2': 0.40777903583103786, 'eval_lambda': 0.5776, 'eval_tn_branch2': 3405, 'eval_fp_branch2': 1106, 'eval_fn_branch2': 1377, 'eval_tp_branch2': 112, 'eval_loss_branch1': 0.012680768966674805, 'eval_loss_branch2': 0.6981053352355957, 'eval_runtime': 10.2831, 'eval_samples_per_second': 583.48, 'eval_steps_per_second': 18.282, 'epoch': 39.0}
+[INFO|configuration_utils.py:491] 2025-11-16 07:49:00,567 >> Configuration saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-34125\config.json
+INFO:transformers.configuration_utils:Configuration saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-34125\config.json
+[INFO|modeling_utils.py:4181] 2025-11-16 07:49:00,723 >> Model weights saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-34125\model.safetensors
+INFO:transformers.modeling_utils:Model weights saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-34125\model.safetensors
+ 80%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████▌                            | 35000/43750 [1:20:51<17:29,  8.34it/s][INFO|trainer.py:4643] 2025-11-16 07:50:51,954 >>
+{'loss': 0.7012, 'grad_norm': 16.48707389831543, 'learning_rate': 0.020002285714285716, 'epoch': 40.0}
+***** Running Evaluation *****
+INFO:transformers.trainer:
+***** Running Evaluation *****
+[INFO|trainer.py:4645] 2025-11-16 07:50:51,956 >>   Num examples = 6000
+INFO:transformers.trainer:  Num examples = 6000
+[INFO|trainer.py:4648] 2025-11-16 07:50:51,957 >>   Batch size = 32
+INFO:transformers.trainer:  Batch size = 32
+ 80%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████▌                            | 35000/43750 [1:21:01<17:29,  8.34it/s][INFO|trainer.py:4309] 2025-11-16 07:51:02,201 >> Saving model checkpoint to results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-35000
+INFO:transformers.trainer:Saving model checkpoint to results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-35000
+{'eval_loss': 0.7450932860374451, 'eval_accuracy_branch1': 0.9943333333333333, 'eval_precision_branch1': 0.9943473947703401, 'eval_recall_branch1': 0.9943333333333333, 'eval_f1_branch1': 0.9943332930367504, 'eval_accuracy_branch2': 0.5626666666666666, 'eval_precision_branch2': 0.4816987970657711, 'eval_recall_branch2': 0.4779009715673008, 'eval_f1_branch2': 0.474812832019765, 'eval_lambda': 0.6084, 'eval_tn_branch2': 2915, 'eval_fp_branch2': 1596, 'eval_fn_branch2': 1028, 'eval_tp_branch2': 461, 'eval_loss_branch1': 0.015298787504434586, 'eval_loss_branch2': 0.7293450236320496, 'eval_runtime': 10.2276, 'eval_samples_per_second': 586.647, 'eval_steps_per_second': 18.382, 'epoch': 40.0}
+[INFO|configuration_utils.py:491] 2025-11-16 07:51:02,207 >> Configuration saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-35000\config.json
+INFO:transformers.configuration_utils:Configuration saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-35000\config.json
+[INFO|modeling_utils.py:4181] 2025-11-16 07:51:02,338 >> Model weights saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-35000\model.safetensors
+INFO:transformers.modeling_utils:Model weights saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-35000\model.safetensors
+ 82%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▍                         | 35875/43750 [1:22:53<15:47,  8.31it/s][INFO|trainer.py:4643] 2025-11-16 07:52:53,411 >>
+{'loss': 0.6771, 'grad_norm': 10.428030014038086, 'learning_rate': 0.018002285714285717, 'epoch': 41.0}
+***** Running Evaluation *****
+INFO:transformers.trainer:
+***** Running Evaluation *****
+[INFO|trainer.py:4645] 2025-11-16 07:52:53,413 >>   Num examples = 6000
+INFO:transformers.trainer:  Num examples = 6000
+[INFO|trainer.py:4648] 2025-11-16 07:52:53,415 >>   Batch size = 32
+INFO:transformers.trainer:  Batch size = 32
+ 82%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▍                         | 35875/43750 [1:23:03<15:47,  8.31it/s][INFO|trainer.py:4309] 2025-11-16 07:53:03,656 >> Saving model checkpoint to results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-35875
+INFO:transformers.trainer:Saving model checkpoint to results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-35875
+{'eval_loss': 0.707910418510437, 'eval_accuracy_branch1': 0.9946666666666667, 'eval_precision_branch1': 0.9946807375854246, 'eval_recall_branch1': 0.9946666666666666, 'eval_f1_branch1': 0.9946666287404711, 'eval_accuracy_branch2': 0.5833333333333334, 'eval_precision_branch2': 0.3780191280751363, 'eval_recall_branch2': 0.4005381070583526, 'eval_f1_branch2': 0.38829080948537475, 'eval_lambda': 0.6400000000000001, 'eval_tn_branch2': 3444, 'eval_fp_branch2': 1067, 'eval_fn_branch2': 1433, 'eval_tp_branch2': 56, 'eval_loss_branch1': 0.014073203317821026, 'eval_loss_branch2': 0.6936740279197693, 'eval_runtime': 10.2303, 'eval_samples_per_second': 586.494, 'eval_steps_per_second': 18.377, 'epoch': 41.0}
+[INFO|configuration_utils.py:491] 2025-11-16 07:53:03,665 >> Configuration saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-35875\config.json
+INFO:transformers.configuration_utils:Configuration saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-35875\config.json
+[INFO|modeling_utils.py:4181] 2025-11-16 07:53:03,843 >> Model weights saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-35875\model.safetensors
+INFO:transformers.modeling_utils:Model weights saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-35875\model.safetensors
+ 84%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▎                      | 36750/43750 [1:24:54<14:08,  8.25it/s][INFO|trainer.py:4643] 2025-11-16 07:54:55,070 >>
+{'loss': 0.6616, 'grad_norm': 21.44486427307129, 'learning_rate': 0.016002285714285715, 'epoch': 42.0}
+***** Running Evaluation *****
+INFO:transformers.trainer:
+***** Running Evaluation *****
+[INFO|trainer.py:4645] 2025-11-16 07:54:55,073 >>   Num examples = 6000
+INFO:transformers.trainer:  Num examples = 6000
+[INFO|trainer.py:4648] 2025-11-16 07:54:55,074 >>   Batch size = 32
+INFO:transformers.trainer:  Batch size = 32
+ 84%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▎                      | 36750/43750 [1:25:05<14:08,  8.25it/s][INFO|trainer.py:4309] 2025-11-16 07:55:05,335 >> Saving model checkpoint to results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-36750
+INFO:transformers.trainer:Saving model checkpoint to results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-36750
+{'eval_loss': 0.6066900491714478, 'eval_accuracy_branch1': 0.9945, 'eval_precision_branch1': 0.9945123628090702, 'eval_recall_branch1': 0.9944999999999999, 'eval_f1_branch1': 0.9944999656247852, 'eval_accuracy_branch2': 0.7518333333333334, 'eval_precision_branch2': 0.3759166666666667, 'eval_recall_branch2': 0.5, 'eval_f1_branch2': 0.42916944153743697, 'eval_lambda': 0.6723999999999999, 'eval_tn_branch2': 4511, 'eval_fp_branch2': 0, 'eval_fn_branch2': 1489, 'eval_tp_branch2': 0, 'eval_loss_branch1': 0.013412034139037132, 'eval_loss_branch2': 0.5929602980613708, 'eval_runtime': 10.247, 'eval_samples_per_second': 585.536, 'eval_steps_per_second': 18.347, 'epoch': 42.0}
+[INFO|configuration_utils.py:491] 2025-11-16 07:55:05,342 >> Configuration saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-36750\config.json
+INFO:transformers.configuration_utils:Configuration saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-36750\config.json
+[INFO|modeling_utils.py:4181] 2025-11-16 07:55:05,511 >> Model weights saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-36750\model.safetensors
+INFO:transformers.modeling_utils:Model weights saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-36750\model.safetensors
+ 86%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████                    | 37625/43750 [1:26:56<12:19,  8.29it/s][INFO|trainer.py:4643] 2025-11-16 07:56:56,621 >>
+{'loss': 0.6473, 'grad_norm': 11.428104400634766, 'learning_rate': 0.014002285714285715, 'epoch': 43.0}
+***** Running Evaluation *****
+INFO:transformers.trainer:
+***** Running Evaluation *****
+[INFO|trainer.py:4645] 2025-11-16 07:56:56,622 >>   Num examples = 6000
+INFO:transformers.trainer:  Num examples = 6000
+[INFO|trainer.py:4648] 2025-11-16 07:56:56,623 >>   Batch size = 32
+INFO:transformers.trainer:  Batch size = 32
+ 86%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████                    | 37625/43750 [1:27:06<12:19,  8.29it/s][INFO|trainer.py:4309] 2025-11-16 07:57:06,879 >> Saving model checkpoint to results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-37625
+INFO:transformers.trainer:Saving model checkpoint to results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-37625
+{'eval_loss': 0.6056230664253235, 'eval_accuracy_branch1': 0.9941666666666666, 'eval_precision_branch1': 0.9941671608338275, 'eval_recall_branch1': 0.9941666666666666, 'eval_f1_branch1': 0.994166665208333, 'eval_accuracy_branch2': 0.7518333333333334, 'eval_precision_branch2': 0.3759166666666667, 'eval_recall_branch2': 0.5, 'eval_f1_branch2': 0.42916944153743697, 'eval_lambda': 0.7055999999999999, 'eval_tn_branch2': 4511, 'eval_fp_branch2': 0, 'eval_fn_branch2': 1489, 'eval_tp_branch2': 0, 'eval_loss_branch1': 0.01547723077237606, 'eval_loss_branch2': 0.5898571610450745, 'eval_runtime': 10.2407, 'eval_samples_per_second': 585.899, 'eval_steps_per_second': 18.358, 'epoch': 43.0}
+[INFO|configuration_utils.py:491] 2025-11-16 07:57:06,888 >> Configuration saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-37625\config.json
+INFO:transformers.configuration_utils:Configuration saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-37625\config.json
+[INFO|modeling_utils.py:4181] 2025-11-16 07:57:07,062 >> Model weights saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-37625\model.safetensors
+INFO:transformers.modeling_utils:Model weights saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-37625\model.safetensors
+ 88%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▉                 | 38500/43750 [1:28:57<10:27,  8.37it/s][INFO|trainer.py:4643] 2025-11-16 07:58:58,112 >>
+{'loss': 0.6306, 'grad_norm': 25.11604881286621, 'learning_rate': 0.012002285714285715, 'epoch': 44.0}
+***** Running Evaluation *****
+INFO:transformers.trainer:
+***** Running Evaluation *****
+[INFO|trainer.py:4645] 2025-11-16 07:58:58,114 >>   Num examples = 6000
+INFO:transformers.trainer:  Num examples = 6000
+[INFO|trainer.py:4648] 2025-11-16 07:58:58,115 >>   Batch size = 32
+INFO:transformers.trainer:  Batch size = 32
+ 88%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▉                 | 38500/43750 [1:29:08<10:27,  8.37it/s][INFO|trainer.py:4309] 2025-11-16 07:59:08,599 >> Saving model checkpoint to results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-38500
+INFO:transformers.trainer:Saving model checkpoint to results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-38500
+{'eval_loss': 0.5904710292816162, 'eval_accuracy_branch1': 0.9945, 'eval_precision_branch1': 0.9945044505400549, 'eval_recall_branch1': 0.9944999999999999, 'eval_f1_branch1': 0.9944999876249722, 'eval_accuracy_branch2': 0.7518333333333334, 'eval_precision_branch2': 0.3759166666666667, 'eval_recall_branch2': 0.5, 'eval_f1_branch2': 0.42916944153743697, 'eval_lambda': 0.7395999999999999, 'eval_tn_branch2': 4511, 'eval_fp_branch2': 0, 'eval_fn_branch2': 1489, 'eval_tp_branch2': 0, 'eval_loss_branch1': 0.015184259973466396, 'eval_loss_branch2': 0.57506263256073, 'eval_runtime': 10.4673, 'eval_samples_per_second': 573.215, 'eval_steps_per_second': 17.961, 'epoch': 44.0}
+[INFO|configuration_utils.py:491] 2025-11-16 07:59:08,607 >> Configuration saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-38500\config.json
+INFO:transformers.configuration_utils:Configuration saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-38500\config.json
+[INFO|modeling_utils.py:4181] 2025-11-16 07:59:08,750 >> Model weights saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-38500\model.safetensors
+INFO:transformers.modeling_utils:Model weights saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-38500\model.safetensors
+ 90%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▊              | 39375/43750 [1:30:59<08:51,  8.23it/s][INFO|trainer.py:4643] 2025-11-16 08:00:59,932 >>
+{'loss': 0.6191, 'grad_norm': 47.575557708740234, 'learning_rate': 0.010002285714285715, 'epoch': 45.0}
+***** Running Evaluation *****
+INFO:transformers.trainer:
+***** Running Evaluation *****
+[INFO|trainer.py:4645] 2025-11-16 08:00:59,933 >>   Num examples = 6000
+INFO:transformers.trainer:  Num examples = 6000
+[INFO|trainer.py:4648] 2025-11-16 08:00:59,934 >>   Batch size = 32
+INFO:transformers.trainer:  Batch size = 32
+ 90%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▊              | 39375/43750 [1:31:10<08:51,  8.23it/s][INFO|trainer.py:4309] 2025-11-16 08:01:10,217 >> Saving model checkpoint to results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-39375
+INFO:transformers.trainer:Saving model checkpoint to results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-39375
+{'eval_loss': 0.5954071283340454, 'eval_accuracy_branch1': 0.9915, 'eval_precision_branch1': 0.991620665561136, 'eval_recall_branch1': 0.9915, 'eval_f1_branch1': 0.9914994783985496, 'eval_accuracy_branch2': 0.751, 'eval_precision_branch2': 0.37581317764804, 'eval_recall_branch2': 0.4994457991576147, 'eval_f1_branch2': 0.4288977727013135, 'eval_lambda': 0.7744, 'eval_tn_branch2': 4506, 'eval_fp_branch2': 5, 'eval_fn_branch2': 1489, 'eval_tp_branch2': 0, 'eval_loss_branch1': 0.02332490123808384, 'eval_loss_branch2': 0.5718057155609131, 'eval_runtime': 10.2681, 'eval_samples_per_second': 584.336, 'eval_steps_per_second': 18.309, 'epoch': 45.0}
+[INFO|configuration_utils.py:491] 2025-11-16 08:01:10,223 >> Configuration saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-39375\config.json
+INFO:transformers.configuration_utils:Configuration saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-39375\config.json
+[INFO|modeling_utils.py:4181] 2025-11-16 08:01:10,374 >> Model weights saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-39375\model.safetensors
+INFO:transformers.modeling_utils:Model weights saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-39375\model.safetensors
+ 92%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▋           | 40250/43750 [1:33:01<07:00,  8.32it/s][INFO|trainer.py:4643] 2025-11-16 08:03:01,436 >>
+{'loss': 0.6051, 'grad_norm': 10.048768043518066, 'learning_rate': 0.008002285714285715, 'epoch': 46.0}
+***** Running Evaluation *****
+INFO:transformers.trainer:
+***** Running Evaluation *****
+[INFO|trainer.py:4645] 2025-11-16 08:03:01,438 >>   Num examples = 6000
+INFO:transformers.trainer:  Num examples = 6000
+[INFO|trainer.py:4648] 2025-11-16 08:03:01,439 >>   Batch size = 32
+INFO:transformers.trainer:  Batch size = 32
+ 92%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▋           | 40250/43750 [1:33:11<07:00,  8.32it/s][INFO|trainer.py:4309] 2025-11-16 08:03:11,679 >> Saving model checkpoint to results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-40250
+INFO:transformers.trainer:Saving model checkpoint to results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-40250
+{'eval_loss': 0.5779896378517151, 'eval_accuracy_branch1': 0.9938333333333333, 'eval_precision_branch1': 0.9938575323524186, 'eval_recall_branch1': 0.9938333333333333, 'eval_f1_branch1': 0.9938332577907413, 'eval_accuracy_branch2': 0.7518333333333334, 'eval_precision_branch2': 0.3759166666666667, 'eval_recall_branch2': 0.5, 'eval_f1_branch2': 0.42916944153743697, 'eval_lambda': 0.81, 'eval_tn_branch2': 4511, 'eval_fp_branch2': 0, 'eval_fn_branch2': 1489, 'eval_tp_branch2': 0, 'eval_loss_branch1': 0.01494524348527193, 'eval_loss_branch2': 0.5627975463867188, 'eval_runtime': 10.224, 'eval_samples_per_second': 586.855, 'eval_steps_per_second': 18.388, 'epoch': 46.0}
+[INFO|configuration_utils.py:491] 2025-11-16 08:03:11,685 >> Configuration saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-40250\config.json
+INFO:transformers.configuration_utils:Configuration saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-40250\config.json
+[INFO|modeling_utils.py:4181] 2025-11-16 08:03:11,859 >> Model weights saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-40250\model.safetensors
+INFO:transformers.modeling_utils:Model weights saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-40250\model.safetensors
+ 94%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▍        | 41125/43750 [1:35:02<05:10,  8.46it/s][INFO|trainer.py:4643] 2025-11-16 08:05:02,833 >>
+{'loss': 0.5972, 'grad_norm': 12.423973083496094, 'learning_rate': 0.006002285714285714, 'epoch': 47.0}
+***** Running Evaluation *****
+INFO:transformers.trainer:
+***** Running Evaluation *****
+[INFO|trainer.py:4645] 2025-11-16 08:05:02,835 >>   Num examples = 6000
+INFO:transformers.trainer:  Num examples = 6000
+[INFO|trainer.py:4648] 2025-11-16 08:05:02,839 >>   Batch size = 32
+INFO:transformers.trainer:  Batch size = 32
+ 94%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▍        | 41125/43750 [1:35:12<05:10,  8.46it/s][INFO|trainer.py:4309] 2025-11-16 08:05:13,074 >> Saving model checkpoint to results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-41125
+INFO:transformers.trainer:Saving model checkpoint to results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-41125
+{'eval_loss': 0.5820794105529785, 'eval_accuracy_branch1': 0.9953333333333333, 'eval_precision_branch1': 0.9953474232155937, 'eval_recall_branch1': 0.9953333333333334, 'eval_f1_branch1': 0.9953333001479121, 'eval_accuracy_branch2': 0.7518333333333334, 'eval_precision_branch2': 0.3759166666666667, 'eval_recall_branch2': 0.5, 'eval_f1_branch2': 0.42916944153743697, 'eval_lambda': 0.8464, 'eval_tn_branch2': 4511, 'eval_fp_branch2': 0, 'eval_fn_branch2': 1489, 'eval_tp_branch2': 0, 'eval_loss_branch1': 0.012323000468313694, 'eval_loss_branch2': 0.5694923400878906, 'eval_runtime': 10.2225, 'eval_samples_per_second': 586.943, 'eval_steps_per_second': 18.391, 'epoch': 47.0}
+[INFO|configuration_utils.py:491] 2025-11-16 08:05:13,081 >> Configuration saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-41125\config.json
+INFO:transformers.configuration_utils:Configuration saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-41125\config.json
+[INFO|modeling_utils.py:4181] 2025-11-16 08:05:13,229 >> Model weights saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-41125\model.safetensors
+INFO:transformers.modeling_utils:Model weights saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-41125\model.safetensors
+ 96%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▎     | 42000/43750 [1:37:04<03:32,  8.23it/s][INFO|trainer.py:4643] 2025-11-16 08:07:04,237 >>
+{'loss': 0.5883, 'grad_norm': 11.256135940551758, 'learning_rate': 0.004002285714285714, 'epoch': 48.0}
+***** Running Evaluation *****
+INFO:transformers.trainer:
+***** Running Evaluation *****
+[INFO|trainer.py:4645] 2025-11-16 08:07:04,238 >>   Num examples = 6000
+INFO:transformers.trainer:  Num examples = 6000
+[INFO|trainer.py:4648] 2025-11-16 08:07:04,239 >>   Batch size = 32
+INFO:transformers.trainer:  Batch size = 32
+ 96%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▎     | 42000/43750 [1:37:14<03:32,  8.23it/s][INFO|trainer.py:4309] 2025-11-16 08:07:14,523 >> Saving model checkpoint to results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-42000
+INFO:transformers.trainer:Saving model checkpoint to results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-42000
+{'eval_loss': 0.5760961771011353, 'eval_accuracy_branch1': 0.995, 'eval_precision_branch1': 0.9950140804005092, 'eval_recall_branch1': 0.995, 'eval_f1_branch1': 0.9949999644441916, 'eval_accuracy_branch2': 0.7518333333333334, 'eval_precision_branch2': 0.3759166666666667, 'eval_recall_branch2': 0.5, 'eval_f1_branch2': 0.42916944153743697, 'eval_lambda': 0.8835999999999999, 'eval_tn_branch2': 4511, 'eval_fp_branch2': 0, 'eval_fn_branch2': 1489, 'eval_tp_branch2': 0, 'eval_loss_branch1': 0.012100979685783386, 'eval_loss_branch2': 0.5637407898902893, 'eval_runtime': 10.2677, 'eval_samples_per_second': 584.359, 'eval_steps_per_second': 18.31, 'epoch': 48.0}
+[INFO|configuration_utils.py:491] 2025-11-16 08:07:14,532 >> Configuration saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-42000\config.json
+INFO:transformers.configuration_utils:Configuration saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-42000\config.json
+[INFO|modeling_utils.py:4181] 2025-11-16 08:07:14,717 >> Model weights saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-42000\model.safetensors
+INFO:transformers.modeling_utils:Model weights saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-42000\model.safetensors
+ 98%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▏  | 42875/43750 [1:39:05<01:45,  8.26it/s][INFO|trainer.py:4643] 2025-11-16 08:09:06,064 >>
+{'loss': 0.5785, 'grad_norm': 11.41401195526123, 'learning_rate': 0.0020022857142857147, 'epoch': 49.0}
+***** Running Evaluation *****
+INFO:transformers.trainer:
+***** Running Evaluation *****
+[INFO|trainer.py:4645] 2025-11-16 08:09:06,066 >>   Num examples = 6000
+INFO:transformers.trainer:  Num examples = 6000
+[INFO|trainer.py:4648] 2025-11-16 08:09:06,067 >>   Batch size = 32
+INFO:transformers.trainer:  Batch size = 32
+ 98%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▏  | 42875/43750 [1:39:16<01:45,  8.26it/s][INFO|trainer.py:4309] 2025-11-16 08:09:16,284 >> Saving model checkpoint to results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-42875
+INFO:transformers.trainer:Saving model checkpoint to results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-42875
+{'eval_loss': 0.5750274062156677, 'eval_accuracy_branch1': 0.9953333333333333, 'eval_precision_branch1': 0.9953441208275202, 'eval_recall_branch1': 0.9953333333333334, 'eval_f1_branch1': 0.9953333079257876, 'eval_accuracy_branch2': 0.7518333333333334, 'eval_precision_branch2': 0.3759166666666667, 'eval_recall_branch2': 0.5, 'eval_f1_branch2': 0.42916944153743697, 'eval_lambda': 0.9216, 'eval_tn_branch2': 4511, 'eval_fp_branch2': 0, 'eval_fn_branch2': 1489, 'eval_tp_branch2': 0, 'eval_loss_branch1': 0.011613844893872738, 'eval_loss_branch2': 0.56316739320755, 'eval_runtime': 10.202, 'eval_samples_per_second': 588.118, 'eval_steps_per_second': 18.428, 'epoch': 49.0}
+[INFO|configuration_utils.py:491] 2025-11-16 08:09:16,293 >> Configuration saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-42875\config.json
+INFO:transformers.configuration_utils:Configuration saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-42875\config.json
+[INFO|modeling_utils.py:4181] 2025-11-16 08:09:16,447 >> Model weights saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-42875\model.safetensors
+INFO:transformers.modeling_utils:Model weights saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-42875\model.safetensors
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 43750/43750 [1:41:07<00:00,  8.43it/s][INFO|trainer.py:4643] 2025-11-16 08:11:07,748 >>
+{'loss': 0.577, 'grad_norm': 10.64247989654541, 'learning_rate': 2.285714285714286e-06, 'epoch': 50.0}
+***** Running Evaluation *****
+INFO:transformers.trainer:
+***** Running Evaluation *****
+[INFO|trainer.py:4645] 2025-11-16 08:11:07,750 >>   Num examples = 6000
+INFO:transformers.trainer:  Num examples = 6000
+[INFO|trainer.py:4648] 2025-11-16 08:11:07,751 >>   Batch size = 32
+INFO:transformers.trainer:  Batch size = 32
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 43750/43750 [1:41:17<00:00,  8.43it/s][INFO|trainer.py:4309] 2025-11-16 08:11:17,992 >> Saving model checkpoint to results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-43750
+INFO:transformers.trainer:Saving model checkpoint to results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-43750
+{'eval_loss': 0.57760089635849, 'eval_accuracy_branch1': 0.9943333333333333, 'eval_precision_branch1': 0.9943704660483388, 'eval_recall_branch1': 0.9943333333333333, 'eval_f1_branch1': 0.9943332269239278, 'eval_accuracy_branch2': 0.7518333333333334, 'eval_precision_branch2': 0.3759166666666667, 'eval_recall_branch2': 0.5, 'eval_f1_branch2': 0.42916944153743697, 'eval_lambda': 0.9603999999999999, 'eval_tn_branch2': 4511, 'eval_fp_branch2': 0, 'eval_fn_branch2': 1489, 'eval_tp_branch2': 0, 'eval_loss_branch1': 0.015165875665843487, 'eval_loss_branch2': 0.5621879696846008, 'eval_runtime': 10.2251, 'eval_samples_per_second': 586.793, 'eval_steps_per_second': 18.386, 'epoch': 50.0}
+[INFO|configuration_utils.py:491] 2025-11-16 08:11:18,000 >> Configuration saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-43750\config.json
+INFO:transformers.configuration_utils:Configuration saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-43750\config.json
+[INFO|modeling_utils.py:4181] 2025-11-16 08:11:18,145 >> Model weights saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-43750\model.safetensors
+INFO:transformers.modeling_utils:Model weights saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\results\checkpoint-43750\model.safetensors
+[INFO|trainer.py:2810] 2025-11-16 08:11:18,162 >>
+
+Training completed. Do not forget to share your model on huggingface.co/models =)
+
+
+INFO:transformers.trainer:
+
+Training completed. Do not forget to share your model on huggingface.co/models =)
+
+
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 43750/43750 [1:41:18<00:00,  7.20it/s]
+{'train_runtime': 6082.3101, 'train_samples_per_second': 230.176, 'train_steps_per_second': 7.193, 'train_loss': 0.7053239794921875, 'epoch': 50.0}
+[INFO|trainer.py:4309] 2025-11-16 08:11:19,185 >> Saving model checkpoint to results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\final_model
+INFO:transformers.trainer:Saving model checkpoint to results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\final_model
+[INFO|configuration_utils.py:491] 2025-11-16 08:11:19,191 >> Configuration saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\final_model\config.json
+INFO:transformers.configuration_utils:Configuration saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\final_model\config.json
+[INFO|modeling_utils.py:4181] 2025-11-16 08:11:19,356 >> Model weights saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\final_model\model.safetensors
+INFO:transformers.modeling_utils:Model weights saved in results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52\final_model\model.safetensors
+INFO:root:Saved results to results/dann_train_val_kidney_cancer_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_06-29-52.

@@ -1,0 +1,21 @@
+---
+# Specify the checkpoint directory from training (use final_model for best checkpoint)
+checkpoint_dir: results\dann_train_val_colon_nk_results\parabolic_increasing_lambda_scheduler_fold_0_2025-11-18_01-37-52\final_model\model.safetensors
+output_dir: results/dann_test_colon_nk_results/
+architecture:
+    cls_name: ResNet50DANN
+    cls_init_args:
+        num_classes: 2  # Binary classification: benign (0) vs malignant (1)
+        # Unused in evaluation.
+        lamb_initial: 0.0
+        ld_scale: 1.0
+evaluation:
+    evaluator:
+        cls_name: DANNTrainer
+    dataset:
+        cls_name: TwoLabelDataset
+        convert_grayscale_to_rgb: False
+        fold_file_paths:
+            - data/preprocessed/colon_nk_test.npz
+    evaluation_arguments:
+        batch_size: 32

@@ -1,0 +1,19 @@
+  0%|                                                                                                                                                                                      | 0/43750 [00:00<?, ?it/s][WARNING|modeling_utils.py:1759] 2025-11-16 03:03:30,181 >> Could not estimate the number of tokens of the input, floating-point operations will not be computed
+WARNING:transformers.modeling_utils:Could not estimate the number of tokens of the input, floating-point operations will not be computed
+  1%|██▏                                                                                                                                                                       | 576/43750 [01:12<1:36:23,  7.46it/s]Traceback (most recent call last):
+  File "C:\Users\samue\Capstone_Project\domain-adaptation-multi-cancer\domain-adaptation-multi-cancer-main\scripts\run_training.py", line 15, in <module>
+    main()
+  File "C:\Users\samue\Capstone_Project\domain-adaptation-multi-cancer\domain-adaptation-multi-cancer-main\scripts\run_training.py", line 12, in main
+    run_training_from_config_file(args.config_file)
+  File "C:\Users\samue\Capstone_Project\domain-adaptation-multi-cancer\domain-adaptation-multi-cancer-main\src\domain_adaptation_ct\learn\training_funcs.py", line 155, in run_training_from_config_file
+    run_output_dir = train_model(
+                     ^^^^^^^^^^^^
+  File "C:\Users\samue\Capstone_Project\domain-adaptation-multi-cancer\domain-adaptation-multi-cancer-main\src\domain_adaptation_ct\learn\training_funcs.py", line 93, in train_model
+    trainer.train(resume_from_checkpoint=resume_from_checkpoint)
+  File "C:\Users\samue\AppData\Roaming\Python\Python311\site-packages\transformers\trainer.py", line 2325, in train
+    return inner_training_loop(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samue\AppData\Roaming\Python\Python311\site-packages\transformers\trainer.py", line 2679, in _inner_training_loop
+    and (torch.isnan(tr_loss_step) or torch.isinf(tr_loss_step))
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/samue/Capstone_Project/domain-adaptation-multi-cancer/domain-adaptation-multi-cancer-main/mlruns/0/5873f3e2a3a747b69f3cedf22870762e/artifacts
+end_time: 1763286423470
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 5873f3e2a3a747b69f3cedf22870762e
+run_name: capable-auk-759
+run_uuid: 5873f3e2a3a747b69f3cedf22870762e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1763280324459
+status: 3
+tags: []
+user_id: samue

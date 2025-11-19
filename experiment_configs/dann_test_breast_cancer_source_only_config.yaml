@@ -1,0 +1,20 @@
+---
+# Evaluate breast cancer model on SOURCE domains only
+checkpoint_dir: results\dann_train_val_breast_cancer_results\parabolic_increasing_lambda_scheduler_fold_0_2025-11-16_18-06-56\final_model\breast.safetensors
+output_dir: results/dann_test_breast_cancer_source_only_results/
+architecture:
+    cls_name: ResNet50DANN
+    cls_init_args:
+        num_classes: 2  # Binary classification: benign (0) vs malignant (1)
+        lamb_initial: 0.0
+        ld_scale: 1.0
+evaluation:
+    evaluator:
+        cls_name: DANNTrainer
+    dataset:
+        cls_name: TwoLabelDataset
+        convert_grayscale_to_rgb: False
+        fold_file_paths:
+            - data/preprocessed/breast_cancer_test_source_only.npz
+    evaluation_arguments:
+        batch_size: 32

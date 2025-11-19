@@ -1,0 +1,49 @@
+  0%|                                                                                                                                                                                       | 0/2625 [00:00<?, ?it/s]Traceback (most recent call last):
+  File "C:\Users\samue\Capstone_Project\domain-adaptation-multi-cancer\domain-adaptation-multi-cancer-main\scripts\run_training.py", line 15, in <module>
+    main()
+  File "C:\Users\samue\Capstone_Project\domain-adaptation-multi-cancer\domain-adaptation-multi-cancer-main\scripts\run_training.py", line 12, in main
+    run_training_from_config_file(args.config_file)
+  File "C:\Users\samue\Capstone_Project\domain-adaptation-multi-cancer\domain-adaptation-multi-cancer-main\src\domain_adaptation_ct\learn\training_funcs.py", line 155, in run_training_from_config_file
+    run_output_dir = train_model(
+                     ^^^^^^^^^^^^
+  File "C:\Users\samue\Capstone_Project\domain-adaptation-multi-cancer\domain-adaptation-multi-cancer-main\src\domain_adaptation_ct\learn\training_funcs.py", line 93, in train_model
+    trainer.train(resume_from_checkpoint=resume_from_checkpoint)
+  File "C:\Users\samue\AppData\Roaming\Python\Python311\site-packages\transformers\trainer.py", line 2325, in train
+    return inner_training_loop(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samue\AppData\Roaming\Python\Python311\site-packages\transformers\trainer.py", line 2674, in _inner_training_loop
+    tr_loss_step = self.training_step(model, inputs, num_items_in_batch)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samue\AppData\Roaming\Python\Python311\site-packages\transformers\trainer.py", line 4020, in training_step
+    loss = self.compute_loss(model, inputs, num_items_in_batch=num_items_in_batch)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samue\AppData\Roaming\Python\Python311\site-packages\transformers\trainer.py", line 4110, in compute_loss
+    outputs = model(**inputs)
+              ^^^^^^^^^^^^^^^
+  File "C:\Users\samue\AppData\Roaming\Python\Python311\site-packages\torch\nn\modules\module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samue\AppData\Roaming\Python\Python311\site-packages\torch\nn\modules\module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samue\Capstone_Project\domain-adaptation-multi-cancer\domain-adaptation-multi-cancer-main\src\domain_adaptation_ct\learn\architectures.py", line 106, in forward
+    features = self.resnet(pixel_values).pooler_output
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samue\AppData\Roaming\Python\Python311\site-packages\torch\nn\modules\module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samue\AppData\Roaming\Python\Python311\site-packages\torch\nn\modules\module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samue\AppData\Roaming\Python\Python311\site-packages\transformers\models\resnet\modeling_resnet.py", line 287, in forward
+    embedding_output = self.embedder(pixel_values)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samue\AppData\Roaming\Python\Python311\site-packages\torch\nn\modules\module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samue\AppData\Roaming\Python\Python311\site-packages\torch\nn\modules\module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samue\AppData\Roaming\Python\Python311\site-packages\transformers\models\resnet\modeling_resnet.py", line 73, in forward
+    raise ValueError(
+ValueError: Make sure that the channel dimension of the pixel values match with the one set in the configuration.

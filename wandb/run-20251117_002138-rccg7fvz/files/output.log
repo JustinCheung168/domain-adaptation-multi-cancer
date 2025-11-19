@@ -1,0 +1,821 @@
+  0%|                                                                                                   | 0/43750 [00:00<?, ?it/s][WARNING|modeling_utils.py:1759] 2025-11-17 00:21:41,562 >> Could not estimate the number of tokens of the input, floating-point operations will not be computed
+WARNING:transformers.modeling_utils:Could not estimate the number of tokens of the input, floating-point operations will not be computed
+  2%|█▋                                                                                     | 875/43750 [01:39<1:21:09,  8.80it/s][INFO|trainer.py:4643] 2025-11-17 00:23:20,248 >>
+{'loss': 0.8787, 'grad_norm': 14.424331665039062, 'learning_rate': 0.09800228571428572, 'epoch': 1.0}
+***** Running Evaluation *****
+INFO:transformers.trainer:
+***** Running Evaluation *****
+[INFO|trainer.py:4645] 2025-11-17 00:23:20,249 >>   Num examples = 6000
+INFO:transformers.trainer:  Num examples = 6000
+[INFO|trainer.py:4648] 2025-11-17 00:23:20,250 >>   Batch size = 32
+INFO:transformers.trainer:  Batch size = 32
+  2%|█▋                                                                                     | 875/43750 [01:47<1:21:09,  8.80it/s][INFO|trainer.py:4309] 2025-11-17 00:23:28,735 >> Saving model checkpoint to results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-875
+INFO:transformers.trainer:Saving model checkpoint to results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-875
+{'eval_loss': 1.4263252019882202, 'eval_accuracy_branch1': 0.6051666666666666, 'eval_precision_branch1': 0.6138157670852016, 'eval_recall_branch1': 0.6051666666666666, 'eval_f1_branch1': 0.5975203470397372, 'eval_accuracy_branch2': 0.7308333333333333, 'eval_precision_branch2': 0.492867940737926, 'eval_recall_branch2': 0.49898963730948914, 'eval_f1_branch2': 0.44523880065094273, 'eval_lambda': 0.0, 'eval_tn_branch2': 4345, 'eval_fp_branch2': 126, 'eval_fn_branch2': 1489, 'eval_tp_branch2': 40, 'eval_loss_branch1': 0.8236809372901917, 'eval_loss_branch2': 0.6028262376785278, 'eval_cm_branch1_actual0_pred0': 2229, 'eval_cm_branch1_actual0_pred1': 771, 'eval_cm_branch1_actual1_pred0': 1598, 'eval_cm_branch1_actual1_pred1': 1402, 'eval_runtime': 8.4795, 'eval_samples_per_second': 707.588, 'eval_steps_per_second': 22.171, 'epoch': 1.0}
+[INFO|configuration_utils.py:491] 2025-11-17 00:23:28,738 >> Configuration saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-875\config.json
+INFO:transformers.configuration_utils:Configuration saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-875\config.json
+[INFO|modeling_utils.py:4181] 2025-11-17 00:23:28,841 >> Model weights saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-875\model.safetensors
+INFO:transformers.modeling_utils:Model weights saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-875\model.safetensors
+  4%|███▍                                                                                  | 1750/43750 [03:37<1:21:49,  8.56it/s][INFO|trainer.py:4643] 2025-11-17 00:25:18,317 >>
+{'loss': 0.7415, 'grad_norm': 6.680898666381836, 'learning_rate': 0.09600228571428572, 'epoch': 2.0}
+***** Running Evaluation *****
+INFO:transformers.trainer:
+***** Running Evaluation *****
+[INFO|trainer.py:4645] 2025-11-17 00:25:18,318 >>   Num examples = 6000
+INFO:transformers.trainer:  Num examples = 6000
+[INFO|trainer.py:4648] 2025-11-17 00:25:18,320 >>   Batch size = 32
+INFO:transformers.trainer:  Batch size = 32
+  4%|███▍                                                                                  | 1750/43750 [03:47<1:21:49,  8.56it/s][INFO|trainer.py:4309] 2025-11-17 00:25:28,209 >> Saving model checkpoint to results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-1750
+INFO:transformers.trainer:Saving model checkpoint to results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-1750
+{'eval_loss': 0.7892887592315674, 'eval_accuracy_branch1': 0.8386666666666667, 'eval_precision_branch1': 0.8390586184295712, 'eval_recall_branch1': 0.8386666666666667, 'eval_f1_branch1': 0.8386200278547167, 'eval_accuracy_branch2': 0.7395, 'eval_precision_branch2': 0.5882986288856669, 'eval_recall_branch2': 0.5168549327187972, 'eval_f1_branch2': 0.4784197419629338, 'eval_lambda': 0.0004, 'eval_tn_branch2': 4341, 'eval_fp_branch2': 130, 'eval_fn_branch2': 1433, 'eval_tp_branch2': 96, 'eval_loss_branch1': 0.3208334445953369, 'eval_loss_branch2': 0.46772831678390503, 'eval_cm_branch1_actual0_pred0': 2567, 'eval_cm_branch1_actual0_pred1': 433, 'eval_cm_branch1_actual1_pred0': 535, 'eval_cm_branch1_actual1_pred1': 2465, 'eval_runtime': 9.8744, 'eval_samples_per_second': 607.632, 'eval_steps_per_second': 19.039, 'epoch': 2.0}
+[INFO|configuration_utils.py:491] 2025-11-17 00:25:28,215 >> Configuration saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-1750\config.json
+INFO:transformers.configuration_utils:Configuration saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-1750\config.json
+[INFO|modeling_utils.py:4181] 2025-11-17 00:25:28,346 >> Model weights saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-1750\model.safetensors
+INFO:transformers.modeling_utils:Model weights saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-1750\model.safetensors
+  6%|█████▏                                                                                | 2625/43750 [05:36<1:20:59,  8.46it/s][INFO|trainer.py:4643] 2025-11-17 00:27:17,149 >>
+{'loss': 0.8434, 'grad_norm': 10.068077087402344, 'learning_rate': 0.09400228571428572, 'epoch': 3.0}
+***** Running Evaluation *****
+INFO:transformers.trainer:
+***** Running Evaluation *****
+[INFO|trainer.py:4645] 2025-11-17 00:27:17,150 >>   Num examples = 6000
+INFO:transformers.trainer:  Num examples = 6000
+[INFO|trainer.py:4648] 2025-11-17 00:27:17,152 >>   Batch size = 32
+INFO:transformers.trainer:  Batch size = 32
+  6%|█████▏                                                                                | 2625/43750 [05:45<1:20:59,  8.46it/s][INFO|trainer.py:4309] 2025-11-17 00:27:27,050 >> Saving model checkpoint to results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-2625
+INFO:transformers.trainer:Saving model checkpoint to results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-2625
+{'eval_loss': 1.1621949672698975, 'eval_accuracy_branch1': 0.766, 'eval_precision_branch1': 0.7878191197495854, 'eval_recall_branch1': 0.766, 'eval_f1_branch1': 0.7614795336188709, 'eval_accuracy_branch2': 0.7051666666666667, 'eval_precision_branch2': 0.5685270042423582, 'eval_recall_branch2': 0.5471820506222865, 'eval_f1_branch2': 0.5473224017706885, 'eval_lambda': 0.0016, 'eval_tn_branch2': 3887, 'eval_fp_branch2': 584, 'eval_fn_branch2': 1185, 'eval_tp_branch2': 344, 'eval_loss_branch1': 0.6583386063575745, 'eval_loss_branch2': 0.5033077597618103, 'eval_cm_branch1_actual0_pred0': 1885, 'eval_cm_branch1_actual0_pred1': 1115, 'eval_cm_branch1_actual1_pred0': 289, 'eval_cm_branch1_actual1_pred1': 2711, 'eval_runtime': 9.8837, 'eval_samples_per_second': 607.061, 'eval_steps_per_second': 19.021, 'epoch': 3.0}
+[INFO|configuration_utils.py:491] 2025-11-17 00:27:27,057 >> Configuration saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-2625\config.json
+INFO:transformers.configuration_utils:Configuration saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-2625\config.json
+[INFO|modeling_utils.py:4181] 2025-11-17 00:27:27,201 >> Model weights saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-2625\model.safetensors
+INFO:transformers.modeling_utils:Model weights saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-2625\model.safetensors
+  8%|██████▉                                                                               | 3500/43750 [07:35<1:19:42,  8.42it/s][INFO|trainer.py:4643] 2025-11-17 00:29:16,172 >>
+{'loss': 1.0484, 'grad_norm': 12.3654146194458, 'learning_rate': 0.09200228571428572, 'epoch': 4.0}
+***** Running Evaluation *****
+INFO:transformers.trainer:
+***** Running Evaluation *****
+[INFO|trainer.py:4645] 2025-11-17 00:29:16,173 >>   Num examples = 6000
+INFO:transformers.trainer:  Num examples = 6000
+[INFO|trainer.py:4648] 2025-11-17 00:29:16,175 >>   Batch size = 32
+INFO:transformers.trainer:  Batch size = 32
+  8%|██████▉                                                                               | 3500/43750 [07:44<1:19:42,  8.42it/s][INFO|trainer.py:4309] 2025-11-17 00:29:26,008 >> Saving model checkpoint to results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-3500
+INFO:transformers.trainer:Saving model checkpoint to results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-3500
+{'eval_loss': 1.3200451135635376, 'eval_accuracy_branch1': 0.78, 'eval_precision_branch1': 0.7800179211469533, 'eval_recall_branch1': 0.78, 'eval_f1_branch1': 0.7799964799436792, 'eval_accuracy_branch2': 0.7663333333333333, 'eval_precision_branch2': 0.8500073618186637, 'eval_recall_branch2': 0.5434670258547234, 'eval_f1_branch2': 0.51335564538691, 'eval_lambda': 0.0036, 'eval_tn_branch2': 4462, 'eval_fp_branch2': 9, 'eval_fn_branch2': 1393, 'eval_tp_branch2': 136, 'eval_loss_branch1': 0.7792969346046448, 'eval_loss_branch2': 0.5408558249473572, 'eval_cm_branch1_actual0_pred0': 2328, 'eval_cm_branch1_actual0_pred1': 672, 'eval_cm_branch1_actual1_pred0': 648, 'eval_cm_branch1_actual1_pred1': 2352, 'eval_runtime': 9.8206, 'eval_samples_per_second': 610.96, 'eval_steps_per_second': 19.143, 'epoch': 4.0}
+[INFO|configuration_utils.py:491] 2025-11-17 00:29:26,016 >> Configuration saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-3500\config.json
+INFO:transformers.configuration_utils:Configuration saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-3500\config.json
+[INFO|modeling_utils.py:4181] 2025-11-17 00:29:26,144 >> Model weights saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-3500\model.safetensors
+INFO:transformers.modeling_utils:Model weights saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-3500\model.safetensors
+ 10%|████████▌                                                                             | 4375/43750 [09:33<1:17:36,  8.46it/s][INFO|trainer.py:4643] 2025-11-17 00:31:15,036 >>
+{'loss': 1.0827, 'grad_norm': 9.130949974060059, 'learning_rate': 0.09000228571428572, 'epoch': 5.0}
+***** Running Evaluation *****
+INFO:transformers.trainer:
+***** Running Evaluation *****
+[INFO|trainer.py:4645] 2025-11-17 00:31:15,038 >>   Num examples = 6000
+INFO:transformers.trainer:  Num examples = 6000
+[INFO|trainer.py:4648] 2025-11-17 00:31:15,040 >>   Batch size = 32
+INFO:transformers.trainer:  Batch size = 32
+ 10%|████████▌                                                                             | 4375/43750 [09:43<1:17:36,  8.46it/s][INFO|trainer.py:4309] 2025-11-17 00:31:24,899 >> Saving model checkpoint to results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-4375
+INFO:transformers.trainer:Saving model checkpoint to results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-4375
+{'eval_loss': 1.4917700290679932, 'eval_accuracy_branch1': 0.7625, 'eval_precision_branch1': 0.7694853292186774, 'eval_recall_branch1': 0.7625, 'eval_f1_branch1': 0.7609509020832248, 'eval_accuracy_branch2': 0.755, 'eval_precision_branch2': 0.8134188759596288, 'eval_recall_branch2': 0.5214454491184304, 'eval_f1_branch2': 0.4721829650822102, 'eval_lambda': 0.0064, 'eval_tn_branch2': 4461, 'eval_fp_branch2': 10, 'eval_fn_branch2': 1460, 'eval_tp_branch2': 69, 'eval_loss_branch1': 0.9305012226104736, 'eval_loss_branch2': 0.5602926015853882, 'eval_cm_branch1_actual0_pred0': 2046, 'eval_cm_branch1_actual0_pred1': 954, 'eval_cm_branch1_actual1_pred0': 471, 'eval_cm_branch1_actual1_pred1': 2529, 'eval_runtime': 9.8466, 'eval_samples_per_second': 609.346, 'eval_steps_per_second': 19.093, 'epoch': 5.0}
+[INFO|configuration_utils.py:491] 2025-11-17 00:31:24,905 >> Configuration saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-4375\config.json
+INFO:transformers.configuration_utils:Configuration saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-4375\config.json
+[INFO|modeling_utils.py:4181] 2025-11-17 00:31:25,046 >> Model weights saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-4375\model.safetensors
+INFO:transformers.modeling_utils:Model weights saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-4375\model.safetensors
+ 12%|██████████▎                                                                           | 5250/43750 [11:32<1:14:33,  8.61it/s][INFO|trainer.py:4643] 2025-11-17 00:33:13,465 >>
+{'loss': 1.2314, 'grad_norm': 1.7699575424194336, 'learning_rate': 0.08800228571428571, 'epoch': 6.0}
+***** Running Evaluation *****
+INFO:transformers.trainer:
+***** Running Evaluation *****
+[INFO|trainer.py:4645] 2025-11-17 00:33:13,466 >>   Num examples = 6000
+INFO:transformers.trainer:  Num examples = 6000
+[INFO|trainer.py:4648] 2025-11-17 00:33:13,468 >>   Batch size = 32
+INFO:transformers.trainer:  Batch size = 32
+ 12%|██████████▎                                                                           | 5250/43750 [11:42<1:14:33,  8.61it/s][INFO|trainer.py:4309] 2025-11-17 00:33:23,351 >> Saving model checkpoint to results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-5250
+INFO:transformers.trainer:Saving model checkpoint to results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-5250
+{'eval_loss': 1.3632231950759888, 'eval_accuracy_branch1': 0.8773333333333333, 'eval_precision_branch1': 0.877346917822375, 'eval_recall_branch1': 0.8773333333333333, 'eval_f1_branch1': 0.8773322293233973, 'eval_accuracy_branch2': 0.7451666666666666, 'eval_precision_branch2': 0.3725833333333333, 'eval_recall_branch2': 0.5, 'eval_f1_branch2': 0.4269888262821125, 'eval_lambda': 0.010000000000000002, 'eval_tn_branch2': 4471, 'eval_fp_branch2': 0, 'eval_fn_branch2': 1529, 'eval_tp_branch2': 0, 'eval_loss_branch1': 0.7179312109947205, 'eval_loss_branch2': 0.6447591781616211, 'eval_cm_branch1_actual0_pred0': 2641, 'eval_cm_branch1_actual0_pred1': 359, 'eval_cm_branch1_actual1_pred0': 377, 'eval_cm_branch1_actual1_pred1': 2623, 'eval_runtime': 9.8693, 'eval_samples_per_second': 607.945, 'eval_steps_per_second': 19.049, 'epoch': 6.0}
+[INFO|configuration_utils.py:491] 2025-11-17 00:33:23,359 >> Configuration saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-5250\config.json
+INFO:transformers.configuration_utils:Configuration saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-5250\config.json
+[INFO|modeling_utils.py:4181] 2025-11-17 00:33:23,488 >> Model weights saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-5250\model.safetensors
+INFO:transformers.modeling_utils:Model weights saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-5250\model.safetensors
+ 14%|████████████                                                                          | 6125/43750 [13:31<1:14:20,  8.44it/s][INFO|trainer.py:4643] 2025-11-17 00:35:12,459 >>
+{'loss': 1.3582, 'grad_norm': 3.028778076171875, 'learning_rate': 0.08600228571428571, 'epoch': 7.0}
+***** Running Evaluation *****
+INFO:transformers.trainer:
+***** Running Evaluation *****
+[INFO|trainer.py:4645] 2025-11-17 00:35:12,460 >>   Num examples = 6000
+INFO:transformers.trainer:  Num examples = 6000
+[INFO|trainer.py:4648] 2025-11-17 00:35:12,462 >>   Batch size = 32
+INFO:transformers.trainer:  Batch size = 32
+ 14%|████████████                                                                          | 6125/43750 [13:41<1:14:20,  8.44it/s][INFO|trainer.py:4309] 2025-11-17 00:35:22,264 >> Saving model checkpoint to results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-6125
+INFO:transformers.trainer:Saving model checkpoint to results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-6125
+{'eval_loss': 1.1324923038482666, 'eval_accuracy_branch1': 0.9158333333333334, 'eval_precision_branch1': 0.9158344884291345, 'eval_recall_branch1': 0.9158333333333333, 'eval_f1_branch1': 0.9158332748842186, 'eval_accuracy_branch2': 0.7451666666666666, 'eval_precision_branch2': 0.3725833333333333, 'eval_recall_branch2': 0.5, 'eval_f1_branch2': 0.4269888262821125, 'eval_lambda': 0.0144, 'eval_tn_branch2': 4471, 'eval_fp_branch2': 0, 'eval_fn_branch2': 1529, 'eval_tp_branch2': 0, 'eval_loss_branch1': 0.5461405515670776, 'eval_loss_branch2': 0.5849970579147339, 'eval_cm_branch1_actual0_pred0': 2750, 'eval_cm_branch1_actual0_pred1': 250, 'eval_cm_branch1_actual1_pred0': 255, 'eval_cm_branch1_actual1_pred1': 2745, 'eval_runtime': 9.788, 'eval_samples_per_second': 612.996, 'eval_steps_per_second': 19.207, 'epoch': 7.0}
+[INFO|configuration_utils.py:491] 2025-11-17 00:35:22,271 >> Configuration saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-6125\config.json
+INFO:transformers.configuration_utils:Configuration saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-6125\config.json
+[INFO|modeling_utils.py:4181] 2025-11-17 00:35:22,415 >> Model weights saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-6125\model.safetensors
+INFO:transformers.modeling_utils:Model weights saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-6125\model.safetensors
+ 16%|█████████████▊                                                                        | 7000/43750 [15:30<1:13:07,  8.38it/s][INFO|trainer.py:4643] 2025-11-17 00:37:11,258 >>
+{'loss': 1.533, 'grad_norm': 1.9928148984909058, 'learning_rate': 0.08400228571428572, 'epoch': 8.0}
+***** Running Evaluation *****
+INFO:transformers.trainer:
+***** Running Evaluation *****
+[INFO|trainer.py:4645] 2025-11-17 00:37:11,261 >>   Num examples = 6000
+INFO:transformers.trainer:  Num examples = 6000
+[INFO|trainer.py:4648] 2025-11-17 00:37:11,262 >>   Batch size = 32
+INFO:transformers.trainer:  Batch size = 32
+ 16%|█████████████▊                                                                        | 7000/43750 [15:40<1:13:07,  8.38it/s][INFO|trainer.py:4309] 2025-11-17 00:37:21,151 >> Saving model checkpoint to results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-7000
+INFO:transformers.trainer:Saving model checkpoint to results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-7000
+{'eval_loss': 1.7141578197479248, 'eval_accuracy_branch1': 0.8913333333333333, 'eval_precision_branch1': 0.8931872549277906, 'eval_recall_branch1': 0.8913333333333333, 'eval_f1_branch1': 0.8912050883090968, 'eval_accuracy_branch2': 0.7451666666666666, 'eval_precision_branch2': 0.3725833333333333, 'eval_recall_branch2': 0.5, 'eval_f1_branch2': 0.4269888262821125, 'eval_lambda': 0.019600000000000003, 'eval_tn_branch2': 4471, 'eval_fp_branch2': 0, 'eval_fn_branch2': 1529, 'eval_tp_branch2': 0, 'eval_loss_branch1': 1.0635017156600952, 'eval_loss_branch2': 0.6487983465194702, 'eval_cm_branch1_actual0_pred0': 2777, 'eval_cm_branch1_actual0_pred1': 223, 'eval_cm_branch1_actual1_pred0': 429, 'eval_cm_branch1_actual1_pred1': 2571, 'eval_runtime': 9.8771, 'eval_samples_per_second': 607.466, 'eval_steps_per_second': 19.034, 'epoch': 8.0}
+[INFO|configuration_utils.py:491] 2025-11-17 00:37:21,158 >> Configuration saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-7000\config.json
+INFO:transformers.configuration_utils:Configuration saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-7000\config.json
+[INFO|modeling_utils.py:4181] 2025-11-17 00:37:21,301 >> Model weights saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-7000\model.safetensors
+INFO:transformers.modeling_utils:Model weights saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-7000\model.safetensors
+ 18%|███████████████▍                                                                      | 7875/43750 [17:28<1:10:56,  8.43it/s][INFO|trainer.py:4643] 2025-11-17 00:39:09,884 >>
+{'loss': 1.6736, 'grad_norm': 4.767294406890869, 'learning_rate': 0.08200228571428572, 'epoch': 9.0}
+***** Running Evaluation *****
+INFO:transformers.trainer:
+***** Running Evaluation *****
+[INFO|trainer.py:4645] 2025-11-17 00:39:09,885 >>   Num examples = 6000
+INFO:transformers.trainer:  Num examples = 6000
+[INFO|trainer.py:4648] 2025-11-17 00:39:09,887 >>   Batch size = 32
+INFO:transformers.trainer:  Batch size = 32
+ 18%|███████████████▍                                                                      | 7875/43750 [17:38<1:10:56,  8.43it/s][INFO|trainer.py:4309] 2025-11-17 00:39:19,758 >> Saving model checkpoint to results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-7875
+INFO:transformers.trainer:Saving model checkpoint to results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-7875
+{'eval_loss': 1.6859726905822754, 'eval_accuracy_branch1': 0.9018333333333334, 'eval_precision_branch1': 0.9018344495401376, 'eval_recall_branch1': 0.9018333333333333, 'eval_f1_branch1': 0.9018332651619897, 'eval_accuracy_branch2': 0.7451666666666666, 'eval_precision_branch2': 0.3725833333333333, 'eval_recall_branch2': 0.5, 'eval_f1_branch2': 0.4269888262821125, 'eval_lambda': 0.0256, 'eval_tn_branch2': 4471, 'eval_fp_branch2': 0, 'eval_fn_branch2': 1529, 'eval_tp_branch2': 0, 'eval_loss_branch1': 1.0878849029541016, 'eval_loss_branch2': 0.595165491104126, 'eval_cm_branch1_actual0_pred0': 2703, 'eval_cm_branch1_actual0_pred1': 297, 'eval_cm_branch1_actual1_pred0': 292, 'eval_cm_branch1_actual1_pred1': 2708, 'eval_runtime': 9.8591, 'eval_samples_per_second': 608.573, 'eval_steps_per_second': 19.069, 'epoch': 9.0}
+[INFO|configuration_utils.py:491] 2025-11-17 00:39:19,765 >> Configuration saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-7875\config.json
+INFO:transformers.configuration_utils:Configuration saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-7875\config.json
+[INFO|modeling_utils.py:4181] 2025-11-17 00:39:19,909 >> Model weights saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-7875\model.safetensors
+INFO:transformers.modeling_utils:Model weights saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-7875\model.safetensors
+ 20%|█████████████████▏                                                                    | 8750/43750 [19:27<1:08:02,  8.57it/s][INFO|trainer.py:4643] 2025-11-17 00:41:08,665 >>
+{'loss': 1.8172, 'grad_norm': 9.108922958374023, 'learning_rate': 0.08000228571428572, 'epoch': 10.0}
+***** Running Evaluation *****
+INFO:transformers.trainer:
+***** Running Evaluation *****
+[INFO|trainer.py:4645] 2025-11-17 00:41:08,667 >>   Num examples = 6000
+INFO:transformers.trainer:  Num examples = 6000
+[INFO|trainer.py:4648] 2025-11-17 00:41:08,668 >>   Batch size = 32
+INFO:transformers.trainer:  Batch size = 32
+ 20%|█████████████████▏                                                                    | 8750/43750 [19:37<1:08:02,  8.57it/s][INFO|trainer.py:4309] 2025-11-17 00:41:18,514 >> Saving model checkpoint to results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-8750
+INFO:transformers.trainer:Saving model checkpoint to results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-8750
+{'eval_loss': 1.9286510944366455, 'eval_accuracy_branch1': 0.8903333333333333, 'eval_precision_branch1': 0.8903834759220184, 'eval_recall_branch1': 0.8903333333333334, 'eval_f1_branch1': 0.8903298117017313, 'eval_accuracy_branch2': 0.7555, 'eval_precision_branch2': 0.7373556806870585, 'eval_recall_branch2': 0.5288818618759452, 'eval_f1_branch2': 0.49002764175328284, 'eval_lambda': 0.0324, 'eval_tn_branch2': 4431, 'eval_fp_branch2': 40, 'eval_fn_branch2': 1427, 'eval_tp_branch2': 102, 'eval_loss_branch1': 1.3232440948486328, 'eval_loss_branch2': 0.6018872261047363, 'eval_cm_branch1_actual0_pred0': 2688, 'eval_cm_branch1_actual0_pred1': 312, 'eval_cm_branch1_actual1_pred0': 346, 'eval_cm_branch1_actual1_pred1': 2654, 'eval_runtime': 9.8322, 'eval_samples_per_second': 610.241, 'eval_steps_per_second': 19.121, 'epoch': 10.0}
+[INFO|configuration_utils.py:491] 2025-11-17 00:41:18,520 >> Configuration saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-8750\config.json
+INFO:transformers.configuration_utils:Configuration saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-8750\config.json
+[INFO|modeling_utils.py:4181] 2025-11-17 00:41:18,649 >> Model weights saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-8750\model.safetensors
+INFO:transformers.modeling_utils:Model weights saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-8750\model.safetensors
+ 22%|██████████████████▉                                                                   | 9625/43750 [21:26<1:06:58,  8.49it/s][INFO|trainer.py:4643] 2025-11-17 00:43:07,480 >>
+{'loss': 1.9553, 'grad_norm': 5.935235500335693, 'learning_rate': 0.07800228571428572, 'epoch': 11.0}
+***** Running Evaluation *****
+INFO:transformers.trainer:
+***** Running Evaluation *****
+[INFO|trainer.py:4645] 2025-11-17 00:43:07,482 >>   Num examples = 6000
+INFO:transformers.trainer:  Num examples = 6000
+[INFO|trainer.py:4648] 2025-11-17 00:43:07,483 >>   Batch size = 32
+INFO:transformers.trainer:  Batch size = 32
+ 22%|██████████████████▉                                                                   | 9625/43750 [21:36<1:06:58,  8.49it/s][INFO|trainer.py:4309] 2025-11-17 00:43:17,371 >> Saving model checkpoint to results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-9625
+INFO:transformers.trainer:Saving model checkpoint to results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-9625
+{'eval_loss': 1.7943978309631348, 'eval_accuracy_branch1': 0.9055, 'eval_precision_branch1': 0.905549071437644, 'eval_recall_branch1': 0.9055, 'eval_f1_branch1': 0.905497141288524, 'eval_accuracy_branch2': 0.7451666666666666, 'eval_precision_branch2': 0.3725833333333333, 'eval_recall_branch2': 0.5, 'eval_f1_branch2': 0.4269888262821125, 'eval_lambda': 0.04000000000000001, 'eval_tn_branch2': 4471, 'eval_fp_branch2': 0, 'eval_fn_branch2': 1529, 'eval_tp_branch2': 0, 'eval_loss_branch1': 1.2043267488479614, 'eval_loss_branch2': 0.5867955088615417, 'eval_cm_branch1_actual0_pred0': 2733, 'eval_cm_branch1_actual0_pred1': 267, 'eval_cm_branch1_actual1_pred0': 300, 'eval_cm_branch1_actual1_pred1': 2700, 'eval_runtime': 9.874, 'eval_samples_per_second': 607.656, 'eval_steps_per_second': 19.04, 'epoch': 11.0}
+[INFO|configuration_utils.py:491] 2025-11-17 00:43:17,380 >> Configuration saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-9625\config.json
+INFO:transformers.configuration_utils:Configuration saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-9625\config.json
+[INFO|modeling_utils.py:4181] 2025-11-17 00:43:17,525 >> Model weights saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-9625\model.safetensors
+INFO:transformers.modeling_utils:Model weights saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-9625\model.safetensors
+ 24%|████████████████████▍                                                                | 10500/43750 [23:25<1:06:12,  8.37it/s][INFO|trainer.py:4643] 2025-11-17 00:45:06,161 >>
+{'loss': 2.0377, 'grad_norm': 2.9877843856811523, 'learning_rate': 0.07600228571428572, 'epoch': 12.0}
+***** Running Evaluation *****
+INFO:transformers.trainer:
+***** Running Evaluation *****
+[INFO|trainer.py:4645] 2025-11-17 00:45:06,164 >>   Num examples = 6000
+INFO:transformers.trainer:  Num examples = 6000
+[INFO|trainer.py:4648] 2025-11-17 00:45:06,166 >>   Batch size = 32
+INFO:transformers.trainer:  Batch size = 32
+ 24%|████████████████████▍                                                                | 10500/43750 [23:34<1:06:12,  8.37it/s][INFO|trainer.py:4309] 2025-11-17 00:45:16,093 >> Saving model checkpoint to results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-10500
+INFO:transformers.trainer:Saving model checkpoint to results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-10500
+{'eval_loss': 1.7078818082809448, 'eval_accuracy_branch1': 0.9245, 'eval_precision_branch1': 0.9256070038169278, 'eval_recall_branch1': 0.9245, 'eval_f1_branch1': 0.9244508741809362, 'eval_accuracy_branch2': 0.7451666666666666, 'eval_precision_branch2': 0.3725833333333333, 'eval_recall_branch2': 0.5, 'eval_f1_branch2': 0.4269888262821125, 'eval_lambda': 0.0484, 'eval_tn_branch2': 4471, 'eval_fp_branch2': 0, 'eval_fn_branch2': 1529, 'eval_tp_branch2': 0, 'eval_loss_branch1': 1.1183501482009888, 'eval_loss_branch2': 0.5865915417671204, 'eval_cm_branch1_actual0_pred0': 2850, 'eval_cm_branch1_actual0_pred1': 150, 'eval_cm_branch1_actual1_pred0': 303, 'eval_cm_branch1_actual1_pred1': 2697, 'eval_runtime': 9.9128, 'eval_samples_per_second': 605.281, 'eval_steps_per_second': 18.965, 'epoch': 12.0}
+[INFO|configuration_utils.py:491] 2025-11-17 00:45:16,100 >> Configuration saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-10500\config.json
+INFO:transformers.configuration_utils:Configuration saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-10500\config.json
+[INFO|modeling_utils.py:4181] 2025-11-17 00:45:16,247 >> Model weights saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-10500\model.safetensors
+INFO:transformers.modeling_utils:Model weights saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-10500\model.safetensors
+ 26%|██████████████████████                                                               | 11375/43750 [25:23<1:03:57,  8.44it/s][INFO|trainer.py:4643] 2025-11-17 00:47:04,918 >>
+{'loss': 2.1741, 'grad_norm': 8.103828430175781, 'learning_rate': 0.07400228571428571, 'epoch': 13.0}
+***** Running Evaluation *****
+INFO:transformers.trainer:
+***** Running Evaluation *****
+[INFO|trainer.py:4645] 2025-11-17 00:47:04,920 >>   Num examples = 6000
+INFO:transformers.trainer:  Num examples = 6000
+[INFO|trainer.py:4648] 2025-11-17 00:47:04,921 >>   Batch size = 32
+INFO:transformers.trainer:  Batch size = 32
+ 26%|██████████████████████                                                               | 11375/43750 [25:33<1:03:57,  8.44it/s][INFO|trainer.py:4309] 2025-11-17 00:47:14,744 >> Saving model checkpoint to results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-11375
+INFO:transformers.trainer:Saving model checkpoint to results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-11375
+{'eval_loss': 2.5357582569122314, 'eval_accuracy_branch1': 0.9018333333333334, 'eval_precision_branch1': 0.9018530241315157, 'eval_recall_branch1': 0.9018333333333333, 'eval_f1_branch1': 0.9018321307769354, 'eval_accuracy_branch2': 0.7451666666666666, 'eval_precision_branch2': 0.3725833333333333, 'eval_recall_branch2': 0.5, 'eval_f1_branch2': 0.4269888262821125, 'eval_lambda': 0.0576, 'eval_tn_branch2': 4471, 'eval_fp_branch2': 0, 'eval_fn_branch2': 1529, 'eval_tp_branch2': 0, 'eval_loss_branch1': 1.7144904136657715, 'eval_loss_branch2': 0.8170826435089111, 'eval_cm_branch1_actual0_pred0': 2716, 'eval_cm_branch1_actual0_pred1': 284, 'eval_cm_branch1_actual1_pred0': 305, 'eval_cm_branch1_actual1_pred1': 2695, 'eval_runtime': 9.8101, 'eval_samples_per_second': 611.614, 'eval_steps_per_second': 19.164, 'epoch': 13.0}
+[INFO|configuration_utils.py:491] 2025-11-17 00:47:14,752 >> Configuration saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-11375\config.json
+INFO:transformers.configuration_utils:Configuration saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-11375\config.json
+[INFO|modeling_utils.py:4181] 2025-11-17 00:47:14,890 >> Model weights saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-11375\model.safetensors
+INFO:transformers.modeling_utils:Model weights saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-11375\model.safetensors
+ 28%|███████████████████████▊                                                             | 12250/43750 [27:22<1:00:46,  8.64it/s][INFO|trainer.py:4643] 2025-11-17 00:49:03,709 >>
+{'loss': 2.2124, 'grad_norm': 6.358374118804932, 'learning_rate': 0.07200228571428573, 'epoch': 14.0}
+***** Running Evaluation *****
+INFO:transformers.trainer:
+***** Running Evaluation *****
+[INFO|trainer.py:4645] 2025-11-17 00:49:03,711 >>   Num examples = 6000
+INFO:transformers.trainer:  Num examples = 6000
+[INFO|trainer.py:4648] 2025-11-17 00:49:03,712 >>   Batch size = 32
+INFO:transformers.trainer:  Batch size = 32
+ 28%|███████████████████████▊                                                             | 12250/43750 [27:32<1:00:46,  8.64it/s][INFO|trainer.py:4309] 2025-11-17 00:49:13,674 >> Saving model checkpoint to results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-12250
+INFO:transformers.trainer:Saving model checkpoint to results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-12250
+{'eval_loss': 2.3336191177368164, 'eval_accuracy_branch1': 0.9, 'eval_precision_branch1': 0.9007525241843016, 'eval_recall_branch1': 0.8999999999999999, 'eval_f1_branch1': 0.8999530335073965, 'eval_accuracy_branch2': 0.7453333333333333, 'eval_precision_branch2': 0.8726454409068178, 'eval_recall_branch2': 0.5003270111183781, 'eval_f1_branch2': 0.4276832031762084, 'eval_lambda': 0.06760000000000001, 'eval_tn_branch2': 4471, 'eval_fp_branch2': 0, 'eval_fn_branch2': 1528, 'eval_tp_branch2': 1, 'eval_loss_branch1': 1.7167004346847534, 'eval_loss_branch2': 0.6124684810638428, 'eval_cm_branch1_actual0_pred0': 2765, 'eval_cm_branch1_actual0_pred1': 235, 'eval_cm_branch1_actual1_pred0': 365, 'eval_cm_branch1_actual1_pred1': 2635, 'eval_runtime': 9.9478, 'eval_samples_per_second': 603.145, 'eval_steps_per_second': 18.899, 'epoch': 14.0}
+[INFO|configuration_utils.py:491] 2025-11-17 00:49:13,680 >> Configuration saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-12250\config.json
+INFO:transformers.configuration_utils:Configuration saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-12250\config.json
+[INFO|modeling_utils.py:4181] 2025-11-17 00:49:13,825 >> Model weights saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-12250\model.safetensors
+INFO:transformers.modeling_utils:Model weights saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-12250\model.safetensors
+ 30%|█████████████████████████▌                                                           | 13125/43750 [29:21<1:00:26,  8.45it/s][INFO|trainer.py:4643] 2025-11-17 00:51:02,564 >>
+{'loss': 2.3298, 'grad_norm': 5.920772075653076, 'learning_rate': 0.07000228571428573, 'epoch': 15.0}
+***** Running Evaluation *****
+INFO:transformers.trainer:
+***** Running Evaluation *****
+[INFO|trainer.py:4645] 2025-11-17 00:51:02,566 >>   Num examples = 6000
+INFO:transformers.trainer:  Num examples = 6000
+[INFO|trainer.py:4648] 2025-11-17 00:51:02,567 >>   Batch size = 32
+INFO:transformers.trainer:  Batch size = 32
+ 30%|█████████████████████████▌                                                           | 13125/43750 [29:31<1:00:26,  8.45it/s][INFO|trainer.py:4309] 2025-11-17 00:51:12,454 >> Saving model checkpoint to results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-13125
+INFO:transformers.trainer:Saving model checkpoint to results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-13125
+{'eval_loss': 2.7053661346435547, 'eval_accuracy_branch1': 0.9061666666666667, 'eval_precision_branch1': 0.9061768210871939, 'eval_recall_branch1': 0.9061666666666666, 'eval_f1_branch1': 0.9061660802046679, 'eval_accuracy_branch2': 0.4811666666666667, 'eval_precision_branch2': 0.468166255823375, 'eval_recall_branch2': 0.4582062090714976, 'eval_f1_branch2': 0.43987887853063656, 'eval_lambda': 0.07840000000000001, 'eval_tn_branch2': 2258, 'eval_fp_branch2': 2213, 'eval_fn_branch2': 900, 'eval_tp_branch2': 629, 'eval_loss_branch1': 1.679253101348877, 'eval_loss_branch2': 1.0207200050354004, 'eval_cm_branch1_actual0_pred0': 2711, 'eval_cm_branch1_actual0_pred1': 289, 'eval_cm_branch1_actual1_pred0': 274, 'eval_cm_branch1_actual1_pred1': 2726, 'eval_runtime': 9.87, 'eval_samples_per_second': 607.901, 'eval_steps_per_second': 19.048, 'epoch': 15.0}
+[INFO|configuration_utils.py:491] 2025-11-17 00:51:12,461 >> Configuration saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-13125\config.json
+INFO:transformers.configuration_utils:Configuration saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-13125\config.json
+[INFO|modeling_utils.py:4181] 2025-11-17 00:51:12,602 >> Model weights saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-13125\model.safetensors
+INFO:transformers.modeling_utils:Model weights saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-13125\model.safetensors
+ 32%|███████████████████████████▊                                                           | 14000/43750 [31:20<59:00,  8.40it/s][INFO|trainer.py:4643] 2025-11-17 00:53:01,478 >>
+{'loss': 2.3927, 'grad_norm': 12.639349937438965, 'learning_rate': 0.06800228571428572, 'epoch': 16.0}
+***** Running Evaluation *****
+INFO:transformers.trainer:
+***** Running Evaluation *****
+[INFO|trainer.py:4645] 2025-11-17 00:53:01,480 >>   Num examples = 6000
+INFO:transformers.trainer:  Num examples = 6000
+[INFO|trainer.py:4648] 2025-11-17 00:53:01,483 >>   Batch size = 32
+INFO:transformers.trainer:  Batch size = 32
+ 32%|███████████████████████████▊                                                           | 14000/43750 [31:30<59:00,  8.40it/s][INFO|trainer.py:4309] 2025-11-17 00:53:11,359 >> Saving model checkpoint to results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-14000
+INFO:transformers.trainer:Saving model checkpoint to results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-14000
+{'eval_loss': 2.2193551063537598, 'eval_accuracy_branch1': 0.9123333333333333, 'eval_precision_branch1': 0.9123927178847088, 'eval_recall_branch1': 0.9123333333333333, 'eval_f1_branch1': 0.9123301772197132, 'eval_accuracy_branch2': 0.6353333333333333, 'eval_precision_branch2': 0.5187117935168838, 'eval_recall_branch2': 0.5186147659818913, 'eval_f1_branch2': 0.5186604152162559, 'eval_lambda': 0.09, 'eval_tn_branch2': 3383, 'eval_fp_branch2': 1088, 'eval_fn_branch2': 1100, 'eval_tp_branch2': 429, 'eval_loss_branch1': 1.5520951747894287, 'eval_loss_branch2': 0.6630532145500183, 'eval_cm_branch1_actual0_pred0': 2719, 'eval_cm_branch1_actual0_pred1': 281, 'eval_cm_branch1_actual1_pred0': 245, 'eval_cm_branch1_actual1_pred1': 2755, 'eval_runtime': 9.8647, 'eval_samples_per_second': 608.227, 'eval_steps_per_second': 19.058, 'epoch': 16.0}
+[INFO|configuration_utils.py:491] 2025-11-17 00:53:11,367 >> Configuration saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-14000\config.json
+INFO:transformers.configuration_utils:Configuration saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-14000\config.json
+[INFO|modeling_utils.py:4181] 2025-11-17 00:53:11,504 >> Model weights saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-14000\model.safetensors
+INFO:transformers.modeling_utils:Model weights saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-14000\model.safetensors
+ 34%|█████████████████████████████▌                                                         | 14875/43750 [33:19<57:00,  8.44it/s][INFO|trainer.py:4643] 2025-11-17 00:55:00,276 >>
+{'loss': 2.3206, 'grad_norm': 6.876128673553467, 'learning_rate': 0.06600228571428572, 'epoch': 17.0}
+***** Running Evaluation *****
+INFO:transformers.trainer:
+***** Running Evaluation *****
+[INFO|trainer.py:4645] 2025-11-17 00:55:00,278 >>   Num examples = 6000
+INFO:transformers.trainer:  Num examples = 6000
+[INFO|trainer.py:4648] 2025-11-17 00:55:00,280 >>   Batch size = 32
+INFO:transformers.trainer:  Batch size = 32
+ 34%|█████████████████████████████▌                                                         | 14875/43750 [33:29<57:00,  8.44it/s][INFO|trainer.py:4309] 2025-11-17 00:55:10,253 >> Saving model checkpoint to results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-14875
+INFO:transformers.trainer:Saving model checkpoint to results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-14875
+{'eval_loss': 2.735943078994751, 'eval_accuracy_branch1': 0.9116666666666666, 'eval_precision_branch1': 0.91228307567403, 'eval_recall_branch1': 0.9116666666666666, 'eval_f1_branch1': 0.9116336372839804, 'eval_accuracy_branch2': 0.5801666666666667, 'eval_precision_branch2': 0.5218002621913052, 'eval_recall_branch2': 0.5270012736684445, 'eval_f1_branch2': 0.5148865537780223, 'eval_lambda': 0.1024, 'eval_tn_branch2': 2841, 'eval_fp_branch2': 1630, 'eval_fn_branch2': 889, 'eval_tp_branch2': 640, 'eval_loss_branch1': 1.9962233304977417, 'eval_loss_branch2': 0.7338768243789673, 'eval_cm_branch1_actual0_pred0': 2793, 'eval_cm_branch1_actual0_pred1': 207, 'eval_cm_branch1_actual1_pred0': 323, 'eval_cm_branch1_actual1_pred1': 2677, 'eval_runtime': 9.9614, 'eval_samples_per_second': 602.328, 'eval_steps_per_second': 18.873, 'epoch': 17.0}
+[INFO|configuration_utils.py:491] 2025-11-17 00:55:10,260 >> Configuration saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-14875\config.json
+INFO:transformers.configuration_utils:Configuration saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-14875\config.json
+[INFO|modeling_utils.py:4181] 2025-11-17 00:55:10,404 >> Model weights saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-14875\model.safetensors
+INFO:transformers.modeling_utils:Model weights saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-14875\model.safetensors
+ 36%|███████████████████████████████▎                                                       | 15750/43750 [35:17<54:41,  8.53it/s][INFO|trainer.py:4643] 2025-11-17 00:56:59,060 >>
+{'loss': 2.3589, 'grad_norm': 16.087379455566406, 'learning_rate': 0.06400228571428572, 'epoch': 18.0}
+***** Running Evaluation *****
+INFO:transformers.trainer:
+***** Running Evaluation *****
+[INFO|trainer.py:4645] 2025-11-17 00:56:59,062 >>   Num examples = 6000
+INFO:transformers.trainer:  Num examples = 6000
+[INFO|trainer.py:4648] 2025-11-17 00:56:59,063 >>   Batch size = 32
+INFO:transformers.trainer:  Batch size = 32
+ 36%|███████████████████████████████▎                                                       | 15750/43750 [35:27<54:41,  8.53it/s][INFO|trainer.py:4309] 2025-11-17 00:57:08,930 >> Saving model checkpoint to results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-15750
+INFO:transformers.trainer:Saving model checkpoint to results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-15750
+{'eval_loss': 3.414541721343994, 'eval_accuracy_branch1': 0.9076666666666666, 'eval_precision_branch1': 0.9089491311419278, 'eval_recall_branch1': 0.9076666666666666, 'eval_f1_branch1': 0.9075942205355665, 'eval_accuracy_branch2': 0.5313333333333333, 'eval_precision_branch2': 0.5356757459078061, 'eval_recall_branch2': 0.5469534865997119, 'eval_f1_branch2': 0.5036081380491895, 'eval_lambda': 0.11560000000000002, 'eval_tn_branch2': 2303, 'eval_fp_branch2': 2168, 'eval_fn_branch2': 644, 'eval_tp_branch2': 885, 'eval_loss_branch1': 2.5022504329681396, 'eval_loss_branch2': 0.9049314260482788, 'eval_cm_branch1_actual0_pred0': 2807, 'eval_cm_branch1_actual0_pred1': 193, 'eval_cm_branch1_actual1_pred0': 361, 'eval_cm_branch1_actual1_pred1': 2639, 'eval_runtime': 9.8531, 'eval_samples_per_second': 608.943, 'eval_steps_per_second': 19.08, 'epoch': 18.0}
+[INFO|configuration_utils.py:491] 2025-11-17 00:57:08,936 >> Configuration saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-15750\config.json
+INFO:transformers.configuration_utils:Configuration saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-15750\config.json
+[INFO|modeling_utils.py:4181] 2025-11-17 00:57:09,075 >> Model weights saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-15750\model.safetensors
+INFO:transformers.modeling_utils:Model weights saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-15750\model.safetensors
+ 38%|█████████████████████████████████                                                      | 16625/43750 [37:16<54:11,  8.34it/s][INFO|trainer.py:4643] 2025-11-17 00:58:57,903 >>
+{'loss': 2.4271, 'grad_norm': 19.578943252563477, 'learning_rate': 0.06200228571428571, 'epoch': 19.0}
+***** Running Evaluation *****
+INFO:transformers.trainer:
+***** Running Evaluation *****
+[INFO|trainer.py:4645] 2025-11-17 00:58:57,904 >>   Num examples = 6000
+INFO:transformers.trainer:  Num examples = 6000
+[INFO|trainer.py:4648] 2025-11-17 00:58:57,907 >>   Batch size = 32
+INFO:transformers.trainer:  Batch size = 32
+ 38%|█████████████████████████████████                                                      | 16625/43750 [37:26<54:11,  8.34it/s][INFO|trainer.py:4309] 2025-11-17 00:59:07,778 >> Saving model checkpoint to results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-16625
+INFO:transformers.trainer:Saving model checkpoint to results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-16625
+{'eval_loss': 3.213374376296997, 'eval_accuracy_branch1': 0.9158333333333334, 'eval_precision_branch1': 0.9172859055706246, 'eval_recall_branch1': 0.9158333333333333, 'eval_f1_branch1': 0.9157600234937788, 'eval_accuracy_branch2': 0.7451666666666666, 'eval_precision_branch2': 0.3725833333333333, 'eval_recall_branch2': 0.5, 'eval_f1_branch2': 0.4269888262821125, 'eval_lambda': 0.1296, 'eval_tn_branch2': 4471, 'eval_fp_branch2': 0, 'eval_fn_branch2': 1529, 'eval_tp_branch2': 0, 'eval_loss_branch1': 2.2456376552581787, 'eval_loss_branch2': 0.9619468450546265, 'eval_cm_branch1_actual0_pred0': 2836, 'eval_cm_branch1_actual0_pred1': 164, 'eval_cm_branch1_actual1_pred0': 341, 'eval_cm_branch1_actual1_pred1': 2659, 'eval_runtime': 9.8618, 'eval_samples_per_second': 608.41, 'eval_steps_per_second': 19.064, 'epoch': 19.0}
+[INFO|configuration_utils.py:491] 2025-11-17 00:59:07,784 >> Configuration saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-16625\config.json
+INFO:transformers.configuration_utils:Configuration saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-16625\config.json
+[INFO|modeling_utils.py:4181] 2025-11-17 00:59:07,919 >> Model weights saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-16625\model.safetensors
+INFO:transformers.modeling_utils:Model weights saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-16625\model.safetensors
+ 40%|██████████████████████████████████▊                                                    | 17500/43750 [39:15<52:20,  8.36it/s][INFO|trainer.py:4643] 2025-11-17 01:00:56,873 >>
+{'loss': 2.4866, 'grad_norm': 21.215133666992188, 'learning_rate': 0.06000228571428572, 'epoch': 20.0}
+***** Running Evaluation *****
+INFO:transformers.trainer:
+***** Running Evaluation *****
+[INFO|trainer.py:4645] 2025-11-17 01:00:56,875 >>   Num examples = 6000
+INFO:transformers.trainer:  Num examples = 6000
+[INFO|trainer.py:4648] 2025-11-17 01:00:56,876 >>   Batch size = 32
+INFO:transformers.trainer:  Batch size = 32
+ 40%|██████████████████████████████████▊                                                    | 17500/43750 [39:25<52:20,  8.36it/s][INFO|trainer.py:4309] 2025-11-17 01:01:06,805 >> Saving model checkpoint to results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-17500
+INFO:transformers.trainer:Saving model checkpoint to results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-17500
+{'eval_loss': 4.905490398406982, 'eval_accuracy_branch1': 0.8968333333333334, 'eval_precision_branch1': 0.9011443424383309, 'eval_recall_branch1': 0.8968333333333334, 'eval_f1_branch1': 0.8965554093262624, 'eval_accuracy_branch2': 0.548, 'eval_precision_branch2': 0.5677912518695848, 'eval_recall_branch2': 0.5886921296008475, 'eval_f1_branch2': 0.5280365217126984, 'eval_lambda': 0.1444, 'eval_tn_branch2': 2261, 'eval_fp_branch2': 2210, 'eval_fn_branch2': 502, 'eval_tp_branch2': 1027, 'eval_loss_branch1': 3.7241950035095215, 'eval_loss_branch2': 1.1703133583068848, 'eval_cm_branch1_actual0_pred0': 2846, 'eval_cm_branch1_actual0_pred1': 154, 'eval_cm_branch1_actual1_pred0': 465, 'eval_cm_branch1_actual1_pred1': 2535, 'eval_runtime': 9.9158, 'eval_samples_per_second': 605.095, 'eval_steps_per_second': 18.96, 'epoch': 20.0}
+[INFO|configuration_utils.py:491] 2025-11-17 01:01:06,812 >> Configuration saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-17500\config.json
+INFO:transformers.configuration_utils:Configuration saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-17500\config.json
+[INFO|modeling_utils.py:4181] 2025-11-17 01:01:06,951 >> Model weights saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-17500\model.safetensors
+INFO:transformers.modeling_utils:Model weights saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-17500\model.safetensors
+ 42%|████████████████████████████████████▌                                                  | 18375/43750 [41:14<49:41,  8.51it/s][INFO|trainer.py:4643] 2025-11-17 01:02:55,555 >>
+{'loss': 2.4502, 'grad_norm': 17.57713508605957, 'learning_rate': 0.05800228571428572, 'epoch': 21.0}
+***** Running Evaluation *****
+INFO:transformers.trainer:
+***** Running Evaluation *****
+[INFO|trainer.py:4645] 2025-11-17 01:02:55,557 >>   Num examples = 6000
+INFO:transformers.trainer:  Num examples = 6000
+[INFO|trainer.py:4648] 2025-11-17 01:02:55,558 >>   Batch size = 32
+INFO:transformers.trainer:  Batch size = 32
+ 42%|████████████████████████████████████▌                                                  | 18375/43750 [41:24<49:41,  8.51it/s][INFO|trainer.py:4309] 2025-11-17 01:03:05,443 >> Saving model checkpoint to results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-18375
+INFO:transformers.trainer:Saving model checkpoint to results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-18375
+{'eval_loss': 4.0063090324401855, 'eval_accuracy_branch1': 0.9015, 'eval_precision_branch1': 0.9029668440865689, 'eval_recall_branch1': 0.9015, 'eval_f1_branch1': 0.9014102806167579, 'eval_accuracy_branch2': 0.3466666666666667, 'eval_precision_branch2': 0.529310408539257, 'eval_recall_branch2': 0.520304896360661, 'eval_f1_branch2': 0.3401999665387126, 'eval_lambda': 0.16000000000000003, 'eval_tn_branch2': 743, 'eval_fp_branch2': 3728, 'eval_fn_branch2': 192, 'eval_tp_branch2': 1337, 'eval_loss_branch1': 3.0355069637298584, 'eval_loss_branch2': 0.9621216654777527, 'eval_cm_branch1_actual0_pred0': 2795, 'eval_cm_branch1_actual0_pred1': 205, 'eval_cm_branch1_actual1_pred0': 386, 'eval_cm_branch1_actual1_pred1': 2614, 'eval_runtime': 9.8703, 'eval_samples_per_second': 607.886, 'eval_steps_per_second': 19.047, 'epoch': 21.0}
+[INFO|configuration_utils.py:491] 2025-11-17 01:03:05,450 >> Configuration saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-18375\config.json
+INFO:transformers.configuration_utils:Configuration saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-18375\config.json
+[INFO|modeling_utils.py:4181] 2025-11-17 01:03:05,585 >> Model weights saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-18375\model.safetensors
+INFO:transformers.modeling_utils:Model weights saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-18375\model.safetensors
+ 44%|██████████████████████████████████████▎                                                | 19250/43750 [43:13<49:20,  8.28it/s][INFO|trainer.py:4643] 2025-11-17 01:04:54,230 >>
+{'loss': 2.4754, 'grad_norm': 11.928272247314453, 'learning_rate': 0.05600228571428572, 'epoch': 22.0}
+***** Running Evaluation *****
+INFO:transformers.trainer:
+***** Running Evaluation *****
+[INFO|trainer.py:4645] 2025-11-17 01:04:54,231 >>   Num examples = 6000
+INFO:transformers.trainer:  Num examples = 6000
+[INFO|trainer.py:4648] 2025-11-17 01:04:54,237 >>   Batch size = 32
+INFO:transformers.trainer:  Batch size = 32
+ 44%|██████████████████████████████████████▎                                                | 19250/43750 [43:22<49:20,  8.28it/s][INFO|trainer.py:4309] 2025-11-17 01:05:04,081 >> Saving model checkpoint to results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-19250
+INFO:transformers.trainer:Saving model checkpoint to results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-19250
+{'eval_loss': 4.121468544006348, 'eval_accuracy_branch1': 0.894, 'eval_precision_branch1': 0.8948354718584525, 'eval_recall_branch1': 0.894, 'eval_f1_branch1': 0.8939438963211539, 'eval_accuracy_branch2': 0.7451666666666666, 'eval_precision_branch2': 0.3725833333333333, 'eval_recall_branch2': 0.5, 'eval_f1_branch2': 0.4269888262821125, 'eval_lambda': 0.17639999999999997, 'eval_tn_branch2': 4471, 'eval_fp_branch2': 0, 'eval_fn_branch2': 1529, 'eval_tp_branch2': 0, 'eval_loss_branch1': 3.3325579166412354, 'eval_loss_branch2': 0.7802361249923706, 'eval_cm_branch1_actual0_pred0': 2751, 'eval_cm_branch1_actual0_pred1': 249, 'eval_cm_branch1_actual1_pred0': 387, 'eval_cm_branch1_actual1_pred1': 2613, 'eval_runtime': 9.8333, 'eval_samples_per_second': 610.171, 'eval_steps_per_second': 19.119, 'epoch': 22.0}
+[INFO|configuration_utils.py:491] 2025-11-17 01:05:04,088 >> Configuration saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-19250\config.json
+INFO:transformers.configuration_utils:Configuration saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-19250\config.json
+[INFO|modeling_utils.py:4181] 2025-11-17 01:05:04,230 >> Model weights saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-19250\model.safetensors
+INFO:transformers.modeling_utils:Model weights saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-19250\model.safetensors
+ 46%|████████████████████████████████████████                                               | 20125/43750 [45:11<46:00,  8.56it/s][INFO|trainer.py:4643] 2025-11-17 01:06:53,021 >>
+{'loss': 2.4386, 'grad_norm': 23.631155014038086, 'learning_rate': 0.05400228571428572, 'epoch': 23.0}
+***** Running Evaluation *****
+INFO:transformers.trainer:
+***** Running Evaluation *****
+[INFO|trainer.py:4645] 2025-11-17 01:06:53,022 >>   Num examples = 6000
+INFO:transformers.trainer:  Num examples = 6000
+[INFO|trainer.py:4648] 2025-11-17 01:06:53,023 >>   Batch size = 32
+INFO:transformers.trainer:  Batch size = 32
+ 46%|████████████████████████████████████████                                               | 20125/43750 [45:21<46:00,  8.56it/s][INFO|trainer.py:4309] 2025-11-17 01:07:02,946 >> Saving model checkpoint to results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-20125
+INFO:transformers.trainer:Saving model checkpoint to results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-20125
+{'eval_loss': 4.352958679199219, 'eval_accuracy_branch1': 0.8946666666666667, 'eval_precision_branch1': 0.8954794208186068, 'eval_recall_branch1': 0.8946666666666667, 'eval_f1_branch1': 0.8946125209218603, 'eval_accuracy_branch2': 0.7451666666666666, 'eval_precision_branch2': 0.3725833333333333, 'eval_recall_branch2': 0.5, 'eval_f1_branch2': 0.4269888262821125, 'eval_lambda': 0.1936, 'eval_tn_branch2': 4471, 'eval_fp_branch2': 0, 'eval_fn_branch2': 1529, 'eval_tp_branch2': 0, 'eval_loss_branch1': 3.429271936416626, 'eval_loss_branch2': 0.9148107767105103, 'eval_cm_branch1_actual0_pred0': 2752, 'eval_cm_branch1_actual0_pred1': 248, 'eval_cm_branch1_actual1_pred0': 384, 'eval_cm_branch1_actual1_pred1': 2616, 'eval_runtime': 9.9039, 'eval_samples_per_second': 605.821, 'eval_steps_per_second': 18.982, 'epoch': 23.0}
+[INFO|configuration_utils.py:491] 2025-11-17 01:07:02,954 >> Configuration saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-20125\config.json
+INFO:transformers.configuration_utils:Configuration saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-20125\config.json
+[INFO|modeling_utils.py:4181] 2025-11-17 01:07:03,082 >> Model weights saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-20125\model.safetensors
+INFO:transformers.modeling_utils:Model weights saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-20125\model.safetensors
+ 48%|█████████████████████████████████████████▊                                             | 21000/43750 [47:10<45:03,  8.41it/s][INFO|trainer.py:4643] 2025-11-17 01:08:51,650 >>
+{'loss': 2.4936, 'grad_norm': 11.10039234161377, 'learning_rate': 0.052002285714285716, 'epoch': 24.0}
+***** Running Evaluation *****
+INFO:transformers.trainer:
+***** Running Evaluation *****
+[INFO|trainer.py:4645] 2025-11-17 01:08:51,652 >>   Num examples = 6000
+INFO:transformers.trainer:  Num examples = 6000
+[INFO|trainer.py:4648] 2025-11-17 01:08:51,653 >>   Batch size = 32
+INFO:transformers.trainer:  Batch size = 32
+ 48%|█████████████████████████████████████████▊                                             | 21000/43750 [47:20<45:03,  8.41it/s][INFO|trainer.py:4309] 2025-11-17 01:09:01,534 >> Saving model checkpoint to results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-21000
+INFO:transformers.trainer:Saving model checkpoint to results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-21000
+{'eval_loss': 4.063282489776611, 'eval_accuracy_branch1': 0.8966666666666666, 'eval_precision_branch1': 0.896921402001996, 'eval_recall_branch1': 0.8966666666666667, 'eval_f1_branch1': 0.8966500847469305, 'eval_accuracy_branch2': 0.561, 'eval_precision_branch2': 0.5309967834990488, 'eval_recall_branch2': 0.5401773130203671, 'eval_f1_branch2': 0.5152097273149809, 'eval_lambda': 0.2116, 'eval_tn_branch2': 2605, 'eval_fp_branch2': 1866, 'eval_fn_branch2': 768, 'eval_tp_branch2': 761, 'eval_loss_branch1': 3.382507085800171, 'eval_loss_branch2': 0.6717610359191895, 'eval_cm_branch1_actual0_pred0': 2728, 'eval_cm_branch1_actual0_pred1': 272, 'eval_cm_branch1_actual1_pred0': 348, 'eval_cm_branch1_actual1_pred1': 2652, 'eval_runtime': 9.8648, 'eval_samples_per_second': 608.226, 'eval_steps_per_second': 19.058, 'epoch': 24.0}
+[INFO|configuration_utils.py:491] 2025-11-17 01:09:01,545 >> Configuration saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-21000\config.json
+INFO:transformers.configuration_utils:Configuration saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-21000\config.json
+[INFO|modeling_utils.py:4181] 2025-11-17 01:09:01,687 >> Model weights saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-21000\model.safetensors
+INFO:transformers.modeling_utils:Model weights saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-21000\model.safetensors
+ 50%|███████████████████████████████████████████▌                                           | 21875/43750 [49:09<43:25,  8.40it/s][INFO|trainer.py:4643] 2025-11-17 01:10:50,560 >>
+{'loss': 2.4839, 'grad_norm': 26.059907913208008, 'learning_rate': 0.050002285714285714, 'epoch': 25.0}
+***** Running Evaluation *****
+INFO:transformers.trainer:
+***** Running Evaluation *****
+[INFO|trainer.py:4645] 2025-11-17 01:10:50,562 >>   Num examples = 6000
+INFO:transformers.trainer:  Num examples = 6000
+[INFO|trainer.py:4648] 2025-11-17 01:10:50,563 >>   Batch size = 32
+INFO:transformers.trainer:  Batch size = 32
+ 50%|███████████████████████████████████████████▌                                           | 21875/43750 [49:19<43:25,  8.40it/s][INFO|trainer.py:4309] 2025-11-17 01:11:00,465 >> Saving model checkpoint to results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-21875
+INFO:transformers.trainer:Saving model checkpoint to results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-21875
+{'eval_loss': 4.49357795715332, 'eval_accuracy_branch1': 0.9018333333333334, 'eval_precision_branch1': 0.903609258918046, 'eval_recall_branch1': 0.9018333333333334, 'eval_f1_branch1': 0.9017252283546686, 'eval_accuracy_branch2': 0.5196666666666667, 'eval_precision_branch2': 0.5307614586203729, 'eval_recall_branch2': 0.5404163361326149, 'eval_f1_branch2': 0.4946091644204852, 'eval_lambda': 0.2304, 'eval_tn_branch2': 2227, 'eval_fp_branch2': 2244, 'eval_fn_branch2': 638, 'eval_tp_branch2': 891, 'eval_loss_branch1': 3.3125176429748535, 'eval_loss_branch2': 1.1710668802261353, 'eval_cm_branch1_actual0_pred0': 2805, 'eval_cm_branch1_actual0_pred1': 195, 'eval_cm_branch1_actual1_pred0': 394, 'eval_cm_branch1_actual1_pred1': 2606, 'eval_runtime': 9.8855, 'eval_samples_per_second': 606.949, 'eval_steps_per_second': 19.018, 'epoch': 25.0}
+[INFO|configuration_utils.py:491] 2025-11-17 01:11:00,471 >> Configuration saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-21875\config.json
+INFO:transformers.configuration_utils:Configuration saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-21875\config.json
+[INFO|modeling_utils.py:4181] 2025-11-17 01:11:00,619 >> Model weights saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-21875\model.safetensors
+INFO:transformers.modeling_utils:Model weights saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-21875\model.safetensors
+ 52%|█████████████████████████████████████████████▏                                         | 22750/43750 [51:08<41:58,  8.34it/s][INFO|trainer.py:4643] 2025-11-17 01:12:49,409 >>
+{'loss': 2.4867, 'grad_norm': 22.984281539916992, 'learning_rate': 0.04800228571428572, 'epoch': 26.0}
+***** Running Evaluation *****
+INFO:transformers.trainer:
+***** Running Evaluation *****
+[INFO|trainer.py:4645] 2025-11-17 01:12:49,413 >>   Num examples = 6000
+INFO:transformers.trainer:  Num examples = 6000
+[INFO|trainer.py:4648] 2025-11-17 01:12:49,414 >>   Batch size = 32
+INFO:transformers.trainer:  Batch size = 32
+ 52%|█████████████████████████████████████████████▏                                         | 22750/43750 [51:18<41:58,  8.34it/s][INFO|trainer.py:4309] 2025-11-17 01:12:59,324 >> Saving model checkpoint to results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-22750
+INFO:transformers.trainer:Saving model checkpoint to results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-22750
+{'eval_loss': 4.623331546783447, 'eval_accuracy_branch1': 0.9001666666666667, 'eval_precision_branch1': 0.9012102144344105, 'eval_recall_branch1': 0.9001666666666667, 'eval_f1_branch1': 0.900101707802165, 'eval_accuracy_branch2': 0.6375, 'eval_precision_branch2': 0.5609133659580976, 'eval_recall_branch2': 0.570850897411836, 'eval_f1_branch2': 0.5617124783480087, 'eval_lambda': 0.25, 'eval_tn_branch2': 3160, 'eval_fp_branch2': 1311, 'eval_fn_branch2': 864, 'eval_tp_branch2': 665, 'eval_loss_branch1': 3.8313305377960205, 'eval_loss_branch2': 0.781244158744812, 'eval_cm_branch1_actual0_pred0': 2777, 'eval_cm_branch1_actual0_pred1': 223, 'eval_cm_branch1_actual1_pred0': 376, 'eval_cm_branch1_actual1_pred1': 2624, 'eval_runtime': 9.8997, 'eval_samples_per_second': 606.078, 'eval_steps_per_second': 18.99, 'epoch': 26.0}
+[INFO|configuration_utils.py:491] 2025-11-17 01:12:59,330 >> Configuration saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-22750\config.json
+INFO:transformers.configuration_utils:Configuration saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-22750\config.json
+[INFO|modeling_utils.py:4181] 2025-11-17 01:12:59,470 >> Model weights saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-22750\model.safetensors
+INFO:transformers.modeling_utils:Model weights saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-22750\model.safetensors
+ 54%|██████████████████████████████████████████████▉                                        | 23625/43750 [53:07<39:36,  8.47it/s][INFO|trainer.py:4643] 2025-11-17 01:14:48,258 >>
+{'loss': 2.4523, 'grad_norm': 31.59949493408203, 'learning_rate': 0.04600228571428572, 'epoch': 27.0}
+***** Running Evaluation *****
+INFO:transformers.trainer:
+***** Running Evaluation *****
+[INFO|trainer.py:4645] 2025-11-17 01:14:48,260 >>   Num examples = 6000
+INFO:transformers.trainer:  Num examples = 6000
+[INFO|trainer.py:4648] 2025-11-17 01:14:48,261 >>   Batch size = 32
+INFO:transformers.trainer:  Batch size = 32
+ 54%|██████████████████████████████████████████████▉                                        | 23625/43750 [53:17<39:36,  8.47it/s][INFO|trainer.py:4309] 2025-11-17 01:14:58,141 >> Saving model checkpoint to results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-23625
+INFO:transformers.trainer:Saving model checkpoint to results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-23625
+{'eval_loss': 4.745856761932373, 'eval_accuracy_branch1': 0.906, 'eval_precision_branch1': 0.909415251043034, 'eval_recall_branch1': 0.9059999999999999, 'eval_f1_branch1': 0.905803558554501, 'eval_accuracy_branch2': 0.7451666666666666, 'eval_precision_branch2': 0.3725833333333333, 'eval_recall_branch2': 0.5, 'eval_f1_branch2': 0.4269888262821125, 'eval_lambda': 0.27040000000000003, 'eval_tn_branch2': 4471, 'eval_fp_branch2': 0, 'eval_fn_branch2': 1529, 'eval_tp_branch2': 0, 'eval_loss_branch1': 3.7843575477600098, 'eval_loss_branch2': 0.9516237378120422, 'eval_cm_branch1_actual0_pred0': 2855, 'eval_cm_branch1_actual0_pred1': 145, 'eval_cm_branch1_actual1_pred0': 419, 'eval_cm_branch1_actual1_pred1': 2581, 'eval_runtime': 9.865, 'eval_samples_per_second': 608.211, 'eval_steps_per_second': 19.057, 'epoch': 27.0}
+[INFO|configuration_utils.py:491] 2025-11-17 01:14:58,147 >> Configuration saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-23625\config.json
+INFO:transformers.configuration_utils:Configuration saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-23625\config.json
+[INFO|modeling_utils.py:4181] 2025-11-17 01:14:58,270 >> Model weights saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-23625\model.safetensors
+INFO:transformers.modeling_utils:Model weights saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-23625\model.safetensors
+ 56%|████████████████████████████████████████████████▋                                      | 24500/43750 [55:05<38:07,  8.41it/s][INFO|trainer.py:4643] 2025-11-17 01:16:47,013 >>
+{'loss': 2.4782, 'grad_norm': 31.961286544799805, 'learning_rate': 0.044002285714285716, 'epoch': 28.0}
+***** Running Evaluation *****
+INFO:transformers.trainer:
+***** Running Evaluation *****
+[INFO|trainer.py:4645] 2025-11-17 01:16:47,014 >>   Num examples = 6000
+INFO:transformers.trainer:  Num examples = 6000
+[INFO|trainer.py:4648] 2025-11-17 01:16:47,016 >>   Batch size = 32
+INFO:transformers.trainer:  Batch size = 32
+ 56%|████████████████████████████████████████████████▋                                      | 24500/43750 [55:15<38:07,  8.41it/s][INFO|trainer.py:4309] 2025-11-17 01:16:56,994 >> Saving model checkpoint to results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-24500
+INFO:transformers.trainer:Saving model checkpoint to results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-24500
+{'eval_loss': 4.858985900878906, 'eval_accuracy_branch1': 0.8983333333333333, 'eval_precision_branch1': 0.9017336065794216, 'eval_recall_branch1': 0.8983333333333334, 'eval_f1_branch1': 0.8981177504933773, 'eval_accuracy_branch2': 0.7451666666666666, 'eval_precision_branch2': 0.3725833333333333, 'eval_recall_branch2': 0.5, 'eval_f1_branch2': 0.4269888262821125, 'eval_lambda': 0.2916, 'eval_tn_branch2': 4471, 'eval_fp_branch2': 0, 'eval_fn_branch2': 1529, 'eval_tp_branch2': 0, 'eval_loss_branch1': 4.021672248840332, 'eval_loss_branch2': 0.8268031477928162, 'eval_cm_branch1_actual0_pred0': 2833, 'eval_cm_branch1_actual0_pred1': 167, 'eval_cm_branch1_actual1_pred0': 443, 'eval_cm_branch1_actual1_pred1': 2557, 'eval_runtime': 9.9615, 'eval_samples_per_second': 602.318, 'eval_steps_per_second': 18.873, 'epoch': 28.0}
+[INFO|configuration_utils.py:491] 2025-11-17 01:16:57,001 >> Configuration saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-24500\config.json
+INFO:transformers.configuration_utils:Configuration saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-24500\config.json
+[INFO|modeling_utils.py:4181] 2025-11-17 01:16:57,139 >> Model weights saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-24500\model.safetensors
+INFO:transformers.modeling_utils:Model weights saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-24500\model.safetensors
+ 58%|██████████████████████████████████████████████████▍                                    | 25375/43750 [57:04<36:44,  8.34it/s][INFO|trainer.py:4643] 2025-11-17 01:18:45,951 >>
+{'loss': 2.3994, 'grad_norm': 36.26203918457031, 'learning_rate': 0.042002285714285714, 'epoch': 29.0}
+***** Running Evaluation *****
+INFO:transformers.trainer:
+***** Running Evaluation *****
+[INFO|trainer.py:4645] 2025-11-17 01:18:45,953 >>   Num examples = 6000
+INFO:transformers.trainer:  Num examples = 6000
+[INFO|trainer.py:4648] 2025-11-17 01:18:45,954 >>   Batch size = 32
+INFO:transformers.trainer:  Batch size = 32
+ 58%|██████████████████████████████████████████████████▍                                    | 25375/43750 [57:14<36:44,  8.34it/s][INFO|trainer.py:4309] 2025-11-17 01:18:55,852 >> Saving model checkpoint to results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-25375
+INFO:transformers.trainer:Saving model checkpoint to results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-25375
+{'eval_loss': 5.489495277404785, 'eval_accuracy_branch1': 0.9013333333333333, 'eval_precision_branch1': 0.9043706058841968, 'eval_recall_branch1': 0.9013333333333333, 'eval_f1_branch1': 0.9011477107012056, 'eval_accuracy_branch2': 0.5583333333333333, 'eval_precision_branch2': 0.5470750040169569, 'eval_recall_branch2': 0.5618425493029053, 'eval_f1_branch2': 0.5240646673391622, 'eval_lambda': 0.31360000000000005, 'eval_tn_branch2': 2480, 'eval_fp_branch2': 1991, 'eval_fn_branch2': 659, 'eval_tp_branch2': 870, 'eval_loss_branch1': 4.289688587188721, 'eval_loss_branch2': 1.1871435642242432, 'eval_cm_branch1_actual0_pred0': 2834, 'eval_cm_branch1_actual0_pred1': 166, 'eval_cm_branch1_actual1_pred0': 426, 'eval_cm_branch1_actual1_pred1': 2574, 'eval_runtime': 9.8858, 'eval_samples_per_second': 606.933, 'eval_steps_per_second': 19.017, 'epoch': 29.0}
+[INFO|configuration_utils.py:491] 2025-11-17 01:18:55,859 >> Configuration saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-25375\config.json
+INFO:transformers.configuration_utils:Configuration saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-25375\config.json
+[INFO|modeling_utils.py:4181] 2025-11-17 01:18:56,003 >> Model weights saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-25375\model.safetensors
+INFO:transformers.modeling_utils:Model weights saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-25375\model.safetensors
+ 60%|████████████████████████████████████████████████████▏                                  | 26250/43750 [59:03<34:54,  8.36it/s][INFO|trainer.py:4643] 2025-11-17 01:20:44,658 >>
+{'loss': 2.357, 'grad_norm': 18.86154556274414, 'learning_rate': 0.04000228571428571, 'epoch': 30.0}
+***** Running Evaluation *****
+INFO:transformers.trainer:
+***** Running Evaluation *****
+[INFO|trainer.py:4645] 2025-11-17 01:20:44,661 >>   Num examples = 6000
+INFO:transformers.trainer:  Num examples = 6000
+[INFO|trainer.py:4648] 2025-11-17 01:20:44,662 >>   Batch size = 32
+INFO:transformers.trainer:  Batch size = 32
+ 60%|████████████████████████████████████████████████████▏                                  | 26250/43750 [59:13<34:54,  8.36it/s][INFO|trainer.py:4309] 2025-11-17 01:20:54,537 >> Saving model checkpoint to results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-26250
+INFO:transformers.trainer:Saving model checkpoint to results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-26250
+{'eval_loss': 6.259765625, 'eval_accuracy_branch1': 0.8841666666666667, 'eval_precision_branch1': 0.888785831126278, 'eval_recall_branch1': 0.8841666666666667, 'eval_f1_branch1': 0.8838215877376444, 'eval_accuracy_branch2': 0.7201666666666666, 'eval_precision_branch2': 0.6041619855446954, 'eval_recall_branch2': 0.5781193064701977, 'eval_f1_branch2': 0.583258853711985, 'eval_lambda': 0.3364, 'eval_tn_branch2': 3880, 'eval_fp_branch2': 591, 'eval_fn_branch2': 1088, 'eval_tp_branch2': 441, 'eval_loss_branch1': 5.708336353302002, 'eval_loss_branch2': 0.5360033512115479, 'eval_cm_branch1_actual0_pred0': 2816, 'eval_cm_branch1_actual0_pred1': 184, 'eval_cm_branch1_actual1_pred0': 511, 'eval_cm_branch1_actual1_pred1': 2489, 'eval_runtime': 9.8638, 'eval_samples_per_second': 608.287, 'eval_steps_per_second': 19.06, 'epoch': 30.0}
+[INFO|configuration_utils.py:491] 2025-11-17 01:20:54,544 >> Configuration saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-26250\config.json
+INFO:transformers.configuration_utils:Configuration saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-26250\config.json
+[INFO|modeling_utils.py:4181] 2025-11-17 01:20:54,682 >> Model weights saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-26250\model.safetensors
+INFO:transformers.modeling_utils:Model weights saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-26250\model.safetensors
+ 62%|████████████████████████████████████████████████████▋                                | 27125/43750 [1:01:02<32:45,  8.46it/s][INFO|trainer.py:4643] 2025-11-17 01:22:43,432 >>
+{'loss': 2.3067, 'grad_norm': 20.081727981567383, 'learning_rate': 0.03800228571428572, 'epoch': 31.0}
+***** Running Evaluation *****
+INFO:transformers.trainer:
+***** Running Evaluation *****
+[INFO|trainer.py:4645] 2025-11-17 01:22:43,435 >>   Num examples = 6000
+INFO:transformers.trainer:  Num examples = 6000
+[INFO|trainer.py:4648] 2025-11-17 01:22:43,436 >>   Batch size = 32
+INFO:transformers.trainer:  Batch size = 32
+ 62%|████████████████████████████████████████████████████▋                                | 27125/43750 [1:01:12<32:45,  8.46it/s][INFO|trainer.py:4309] 2025-11-17 01:22:53,284 >> Saving model checkpoint to results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-27125
+INFO:transformers.trainer:Saving model checkpoint to results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-27125
+{'eval_loss': 5.523126125335693, 'eval_accuracy_branch1': 0.8935, 'eval_precision_branch1': 0.8957259585166562, 'eval_recall_branch1': 0.8935, 'eval_f1_branch1': 0.8933500234705054, 'eval_accuracy_branch2': 0.7451666666666666, 'eval_precision_branch2': 0.3725833333333333, 'eval_recall_branch2': 0.5, 'eval_f1_branch2': 0.4269888262821125, 'eval_lambda': 0.36, 'eval_tn_branch2': 4471, 'eval_fp_branch2': 0, 'eval_fn_branch2': 1529, 'eval_tp_branch2': 0, 'eval_loss_branch1': 4.360992908477783, 'eval_loss_branch2': 1.1509283781051636, 'eval_cm_branch1_actual0_pred0': 2793, 'eval_cm_branch1_actual0_pred1': 207, 'eval_cm_branch1_actual1_pred0': 432, 'eval_cm_branch1_actual1_pred1': 2568, 'eval_runtime': 9.834, 'eval_samples_per_second': 610.13, 'eval_steps_per_second': 19.117, 'epoch': 31.0}
+[INFO|configuration_utils.py:491] 2025-11-17 01:22:53,290 >> Configuration saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-27125\config.json
+INFO:transformers.configuration_utils:Configuration saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-27125\config.json
+[INFO|modeling_utils.py:4181] 2025-11-17 01:22:53,427 >> Model weights saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-27125\model.safetensors
+INFO:transformers.modeling_utils:Model weights saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-27125\model.safetensors
+ 64%|██████████████████████████████████████████████████████▍                              | 28000/43750 [1:03:01<31:23,  8.36it/s][INFO|trainer.py:4643] 2025-11-17 01:24:42,266 >>
+{'loss': 2.2711, 'grad_norm': 24.405479431152344, 'learning_rate': 0.036002285714285716, 'epoch': 32.0}
+***** Running Evaluation *****
+INFO:transformers.trainer:
+***** Running Evaluation *****
+[INFO|trainer.py:4645] 2025-11-17 01:24:42,270 >>   Num examples = 6000
+INFO:transformers.trainer:  Num examples = 6000
+[INFO|trainer.py:4648] 2025-11-17 01:24:42,271 >>   Batch size = 32
+INFO:transformers.trainer:  Batch size = 32
+ 64%|██████████████████████████████████████████████████████▍                              | 28000/43750 [1:03:11<31:23,  8.36it/s][INFO|trainer.py:4309] 2025-11-17 01:24:52,178 >> Saving model checkpoint to results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-28000
+INFO:transformers.trainer:Saving model checkpoint to results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-28000
+{'eval_loss': 5.331612586975098, 'eval_accuracy_branch1': 0.8938333333333334, 'eval_precision_branch1': 0.8959047509798768, 'eval_recall_branch1': 0.8938333333333334, 'eval_f1_branch1': 0.8936942825019092, 'eval_accuracy_branch2': 0.7451666666666666, 'eval_precision_branch2': 0.3725833333333333, 'eval_recall_branch2': 0.5, 'eval_f1_branch2': 0.4269888262821125, 'eval_lambda': 0.3844, 'eval_tn_branch2': 4471, 'eval_fp_branch2': 0, 'eval_fn_branch2': 1529, 'eval_tp_branch2': 0, 'eval_loss_branch1': 4.467194557189941, 'eval_loss_branch2': 0.8526989817619324, 'eval_cm_branch1_actual0_pred0': 2790, 'eval_cm_branch1_actual0_pred1': 210, 'eval_cm_branch1_actual1_pred0': 427, 'eval_cm_branch1_actual1_pred1': 2573, 'eval_runtime': 9.8947, 'eval_samples_per_second': 606.388, 'eval_steps_per_second': 19.0, 'epoch': 32.0}
+[INFO|configuration_utils.py:491] 2025-11-17 01:24:52,185 >> Configuration saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-28000\config.json
+INFO:transformers.configuration_utils:Configuration saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-28000\config.json
+[INFO|modeling_utils.py:4181] 2025-11-17 01:24:52,327 >> Model weights saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-28000\model.safetensors
+INFO:transformers.modeling_utils:Model weights saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-28000\model.safetensors
+ 66%|████████████████████████████████████████████████████████                             | 28875/43750 [1:04:59<29:37,  8.37it/s][INFO|trainer.py:4643] 2025-11-17 01:26:40,872 >>
+{'loss': 2.1997, 'grad_norm': 35.35053253173828, 'learning_rate': 0.034002285714285714, 'epoch': 33.0}
+***** Running Evaluation *****
+INFO:transformers.trainer:
+***** Running Evaluation *****
+[INFO|trainer.py:4645] 2025-11-17 01:26:40,874 >>   Num examples = 6000
+INFO:transformers.trainer:  Num examples = 6000
+[INFO|trainer.py:4648] 2025-11-17 01:26:40,875 >>   Batch size = 32
+INFO:transformers.trainer:  Batch size = 32
+ 66%|████████████████████████████████████████████████████████                             | 28875/43750 [1:05:09<29:37,  8.37it/s][INFO|trainer.py:4309] 2025-11-17 01:26:50,690 >> Saving model checkpoint to results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-28875
+INFO:transformers.trainer:Saving model checkpoint to results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-28875
+{'eval_loss': 5.081325531005859, 'eval_accuracy_branch1': 0.9015, 'eval_precision_branch1': 0.9029344915604542, 'eval_recall_branch1': 0.9015, 'eval_f1_branch1': 0.9014122541676608, 'eval_accuracy_branch2': 0.7451666666666666, 'eval_precision_branch2': 0.3725833333333333, 'eval_recall_branch2': 0.5, 'eval_f1_branch2': 0.4269888262821125, 'eval_lambda': 0.4096, 'eval_tn_branch2': 4471, 'eval_fp_branch2': 0, 'eval_fn_branch2': 1529, 'eval_tp_branch2': 0, 'eval_loss_branch1': 4.007424354553223, 'eval_loss_branch2': 1.0635852813720703, 'eval_cm_branch1_actual0_pred0': 2794, 'eval_cm_branch1_actual0_pred1': 206, 'eval_cm_branch1_actual1_pred0': 385, 'eval_cm_branch1_actual1_pred1': 2615, 'eval_runtime': 9.8023, 'eval_samples_per_second': 612.098, 'eval_steps_per_second': 19.179, 'epoch': 33.0}
+[INFO|configuration_utils.py:491] 2025-11-17 01:26:50,699 >> Configuration saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-28875\config.json
+INFO:transformers.configuration_utils:Configuration saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-28875\config.json
+[INFO|modeling_utils.py:4181] 2025-11-17 01:26:50,836 >> Model weights saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-28875\model.safetensors
+INFO:transformers.modeling_utils:Model weights saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-28875\model.safetensors
+ 68%|█████████████████████████████████████████████████████████▊                           | 29750/43750 [1:06:58<27:30,  8.48it/s][INFO|trainer.py:4643] 2025-11-17 01:28:39,526 >>
+{'loss': 2.1868, 'grad_norm': 24.047687530517578, 'learning_rate': 0.03200228571428572, 'epoch': 34.0}
+***** Running Evaluation *****
+INFO:transformers.trainer:
+***** Running Evaluation *****
+[INFO|trainer.py:4645] 2025-11-17 01:28:39,528 >>   Num examples = 6000
+INFO:transformers.trainer:  Num examples = 6000
+[INFO|trainer.py:4648] 2025-11-17 01:28:39,529 >>   Batch size = 32
+INFO:transformers.trainer:  Batch size = 32
+ 68%|█████████████████████████████████████████████████████████▊                           | 29750/43750 [1:07:08<27:30,  8.48it/s][INFO|trainer.py:4309] 2025-11-17 01:28:49,479 >> Saving model checkpoint to results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-29750
+INFO:transformers.trainer:Saving model checkpoint to results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-29750
+{'eval_loss': 5.837145805358887, 'eval_accuracy_branch1': 0.8966666666666666, 'eval_precision_branch1': 0.8992647266054357, 'eval_recall_branch1': 0.8966666666666667, 'eval_f1_branch1': 0.8964982923887627, 'eval_accuracy_branch2': 0.5625, 'eval_precision_branch2': 0.5537436517726975, 'eval_recall_branch2': 0.5706633652025941, 'eval_f1_branch2': 0.5299455850086844, 'eval_lambda': 0.43560000000000004, 'eval_tn_branch2': 2477, 'eval_fp_branch2': 1994, 'eval_fn_branch2': 631, 'eval_tp_branch2': 898, 'eval_loss_branch1': 4.617053508758545, 'eval_loss_branch2': 1.2066447734832764, 'eval_cm_branch1_actual0_pred0': 2811, 'eval_cm_branch1_actual0_pred1': 189, 'eval_cm_branch1_actual1_pred0': 431, 'eval_cm_branch1_actual1_pred1': 2569, 'eval_runtime': 9.9389, 'eval_samples_per_second': 603.688, 'eval_steps_per_second': 18.916, 'epoch': 34.0}
+[INFO|configuration_utils.py:491] 2025-11-17 01:28:49,487 >> Configuration saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-29750\config.json
+INFO:transformers.configuration_utils:Configuration saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-29750\config.json
+[INFO|modeling_utils.py:4181] 2025-11-17 01:28:49,623 >> Model weights saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-29750\model.safetensors
+INFO:transformers.modeling_utils:Model weights saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-29750\model.safetensors
+ 70%|███████████████████████████████████████████████████████████▍                         | 30625/43750 [1:08:58<26:12,  8.35it/s][INFO|trainer.py:4643] 2025-11-17 01:30:39,978 >>
+{'loss': 2.0891, 'grad_norm': 30.965482711791992, 'learning_rate': 0.030002285714285717, 'epoch': 35.0}
+***** Running Evaluation *****
+INFO:transformers.trainer:
+***** Running Evaluation *****
+[INFO|trainer.py:4645] 2025-11-17 01:30:39,979 >>   Num examples = 6000
+INFO:transformers.trainer:  Num examples = 6000
+[INFO|trainer.py:4648] 2025-11-17 01:30:39,980 >>   Batch size = 32
+INFO:transformers.trainer:  Batch size = 32
+ 70%|███████████████████████████████████████████████████████████▍                         | 30625/43750 [1:09:08<26:12,  8.35it/s][INFO|trainer.py:4309] 2025-11-17 01:30:49,840 >> Saving model checkpoint to results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-30625
+INFO:transformers.trainer:Saving model checkpoint to results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-30625
+{'eval_loss': 4.707549095153809, 'eval_accuracy_branch1': 0.8981666666666667, 'eval_precision_branch1': 0.8985333616408608, 'eval_recall_branch1': 0.8981666666666667, 'eval_f1_branch1': 0.8981432367817719, 'eval_accuracy_branch2': 0.6005, 'eval_precision_branch2': 0.535378590078329, 'eval_recall_branch2': 0.5430117263217547, 'eval_f1_branch2': 0.5316133166027251, 'eval_lambda': 0.4624000000000001, 'eval_tn_branch2': 2952, 'eval_fp_branch2': 1519, 'eval_fn_branch2': 878, 'eval_tp_branch2': 651, 'eval_loss_branch1': 3.808922052383423, 'eval_loss_branch2': 0.8877332806587219, 'eval_cm_branch1_actual0_pred0': 2740, 'eval_cm_branch1_actual0_pred1': 260, 'eval_cm_branch1_actual1_pred0': 351, 'eval_cm_branch1_actual1_pred1': 2649, 'eval_runtime': 9.8437, 'eval_samples_per_second': 609.528, 'eval_steps_per_second': 19.099, 'epoch': 35.0}
+[INFO|configuration_utils.py:491] 2025-11-17 01:30:49,849 >> Configuration saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-30625\config.json
+INFO:transformers.configuration_utils:Configuration saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-30625\config.json
+[INFO|modeling_utils.py:4181] 2025-11-17 01:30:49,985 >> Model weights saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-30625\model.safetensors
+INFO:transformers.modeling_utils:Model weights saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-30625\model.safetensors
+ 72%|█████████████████████████████████████████████████████████████▏                       | 31500/43750 [1:10:57<23:32,  8.67it/s][INFO|trainer.py:4643] 2025-11-17 01:32:38,664 >>
+{'loss': 2.219, 'grad_norm': 63.64799499511719, 'learning_rate': 0.028002285714285716, 'epoch': 36.0}
+***** Running Evaluation *****
+INFO:transformers.trainer:
+***** Running Evaluation *****
+[INFO|trainer.py:4645] 2025-11-17 01:32:38,666 >>   Num examples = 6000
+INFO:transformers.trainer:  Num examples = 6000
+[INFO|trainer.py:4648] 2025-11-17 01:32:38,667 >>   Batch size = 32
+INFO:transformers.trainer:  Batch size = 32
+ 72%|█████████████████████████████████████████████████████████████▏                       | 31500/43750 [1:11:07<23:32,  8.67it/s][INFO|trainer.py:4309] 2025-11-17 01:32:48,568 >> Saving model checkpoint to results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-31500
+INFO:transformers.trainer:Saving model checkpoint to results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-31500
+{'eval_loss': 5.014516830444336, 'eval_accuracy_branch1': 0.8958333333333334, 'eval_precision_branch1': 0.8974106562279018, 'eval_recall_branch1': 0.8958333333333333, 'eval_f1_branch1': 0.8957298712981289, 'eval_accuracy_branch2': 0.7451666666666666, 'eval_precision_branch2': 0.3725833333333333, 'eval_recall_branch2': 0.5, 'eval_f1_branch2': 0.4269888262821125, 'eval_lambda': 0.48999999999999994, 'eval_tn_branch2': 4471, 'eval_fp_branch2': 0, 'eval_fn_branch2': 1529, 'eval_tp_branch2': 0, 'eval_loss_branch1': 4.248432636260986, 'eval_loss_branch2': 0.7549582123756409, 'eval_cm_branch1_actual0_pred0': 2782, 'eval_cm_branch1_actual0_pred1': 218, 'eval_cm_branch1_actual1_pred0': 407, 'eval_cm_branch1_actual1_pred1': 2593, 'eval_runtime': 9.8888, 'eval_samples_per_second': 606.745, 'eval_steps_per_second': 19.011, 'epoch': 36.0}
+[INFO|configuration_utils.py:491] 2025-11-17 01:32:48,575 >> Configuration saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-31500\config.json
+INFO:transformers.configuration_utils:Configuration saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-31500\config.json
+[INFO|modeling_utils.py:4181] 2025-11-17 01:32:48,703 >> Model weights saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-31500\model.safetensors
+INFO:transformers.modeling_utils:Model weights saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-31500\model.safetensors
+ 74%|██████████████████████████████████████████████████████████████▉                      | 32375/43750 [1:12:56<22:50,  8.30it/s][INFO|trainer.py:4643] 2025-11-17 01:34:37,556 >>
+{'loss': 2.034, 'grad_norm': 24.00191879272461, 'learning_rate': 0.026002285714285717, 'epoch': 37.0}
+***** Running Evaluation *****
+INFO:transformers.trainer:
+***** Running Evaluation *****
+[INFO|trainer.py:4645] 2025-11-17 01:34:37,558 >>   Num examples = 6000
+INFO:transformers.trainer:  Num examples = 6000
+[INFO|trainer.py:4648] 2025-11-17 01:34:37,560 >>   Batch size = 32
+INFO:transformers.trainer:  Batch size = 32
+ 74%|██████████████████████████████████████████████████████████████▉                      | 32375/43750 [1:13:06<22:50,  8.30it/s][INFO|trainer.py:4309] 2025-11-17 01:34:47,369 >> Saving model checkpoint to results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-32375
+INFO:transformers.trainer:Saving model checkpoint to results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-32375
+{'eval_loss': 5.357448577880859, 'eval_accuracy_branch1': 0.8886666666666667, 'eval_precision_branch1': 0.8904017857142857, 'eval_recall_branch1': 0.8886666666666667, 'eval_f1_branch1': 0.8885428253615127, 'eval_accuracy_branch2': 0.7451666666666666, 'eval_precision_branch2': 0.3725833333333333, 'eval_recall_branch2': 0.5, 'eval_f1_branch2': 0.4269888262821125, 'eval_lambda': 0.5184, 'eval_tn_branch2': 4471, 'eval_fp_branch2': 0, 'eval_fn_branch2': 1529, 'eval_tp_branch2': 0, 'eval_loss_branch1': 4.783699989318848, 'eval_loss_branch2': 0.5608527660369873, 'eval_cm_branch1_actual0_pred0': 2766, 'eval_cm_branch1_actual0_pred1': 234, 'eval_cm_branch1_actual1_pred0': 434, 'eval_cm_branch1_actual1_pred1': 2566, 'eval_runtime': 9.797, 'eval_samples_per_second': 612.433, 'eval_steps_per_second': 19.19, 'epoch': 37.0}
+[INFO|configuration_utils.py:491] 2025-11-17 01:34:47,375 >> Configuration saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-32375\config.json
+INFO:transformers.configuration_utils:Configuration saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-32375\config.json
+[INFO|modeling_utils.py:4181] 2025-11-17 01:34:47,517 >> Model weights saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-32375\model.safetensors
+INFO:transformers.modeling_utils:Model weights saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-32375\model.safetensors
+ 76%|████████████████████████████████████████████████████████████████▌                    | 33250/43750 [1:14:55<20:52,  8.38it/s][INFO|trainer.py:4643] 2025-11-17 01:36:36,225 >>
+{'loss': 2.0336, 'grad_norm': 28.16679573059082, 'learning_rate': 0.024002285714285716, 'epoch': 38.0}
+***** Running Evaluation *****
+INFO:transformers.trainer:
+***** Running Evaluation *****
+[INFO|trainer.py:4645] 2025-11-17 01:36:36,228 >>   Num examples = 6000
+INFO:transformers.trainer:  Num examples = 6000
+[INFO|trainer.py:4648] 2025-11-17 01:36:36,231 >>   Batch size = 32
+INFO:transformers.trainer:  Batch size = 32
+ 76%|████████████████████████████████████████████████████████████████▌                    | 33250/43750 [1:15:05<20:52,  8.38it/s][INFO|trainer.py:4309] 2025-11-17 01:36:46,211 >> Saving model checkpoint to results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-33250
+INFO:transformers.trainer:Saving model checkpoint to results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-33250
+{'eval_loss': 6.018609523773193, 'eval_accuracy_branch1': 0.8971666666666667, 'eval_precision_branch1': 0.8996187718528414, 'eval_recall_branch1': 0.8971666666666667, 'eval_f1_branch1': 0.8970086751134205, 'eval_accuracy_branch2': 0.5508333333333333, 'eval_precision_branch2': 0.5414154762943352, 'eval_recall_branch2': 0.5544431456319259, 'eval_f1_branch2': 0.517045732005899, 'eval_lambda': 0.5476, 'eval_tn_branch2': 2446, 'eval_fp_branch2': 2025, 'eval_fn_branch2': 670, 'eval_tp_branch2': 859, 'eval_loss_branch1': 4.676461219787598, 'eval_loss_branch2': 1.3281749486923218, 'eval_cm_branch1_actual0_pred0': 2809, 'eval_cm_branch1_actual0_pred1': 191, 'eval_cm_branch1_actual1_pred0': 426, 'eval_cm_branch1_actual1_pred1': 2574, 'eval_runtime': 9.9686, 'eval_samples_per_second': 601.892, 'eval_steps_per_second': 18.859, 'epoch': 38.0}
+[INFO|configuration_utils.py:491] 2025-11-17 01:36:46,217 >> Configuration saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-33250\config.json
+INFO:transformers.configuration_utils:Configuration saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-33250\config.json
+[INFO|modeling_utils.py:4181] 2025-11-17 01:36:46,349 >> Model weights saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-33250\model.safetensors
+INFO:transformers.modeling_utils:Model weights saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-33250\model.safetensors
+ 78%|██████████████████████████████████████████████████████████████████▎                  | 34125/43750 [1:16:53<19:00,  8.44it/s][INFO|trainer.py:4643] 2025-11-17 01:38:34,966 >>
+{'loss': 1.9614, 'grad_norm': 22.732418060302734, 'learning_rate': 0.022002285714285714, 'epoch': 39.0}
+***** Running Evaluation *****
+INFO:transformers.trainer:
+***** Running Evaluation *****
+[INFO|trainer.py:4645] 2025-11-17 01:38:34,967 >>   Num examples = 6000
+INFO:transformers.trainer:  Num examples = 6000
+[INFO|trainer.py:4648] 2025-11-17 01:38:34,968 >>   Batch size = 32
+INFO:transformers.trainer:  Batch size = 32
+ 78%|██████████████████████████████████████████████████████████████████▎                  | 34125/43750 [1:17:03<19:00,  8.44it/s][INFO|trainer.py:4309] 2025-11-17 01:38:44,865 >> Saving model checkpoint to results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-34125
+INFO:transformers.trainer:Saving model checkpoint to results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-34125
+{'eval_loss': 5.470661640167236, 'eval_accuracy_branch1': 0.9006666666666666, 'eval_precision_branch1': 0.90398762449003, 'eval_recall_branch1': 0.9006666666666666, 'eval_f1_branch1': 0.9004621052331547, 'eval_accuracy_branch2': 0.6553333333333333, 'eval_precision_branch2': 0.5872733063934379, 'eval_recall_branch2': 0.6036892939441578, 'eval_f1_branch2': 0.5891599685525928, 'eval_lambda': 0.5776, 'eval_tn_branch2': 3170, 'eval_fp_branch2': 1301, 'eval_fn_branch2': 767, 'eval_tp_branch2': 762, 'eval_loss_branch1': 4.622411727905273, 'eval_loss_branch2': 0.8351180553436279, 'eval_cm_branch1_actual0_pred0': 2838, 'eval_cm_branch1_actual0_pred1': 162, 'eval_cm_branch1_actual1_pred0': 434, 'eval_cm_branch1_actual1_pred1': 2566, 'eval_runtime': 9.8798, 'eval_samples_per_second': 607.298, 'eval_steps_per_second': 19.029, 'epoch': 39.0}
+[INFO|configuration_utils.py:491] 2025-11-17 01:38:44,871 >> Configuration saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-34125\config.json
+INFO:transformers.configuration_utils:Configuration saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-34125\config.json
+[INFO|modeling_utils.py:4181] 2025-11-17 01:38:45,012 >> Model weights saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-34125\model.safetensors
+INFO:transformers.modeling_utils:Model weights saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-34125\model.safetensors
+ 80%|████████████████████████████████████████████████████████████████████                 | 35000/43750 [1:18:52<17:10,  8.49it/s][INFO|trainer.py:4643] 2025-11-17 01:40:34,027 >>
+{'loss': 1.9197, 'grad_norm': 18.269807815551758, 'learning_rate': 0.020002285714285716, 'epoch': 40.0}
+***** Running Evaluation *****
+INFO:transformers.trainer:
+***** Running Evaluation *****
+[INFO|trainer.py:4645] 2025-11-17 01:40:34,029 >>   Num examples = 6000
+INFO:transformers.trainer:  Num examples = 6000
+[INFO|trainer.py:4648] 2025-11-17 01:40:34,030 >>   Batch size = 32
+INFO:transformers.trainer:  Batch size = 32
+ 80%|████████████████████████████████████████████████████████████████████                 | 35000/43750 [1:19:02<17:10,  8.49it/s][INFO|trainer.py:4309] 2025-11-17 01:40:43,888 >> Saving model checkpoint to results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-35000
+INFO:transformers.trainer:Saving model checkpoint to results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-35000
+{'eval_loss': 5.256687641143799, 'eval_accuracy_branch1': 0.8935, 'eval_precision_branch1': 0.8956863429051478, 'eval_recall_branch1': 0.8935, 'eval_f1_branch1': 0.8933526815416775, 'eval_accuracy_branch2': 0.7451666666666666, 'eval_precision_branch2': 0.3725833333333333, 'eval_recall_branch2': 0.5, 'eval_f1_branch2': 0.4269888262821125, 'eval_lambda': 0.6084, 'eval_tn_branch2': 4471, 'eval_fp_branch2': 0, 'eval_fn_branch2': 1529, 'eval_tp_branch2': 0, 'eval_loss_branch1': 4.560094356536865, 'eval_loss_branch2': 0.6845406889915466, 'eval_cm_branch1_actual0_pred0': 2792, 'eval_cm_branch1_actual0_pred1': 208, 'eval_cm_branch1_actual1_pred0': 431, 'eval_cm_branch1_actual1_pred1': 2569, 'eval_runtime': 9.8414, 'eval_samples_per_second': 609.667, 'eval_steps_per_second': 19.103, 'epoch': 40.0}
+[INFO|configuration_utils.py:491] 2025-11-17 01:40:43,896 >> Configuration saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-35000\config.json
+INFO:transformers.configuration_utils:Configuration saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-35000\config.json
+[INFO|modeling_utils.py:4181] 2025-11-17 01:40:44,024 >> Model weights saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-35000\model.safetensors
+INFO:transformers.modeling_utils:Model weights saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-35000\model.safetensors
+ 82%|█████████████████████████████████████████████████████████████████████▋               | 35875/43750 [1:20:51<15:41,  8.37it/s][INFO|trainer.py:4643] 2025-11-17 01:42:32,783 >>
+{'loss': 1.8274, 'grad_norm': 23.477048873901367, 'learning_rate': 0.018002285714285717, 'epoch': 41.0}
+***** Running Evaluation *****
+INFO:transformers.trainer:
+***** Running Evaluation *****
+[INFO|trainer.py:4645] 2025-11-17 01:42:32,785 >>   Num examples = 6000
+INFO:transformers.trainer:  Num examples = 6000
+[INFO|trainer.py:4648] 2025-11-17 01:42:32,786 >>   Batch size = 32
+INFO:transformers.trainer:  Batch size = 32
+ 82%|█████████████████████████████████████████████████████████████████████▋               | 35875/43750 [1:21:01<15:41,  8.37it/s][INFO|trainer.py:4309] 2025-11-17 01:42:42,660 >> Saving model checkpoint to results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-35875
+INFO:transformers.trainer:Saving model checkpoint to results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-35875
+{'eval_loss': 5.2358269691467285, 'eval_accuracy_branch1': 0.8963333333333333, 'eval_precision_branch1': 0.8981026785714286, 'eval_recall_branch1': 0.8963333333333333, 'eval_f1_branch1': 0.8962180200222469, 'eval_accuracy_branch2': 0.7451666666666666, 'eval_precision_branch2': 0.3725833333333333, 'eval_recall_branch2': 0.5, 'eval_f1_branch2': 0.4269888262821125, 'eval_lambda': 0.6400000000000001, 'eval_tn_branch2': 4471, 'eval_fp_branch2': 0, 'eval_fn_branch2': 1529, 'eval_tp_branch2': 0, 'eval_loss_branch1': 4.524435520172119, 'eval_loss_branch2': 0.6994263529777527, 'eval_cm_branch1_actual0_pred0': 2789, 'eval_cm_branch1_actual0_pred1': 211, 'eval_cm_branch1_actual1_pred0': 411, 'eval_cm_branch1_actual1_pred1': 2589, 'eval_runtime': 9.859, 'eval_samples_per_second': 608.583, 'eval_steps_per_second': 19.069, 'epoch': 41.0}
+[INFO|configuration_utils.py:491] 2025-11-17 01:42:42,667 >> Configuration saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-35875\config.json
+INFO:transformers.configuration_utils:Configuration saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-35875\config.json
+[INFO|modeling_utils.py:4181] 2025-11-17 01:42:42,861 >> Model weights saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-35875\model.safetensors
+INFO:transformers.modeling_utils:Model weights saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-35875\model.safetensors
+ 84%|███████████████████████████████████████████████████████████████████████▍             | 36750/43750 [1:22:50<13:51,  8.42it/s][INFO|trainer.py:4643] 2025-11-17 01:44:31,540 >>
+{'loss': 1.8321, 'grad_norm': 46.49211120605469, 'learning_rate': 0.016002285714285715, 'epoch': 42.0}
+***** Running Evaluation *****
+INFO:transformers.trainer:
+***** Running Evaluation *****
+[INFO|trainer.py:4645] 2025-11-17 01:44:31,542 >>   Num examples = 6000
+INFO:transformers.trainer:  Num examples = 6000
+[INFO|trainer.py:4648] 2025-11-17 01:44:31,544 >>   Batch size = 32
+INFO:transformers.trainer:  Batch size = 32
+ 84%|███████████████████████████████████████████████████████████████████████▍             | 36750/43750 [1:23:00<13:51,  8.42it/s][INFO|trainer.py:4309] 2025-11-17 01:44:41,406 >> Saving model checkpoint to results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-36750
+INFO:transformers.trainer:Saving model checkpoint to results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-36750
+{'eval_loss': 4.9412312507629395, 'eval_accuracy_branch1': 0.8965, 'eval_precision_branch1': 0.8981478454550393, 'eval_recall_branch1': 0.8965, 'eval_f1_branch1': 0.8963927982038971, 'eval_accuracy_branch2': 0.679, 'eval_precision_branch2': 0.4991816067767024, 'eval_recall_branch2': 0.49949935336495244, 'eval_f1_branch2': 0.48777603845030715, 'eval_lambda': 0.6723999999999999, 'eval_tn_branch2': 3870, 'eval_fp_branch2': 601, 'eval_fn_branch2': 1325, 'eval_tp_branch2': 204, 'eval_loss_branch1': 4.3446269035339355, 'eval_loss_branch2': 0.584739089012146, 'eval_cm_branch1_actual0_pred0': 2786, 'eval_cm_branch1_actual0_pred1': 214, 'eval_cm_branch1_actual1_pred0': 407, 'eval_cm_branch1_actual1_pred1': 2593, 'eval_runtime': 9.8488, 'eval_samples_per_second': 609.211, 'eval_steps_per_second': 19.089, 'epoch': 42.0}
+[INFO|configuration_utils.py:491] 2025-11-17 01:44:41,413 >> Configuration saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-36750\config.json
+INFO:transformers.configuration_utils:Configuration saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-36750\config.json
+[INFO|modeling_utils.py:4181] 2025-11-17 01:44:41,565 >> Model weights saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-36750\model.safetensors
+INFO:transformers.modeling_utils:Model weights saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-36750\model.safetensors
+ 86%|█████████████████████████████████████████████████████████████████████████            | 37625/43750 [1:24:49<12:13,  8.35it/s][INFO|trainer.py:4643] 2025-11-17 01:46:30,337 >>
+{'loss': 1.7879, 'grad_norm': 36.86808776855469, 'learning_rate': 0.014002285714285715, 'epoch': 43.0}
+***** Running Evaluation *****
+INFO:transformers.trainer:
+***** Running Evaluation *****
+[INFO|trainer.py:4645] 2025-11-17 01:46:30,338 >>   Num examples = 6000
+INFO:transformers.trainer:  Num examples = 6000
+[INFO|trainer.py:4648] 2025-11-17 01:46:30,340 >>   Batch size = 32
+INFO:transformers.trainer:  Batch size = 32
+ 86%|█████████████████████████████████████████████████████████████████████████            | 37625/43750 [1:24:59<12:13,  8.35it/s][INFO|trainer.py:4309] 2025-11-17 01:46:40,194 >> Saving model checkpoint to results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-37625
+INFO:transformers.trainer:Saving model checkpoint to results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-37625
+{'eval_loss': 5.815499782562256, 'eval_accuracy_branch1': 0.8915, 'eval_precision_branch1': 0.8947209669481824, 'eval_recall_branch1': 0.8915, 'eval_f1_branch1': 0.8912782045171652, 'eval_accuracy_branch2': 0.7451666666666666, 'eval_precision_branch2': 0.3725833333333333, 'eval_recall_branch2': 0.5, 'eval_f1_branch2': 0.4269888262821125, 'eval_lambda': 0.7055999999999999, 'eval_tn_branch2': 4471, 'eval_fp_branch2': 0, 'eval_fn_branch2': 1529, 'eval_tp_branch2': 0, 'eval_loss_branch1': 5.159050941467285, 'eval_loss_branch2': 0.6427711248397827, 'eval_cm_branch1_actual0_pred0': 2810, 'eval_cm_branch1_actual0_pred1': 190, 'eval_cm_branch1_actual1_pred0': 461, 'eval_cm_branch1_actual1_pred1': 2539, 'eval_runtime': 9.834, 'eval_samples_per_second': 610.127, 'eval_steps_per_second': 19.117, 'epoch': 43.0}
+[INFO|configuration_utils.py:491] 2025-11-17 01:46:40,203 >> Configuration saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-37625\config.json
+INFO:transformers.configuration_utils:Configuration saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-37625\config.json
+[INFO|modeling_utils.py:4181] 2025-11-17 01:46:40,335 >> Model weights saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-37625\model.safetensors
+INFO:transformers.modeling_utils:Model weights saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-37625\model.safetensors
+ 88%|██████████████████████████████████████████████████████████████████████████▊          | 38500/43750 [1:26:48<10:23,  8.42it/s][INFO|trainer.py:4643] 2025-11-17 01:48:29,291 >>
+{'loss': 1.7276, 'grad_norm': 24.73712730407715, 'learning_rate': 0.012002285714285715, 'epoch': 44.0}
+***** Running Evaluation *****
+INFO:transformers.trainer:
+***** Running Evaluation *****
+[INFO|trainer.py:4645] 2025-11-17 01:48:29,293 >>   Num examples = 6000
+INFO:transformers.trainer:  Num examples = 6000
+[INFO|trainer.py:4648] 2025-11-17 01:48:29,294 >>   Batch size = 32
+INFO:transformers.trainer:  Batch size = 32
+ 88%|██████████████████████████████████████████████████████████████████████████▊          | 38500/43750 [1:26:58<10:23,  8.42it/s][INFO|trainer.py:4309] 2025-11-17 01:48:39,182 >> Saving model checkpoint to results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-38500
+INFO:transformers.trainer:Saving model checkpoint to results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-38500
+{'eval_loss': 4.7965288162231445, 'eval_accuracy_branch1': 0.8916666666666667, 'eval_precision_branch1': 0.8927560847666796, 'eval_recall_branch1': 0.8916666666666666, 'eval_f1_branch1': 0.8915914913886396, 'eval_accuracy_branch2': 0.7451666666666666, 'eval_precision_branch2': 0.3725833333333333, 'eval_recall_branch2': 0.5, 'eval_f1_branch2': 0.4269888262821125, 'eval_lambda': 0.7395999999999999, 'eval_tn_branch2': 4471, 'eval_fp_branch2': 0, 'eval_fn_branch2': 1529, 'eval_tp_branch2': 0, 'eval_loss_branch1': 4.195903301239014, 'eval_loss_branch2': 0.5894380807876587, 'eval_cm_branch1_actual0_pred0': 2754, 'eval_cm_branch1_actual0_pred1': 246, 'eval_cm_branch1_actual1_pred0': 404, 'eval_cm_branch1_actual1_pred1': 2596, 'eval_runtime': 9.873, 'eval_samples_per_second': 607.721, 'eval_steps_per_second': 19.042, 'epoch': 44.0}
+[INFO|configuration_utils.py:491] 2025-11-17 01:48:39,190 >> Configuration saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-38500\config.json
+INFO:transformers.configuration_utils:Configuration saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-38500\config.json
+[INFO|modeling_utils.py:4181] 2025-11-17 01:48:39,350 >> Model weights saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-38500\model.safetensors
+INFO:transformers.modeling_utils:Model weights saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-38500\model.safetensors
+ 90%|████████████████████████████████████████████████████████████████████████████▌        | 39375/43750 [1:28:47<08:31,  8.55it/s][INFO|trainer.py:4643] 2025-11-17 01:50:28,144 >>
+{'loss': 1.6995, 'grad_norm': 34.63838195800781, 'learning_rate': 0.010002285714285715, 'epoch': 45.0}
+***** Running Evaluation *****
+INFO:transformers.trainer:
+***** Running Evaluation *****
+[INFO|trainer.py:4645] 2025-11-17 01:50:28,146 >>   Num examples = 6000
+INFO:transformers.trainer:  Num examples = 6000
+[INFO|trainer.py:4648] 2025-11-17 01:50:28,147 >>   Batch size = 32
+INFO:transformers.trainer:  Batch size = 32
+ 90%|████████████████████████████████████████████████████████████████████████████▌        | 39375/43750 [1:28:56<08:31,  8.55it/s][INFO|trainer.py:4309] 2025-11-17 01:50:38,046 >> Saving model checkpoint to results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-39375
+INFO:transformers.trainer:Saving model checkpoint to results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-39375
+{'eval_loss': 4.838397026062012, 'eval_accuracy_branch1': 0.8931666666666667, 'eval_precision_branch1': 0.894330774928787, 'eval_recall_branch1': 0.8931666666666667, 'eval_f1_branch1': 0.8930877624655819, 'eval_accuracy_branch2': 0.6716666666666666, 'eval_precision_branch2': 0.4283699902010587, 'eval_recall_branch2': 0.46660544320282776, 'eval_f1_branch2': 0.435262442429736, 'eval_lambda': 0.7744, 'eval_tn_branch2': 3956, 'eval_fp_branch2': 515, 'eval_fn_branch2': 1455, 'eval_tp_branch2': 74, 'eval_loss_branch1': 4.231778621673584, 'eval_loss_branch2': 0.5950903296470642, 'eval_cm_branch1_actual0_pred0': 2761, 'eval_cm_branch1_actual0_pred1': 239, 'eval_cm_branch1_actual1_pred0': 402, 'eval_cm_branch1_actual1_pred1': 2598, 'eval_runtime': 9.8865, 'eval_samples_per_second': 606.89, 'eval_steps_per_second': 19.016, 'epoch': 45.0}
+[INFO|configuration_utils.py:491] 2025-11-17 01:50:38,052 >> Configuration saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-39375\config.json
+INFO:transformers.configuration_utils:Configuration saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-39375\config.json
+[INFO|modeling_utils.py:4181] 2025-11-17 01:50:38,177 >> Model weights saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-39375\model.safetensors
+INFO:transformers.modeling_utils:Model weights saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-39375\model.safetensors
+ 92%|██████████████████████████████████████████████████████████████████████████████▏      | 40250/43750 [1:30:45<06:51,  8.50it/s][INFO|trainer.py:4643] 2025-11-17 01:52:26,869 >>
+{'loss': 1.6986, 'grad_norm': 13.426822662353516, 'learning_rate': 0.008002285714285715, 'epoch': 46.0}
+***** Running Evaluation *****
+INFO:transformers.trainer:
+***** Running Evaluation *****
+[INFO|trainer.py:4645] 2025-11-17 01:52:26,871 >>   Num examples = 6000
+INFO:transformers.trainer:  Num examples = 6000
+[INFO|trainer.py:4648] 2025-11-17 01:52:26,872 >>   Batch size = 32
+INFO:transformers.trainer:  Batch size = 32
+ 92%|██████████████████████████████████████████████████████████████████████████████▏      | 40250/43750 [1:30:55<06:51,  8.50it/s][INFO|trainer.py:4309] 2025-11-17 01:52:36,759 >> Saving model checkpoint to results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-40250
+INFO:transformers.trainer:Saving model checkpoint to results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-40250
+{'eval_loss': 4.309060096740723, 'eval_accuracy_branch1': 0.8875, 'eval_precision_branch1': 0.887993570932623, 'eval_recall_branch1': 0.8875, 'eval_f1_branch1': 0.8874642104929427, 'eval_accuracy_branch2': 0.7451666666666666, 'eval_precision_branch2': 0.3725833333333333, 'eval_recall_branch2': 0.5, 'eval_f1_branch2': 0.4269888262821125, 'eval_lambda': 0.81, 'eval_tn_branch2': 4471, 'eval_fp_branch2': 0, 'eval_fn_branch2': 1529, 'eval_tp_branch2': 0, 'eval_loss_branch1': 3.6943514347076416, 'eval_loss_branch2': 0.6049627065658569, 'eval_cm_branch1_actual0_pred0': 2716, 'eval_cm_branch1_actual0_pred1': 284, 'eval_cm_branch1_actual1_pred0': 391, 'eval_cm_branch1_actual1_pred1': 2609, 'eval_runtime': 9.8696, 'eval_samples_per_second': 607.93, 'eval_steps_per_second': 19.048, 'epoch': 46.0}
+[INFO|configuration_utils.py:491] 2025-11-17 01:52:36,766 >> Configuration saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-40250\config.json
+INFO:transformers.configuration_utils:Configuration saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-40250\config.json
+[INFO|modeling_utils.py:4181] 2025-11-17 01:52:36,951 >> Model weights saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-40250\model.safetensors
+INFO:transformers.modeling_utils:Model weights saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-40250\model.safetensors
+ 94%|███████████████████████████████████████████████████████████████████████████████▉     | 41125/43750 [1:32:44<05:11,  8.42it/s][INFO|trainer.py:4643] 2025-11-17 01:54:25,853 >>
+{'loss': 1.6343, 'grad_norm': 45.099647521972656, 'learning_rate': 0.006002285714285714, 'epoch': 47.0}
+***** Running Evaluation *****
+INFO:transformers.trainer:
+***** Running Evaluation *****
+[INFO|trainer.py:4645] 2025-11-17 01:54:25,855 >>   Num examples = 6000
+INFO:transformers.trainer:  Num examples = 6000
+[INFO|trainer.py:4648] 2025-11-17 01:54:25,857 >>   Batch size = 32
+INFO:transformers.trainer:  Batch size = 32
+ 94%|███████████████████████████████████████████████████████████████████████████████▉     | 41125/43750 [1:32:54<05:11,  8.42it/s][INFO|trainer.py:4309] 2025-11-17 01:54:35,774 >> Saving model checkpoint to results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-41125
+INFO:transformers.trainer:Saving model checkpoint to results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-41125
+{'eval_loss': 4.415808200836182, 'eval_accuracy_branch1': 0.8893333333333333, 'eval_precision_branch1': 0.8898767348624572, 'eval_recall_branch1': 0.8893333333333333, 'eval_f1_branch1': 0.8892947587070339, 'eval_accuracy_branch2': 0.7451666666666666, 'eval_precision_branch2': 0.3725833333333333, 'eval_recall_branch2': 0.5, 'eval_f1_branch2': 0.4269888262821125, 'eval_lambda': 0.8464, 'eval_tn_branch2': 4471, 'eval_fp_branch2': 0, 'eval_fn_branch2': 1529, 'eval_tp_branch2': 0, 'eval_loss_branch1': 3.8213417530059814, 'eval_loss_branch2': 0.5842951536178589, 'eval_cm_branch1_actual0_pred0': 2724, 'eval_cm_branch1_actual0_pred1': 276, 'eval_cm_branch1_actual1_pred0': 388, 'eval_cm_branch1_actual1_pred1': 2612, 'eval_runtime': 9.9074, 'eval_samples_per_second': 605.609, 'eval_steps_per_second': 18.976, 'epoch': 47.0}
+[INFO|configuration_utils.py:491] 2025-11-17 01:54:35,781 >> Configuration saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-41125\config.json
+INFO:transformers.configuration_utils:Configuration saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-41125\config.json
+[INFO|modeling_utils.py:4181] 2025-11-17 01:54:35,938 >> Model weights saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-41125\model.safetensors
+INFO:transformers.modeling_utils:Model weights saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-41125\model.safetensors
+ 96%|█████████████████████████████████████████████████████████████████████████████████▌   | 42000/43750 [1:34:43<03:29,  8.34it/s][INFO|trainer.py:4643] 2025-11-17 01:56:24,732 >>
+{'loss': 1.5917, 'grad_norm': 28.270305633544922, 'learning_rate': 0.004002285714285714, 'epoch': 48.0}
+***** Running Evaluation *****
+INFO:transformers.trainer:
+***** Running Evaluation *****
+[INFO|trainer.py:4645] 2025-11-17 01:56:24,734 >>   Num examples = 6000
+INFO:transformers.trainer:  Num examples = 6000
+[INFO|trainer.py:4648] 2025-11-17 01:56:24,735 >>   Batch size = 32
+INFO:transformers.trainer:  Batch size = 32
+ 96%|█████████████████████████████████████████████████████████████████████████████████▌   | 42000/43750 [1:34:53<03:29,  8.34it/s][INFO|trainer.py:4309] 2025-11-17 01:56:34,590 >> Saving model checkpoint to results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-42000
+INFO:transformers.trainer:Saving model checkpoint to results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-42000
+{'eval_loss': 4.088961124420166, 'eval_accuracy_branch1': 0.8916666666666667, 'eval_precision_branch1': 0.8922133248830371, 'eval_recall_branch1': 0.8916666666666666, 'eval_f1_branch1': 0.8916289053608013, 'eval_accuracy_branch2': 0.7451666666666666, 'eval_precision_branch2': 0.3725833333333333, 'eval_recall_branch2': 0.5, 'eval_f1_branch2': 0.4269888262821125, 'eval_lambda': 0.8835999999999999, 'eval_tn_branch2': 4471, 'eval_fp_branch2': 0, 'eval_fn_branch2': 1529, 'eval_tp_branch2': 0, 'eval_loss_branch1': 3.4726498126983643, 'eval_loss_branch2': 0.6071304678916931, 'eval_cm_branch1_actual0_pred0': 2731, 'eval_cm_branch1_actual0_pred1': 269, 'eval_cm_branch1_actual1_pred0': 381, 'eval_cm_branch1_actual1_pred1': 2619, 'eval_runtime': 9.8417, 'eval_samples_per_second': 609.652, 'eval_steps_per_second': 19.102, 'epoch': 48.0}
+[INFO|configuration_utils.py:491] 2025-11-17 01:56:34,599 >> Configuration saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-42000\config.json
+INFO:transformers.configuration_utils:Configuration saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-42000\config.json
+[INFO|modeling_utils.py:4181] 2025-11-17 01:56:34,741 >> Model weights saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-42000\model.safetensors
+INFO:transformers.modeling_utils:Model weights saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-42000\model.safetensors
+ 98%|███████████████████████████████████████████████████████████████████████████████████▎ | 42875/43750 [1:36:42<01:42,  8.54it/s][INFO|trainer.py:4643] 2025-11-17 01:58:23,578 >>
+{'loss': 1.5677, 'grad_norm': 23.43876075744629, 'learning_rate': 0.0020022857142857147, 'epoch': 49.0}
+***** Running Evaluation *****
+INFO:transformers.trainer:
+***** Running Evaluation *****
+[INFO|trainer.py:4645] 2025-11-17 01:58:23,580 >>   Num examples = 6000
+INFO:transformers.trainer:  Num examples = 6000
+[INFO|trainer.py:4648] 2025-11-17 01:58:23,580 >>   Batch size = 32
+INFO:transformers.trainer:  Batch size = 32
+ 98%|███████████████████████████████████████████████████████████████████████████████████▎ | 42875/43750 [1:36:52<01:42,  8.54it/s][INFO|trainer.py:4309] 2025-11-17 01:58:33,410 >> Saving model checkpoint to results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-42875
+INFO:transformers.trainer:Saving model checkpoint to results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-42875
+{'eval_loss': 4.317651271820068, 'eval_accuracy_branch1': 0.8925, 'eval_precision_branch1': 0.89360563823781, 'eval_recall_branch1': 0.8925000000000001, 'eval_f1_branch1': 0.8924244550735754, 'eval_accuracy_branch2': 0.7451666666666666, 'eval_precision_branch2': 0.3725833333333333, 'eval_recall_branch2': 0.5, 'eval_f1_branch2': 0.4269888262821125, 'eval_lambda': 0.9216, 'eval_tn_branch2': 4471, 'eval_fp_branch2': 0, 'eval_fn_branch2': 1529, 'eval_tp_branch2': 0, 'eval_loss_branch1': 3.713862895965576, 'eval_loss_branch2': 0.5939249396324158, 'eval_cm_branch1_actual0_pred0': 2757, 'eval_cm_branch1_actual0_pred1': 243, 'eval_cm_branch1_actual1_pred0': 402, 'eval_cm_branch1_actual1_pred1': 2598, 'eval_runtime': 9.8178, 'eval_samples_per_second': 611.133, 'eval_steps_per_second': 19.149, 'epoch': 49.0}
+[INFO|configuration_utils.py:491] 2025-11-17 01:58:33,416 >> Configuration saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-42875\config.json
+INFO:transformers.configuration_utils:Configuration saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-42875\config.json
+[INFO|modeling_utils.py:4181] 2025-11-17 01:58:33,575 >> Model weights saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-42875\model.safetensors
+INFO:transformers.modeling_utils:Model weights saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-42875\model.safetensors
+100%|█████████████████████████████████████████████████████████████████████████████████████| 43750/43750 [1:38:41<00:00,  8.37it/s][INFO|trainer.py:4643] 2025-11-17 02:00:22,356 >>
+{'loss': 1.591, 'grad_norm': 20.89288902282715, 'learning_rate': 2.285714285714286e-06, 'epoch': 50.0}
+***** Running Evaluation *****
+INFO:transformers.trainer:
+***** Running Evaluation *****
+[INFO|trainer.py:4645] 2025-11-17 02:00:22,358 >>   Num examples = 6000
+INFO:transformers.trainer:  Num examples = 6000
+[INFO|trainer.py:4648] 2025-11-17 02:00:22,359 >>   Batch size = 32
+INFO:transformers.trainer:  Batch size = 32
+100%|█████████████████████████████████████████████████████████████████████████████████████| 43750/43750 [1:38:51<00:00,  8.37it/s][INFO|trainer.py:4309] 2025-11-17 02:00:32,282 >> Saving model checkpoint to results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-43750
+INFO:transformers.trainer:Saving model checkpoint to results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-43750
+{'eval_loss': 3.7309694290161133, 'eval_accuracy_branch1': 0.892, 'eval_precision_branch1': 0.8925668665553059, 'eval_recall_branch1': 0.892, 'eval_f1_branch1': 0.8919609979202492, 'eval_accuracy_branch2': 0.7451666666666666, 'eval_precision_branch2': 0.3725833333333333, 'eval_recall_branch2': 0.5, 'eval_f1_branch2': 0.4269888262821125, 'eval_lambda': 0.9603999999999999, 'eval_tn_branch2': 4471, 'eval_fp_branch2': 0, 'eval_fn_branch2': 1529, 'eval_tp_branch2': 0, 'eval_loss_branch1': 3.137346029281616, 'eval_loss_branch2': 0.5852152109146118, 'eval_cm_branch1_actual0_pred0': 2733, 'eval_cm_branch1_actual0_pred1': 267, 'eval_cm_branch1_actual1_pred0': 381, 'eval_cm_branch1_actual1_pred1': 2619, 'eval_runtime': 9.9094, 'eval_samples_per_second': 605.487, 'eval_steps_per_second': 18.972, 'epoch': 50.0}
+[INFO|configuration_utils.py:491] 2025-11-17 02:00:32,290 >> Configuration saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-43750\config.json
+INFO:transformers.configuration_utils:Configuration saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-43750\config.json
+[INFO|modeling_utils.py:4181] 2025-11-17 02:00:32,437 >> Model weights saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-43750\model.safetensors
+INFO:transformers.modeling_utils:Model weights saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\results\checkpoint-43750\model.safetensors
+[INFO|trainer.py:2810] 2025-11-17 02:00:32,452 >>
+
+Training completed. Do not forget to share your model on huggingface.co/models =)
+
+
+INFO:transformers.trainer:
+
+Training completed. Do not forget to share your model on huggingface.co/models =)
+
+
+100%|█████████████████████████████████████████████████████████████████████████████████████| 43750/43750 [1:38:52<00:00,  7.37it/s]
+{'train_runtime': 5935.3642, 'train_samples_per_second': 235.874, 'train_steps_per_second': 7.371, 'train_loss': 1.9519433272879465, 'epoch': 50.0}
+[INFO|trainer.py:4309] 2025-11-17 02:00:33,496 >> Saving model checkpoint to results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\final_model
+INFO:transformers.trainer:Saving model checkpoint to results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\final_model
+[INFO|configuration_utils.py:491] 2025-11-17 02:00:33,502 >> Configuration saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\final_model\config.json
+INFO:transformers.configuration_utils:Configuration saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\final_model\config.json
+[INFO|modeling_utils.py:4181] 2025-11-17 02:00:33,643 >> Model weights saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\final_model\model.safetensors
+INFO:transformers.modeling_utils:Model weights saved in results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34\final_model\model.safetensors
+INFO:root:Saved results to results/dann_train_val_breast_leak_results/parabolic_increasing_lambda_scheduler_fold_0_2025-11-17_00-21-34.
