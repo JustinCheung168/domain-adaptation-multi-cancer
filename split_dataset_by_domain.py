@@ -226,13 +226,25 @@ def split_dataset_by_domain(preprocessed_npz_path: str,
     
     # Extract base name and split type from filename
     # e.g., "colon_nk_test.npz" -> base="colon_nk", split_name="test"
-    filename = preprocessed_path.stem  # "colon_nk_test"
+    # e.g., "colon_nk_test_reinhard.npz" -> base="colon_nk_reinhard", split_name="test"
+    filename = preprocessed_path.stem  # "colon_nk_test" or "colon_nk_test_reinhard"
     parts = filename.split('_')
-    if parts[-1] in ['train', 'val', 'test']:
-        split_name = parts[-1]
-        base_name = '_'.join(parts[:-1])
-    else:
+    
+    # Find the split type (train/val/test) in the filename
+    split_name = None
+    split_idx = None
+    for i, part in enumerate(parts):
+        if part in ['train', 'val', 'test']:
+            split_name = part
+            split_idx = i
+            break
+    
+    if split_name is None:
         raise ValueError(f"Could not determine split type from filename: {filename}")
+    
+    # Base name includes everything except the split type
+    # e.g., "breast_nk_test_reinhard" -> "breast_nk_reinhard"
+    base_name = '_'.join(parts[:split_idx] + parts[split_idx+1:])
     
     print(f"Processing: {preprocessed_path.name}")
     print(f"  Base name: {base_name}")
