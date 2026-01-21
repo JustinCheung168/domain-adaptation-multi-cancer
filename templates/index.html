@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload PNG</title>
+</head>
+<body>
+    <h1>Upload a PNG File</h1>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" accept="image/png">
+        <button type="submit">Upload</button>
+    </form>
+    <h2>Grayscale Image</h2>
+    <img id="grayscale-image" src="" alt="Grayscale Image" style="display:none;">
+
+    <script>
+        const form = document.querySelector('form');
+        const img = document.getElementById('grayscale-image');
+
+        form.addEventListener('submit', async (event) => {
+            event.preventDefault();
+
+            const formData = new FormData(form);
+            const response = await fetch('/upload', {
+                method: 'POST',
+                body: formData
+            });
+
+            if (response.ok) {
+                const blob = await response.blob();
+                const url = URL.createObjectURL(blob);
+                img.src = url;
+                img.style.display = 'block';
+            } else {
+                const error = await response.json();
+                alert(error.error);
+            }
+        });
+    </script>
+</body>
+</html>
