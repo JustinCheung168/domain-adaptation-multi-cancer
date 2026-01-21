@@ -75,7 +75,7 @@
 <body>
     <div class="container">
         <h1>Explainable AI Image Uploader</h1>
-        <p class="note">This website is a work in progress. The vision is to allow users to submit an image, run inference with one of our models hosted on the server, and receive a prediction with a confidence score. Additionally, the site will generate Integrated Gradients for the image to explain the model's decision. For now, the grayscale conversion demonstrates our ability to process and return images.</p>
+        <p class="note">This website is a work in progress. The vision is to allow users to submit an image, run inference with one of our models hosted on the server, and receive a prediction with a confidence score. Additionally, the site will generate and display an Integrated Gradients attribution matrix for the image to explain the model's decision. For now, you can submit an image below and the website will just convert it to grayscale, which demonstrates that we can at least process and return images.</p>
         <form action="/upload" method="post" enctype="multipart/form-data">
             <input type="file" name="file" accept="image/png">
             <button type="submit">Upload</button>
