@@ -7,3 +7,5 @@ MarkupSafe==1.1.1
 Werkzeug==1.0.1
 Pillow==12.1
 setuptools
+torch --index-url https://download.pytorch.org/whl/cpu
+torchvision --index-url https://download.pytorch.org/whl/cpu
