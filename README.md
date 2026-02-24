@@ -1,4 +1,4 @@
-# Multi cancer project to be named
+# Transfer Learning from One Cancer to Another via Deep Learning Domain Adaptation
 
 ## Environment Setup
 
